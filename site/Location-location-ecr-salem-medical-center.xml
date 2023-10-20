@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="location-ecr-salem-medical-center"/>
+  <meta>
+    <versionId value="6"/>
+    <lastUpdated value="2021-08-17T07:53:02.099+00:00"/>
+    <source value="#VI2Nm5Ps5HqZ5HXV"/>
+    <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-location"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Location</b><a name="location-ecr-salem-medical-center"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location &quot;location-ecr-salem-medical-center&quot; Version &quot;6&quot; Updated &quot;2021-08-17 07:53:02+0000&quot; </p><p style="margin-bottom: 0px">Information Source: #VI2Nm5Ps5HqZ5HXV!</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-us-ph-location.html">US Public Health Location</a></p></div><p><b>identifier</b>: id: 1144221995</p><p><b>status</b>: active</p><p><b>name</b>: Clinic Bldg A, Salem Medical Center</p><p><b>type</b>: Hospital <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#HOSP)</span></p><p><b>telecom</b>: ph: (+1) (555)555-3001, fax: (+1) (555)555-3002, <a href="mailto:mail@smc.org">mail@smc.org</a></p><p><b>address</b>: Clinic Bldg A 4444 Healthcare Drive Ann Arbor MI 99999 </p><p><b>managingOrganization</b>: <a href="Organization-organization-ecr-salem-medical-center.html">Organization/organization-ecr-salem-medical-center</a> &quot;Salem Medical Center&quot;</p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org.fhir/sid/us-npi"/>
+    <value value="1144221995"/>
+  </identifier>
+  <status value="active"/>
+  <name value="Clinic Bldg A, Salem Medical Center"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="HOSP"/>
+      <display value="Hospital"/>
+    </coding>
+  </type>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) (555)555-3001"/>
+  </telecom>
+  <telecom>
+    <system value="fax"/>
+    <value value="(+1) (555)555-3002"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="mail@smc.org"/>
+  </telecom>
+  <address>
+    <line value="Clinic Bldg A"/>
+    <line value="4444 Healthcare Drive"/>
+    <city value="Ann Arbor"/>
+    <state value="MI"/>
+    <postalCode value="99999"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/organization-ecr-salem-medical-center"/>
+  </managingOrganization>
+</Location>

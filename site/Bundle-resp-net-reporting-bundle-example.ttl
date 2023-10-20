@@ -1,0 +1,218 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Bundle/resp-net-reporting-bundle-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "resp-net-reporting-bundle-example"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "message"] ; # 
+  fhir:timestamp [ fhir:v "2020-11-20T11:15:33-10:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "MessageHeader/messageheader-example-reportheader"^^xsd:anyURI ] ;
+     fhir:resource ( <MessageHeader/messageheader-example-reportheader> )
+  ] [
+     fhir:fullUrl [ fhir:v "Bundle/rep-content-bundle-example"^^xsd:anyURI ] ;
+     fhir:resource ( <Bundle/rep-content-bundle-example> )
+  ] ) . # 
+
+<MessageHeader/messageheader-example-reportheader> a fhir:MessageHeader ;
+  fhir:id [ fhir:v "messageheader-example-reportheader"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>Reporting Data</p> \n          </div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "subscription-notification" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "cancer-report-message" ]
+  ] ; # 
+  fhir:destination ( [
+     fhir:name [ fhir:v "PHA endpoint" ] ;
+     fhir:endpoint [ fhir:v "http://example.pha.org/fhir"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Organization/example-healthcare-org> ;
+     fhir:reference [ fhir:v "Organization/example-healthcare-org" ]
+  ] ; # 
+  fhir:source [
+     fhir:name [ fhir:v "Healthcare Organization" ] ;
+     fhir:software [ fhir:v "Backend Service App" ] ;
+     fhir:version [ fhir:v "3.1.45.AABB" ] ;
+     fhir:contact [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+1 (917) 123 4567" ]
+     ] ;
+     fhir:endpoint [ fhir:v "http://example.healthcare.org/fhir"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reason [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "encounter-end" ]
+     ] )
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Bundle/rep-content-bundle-example> ;
+     fhir:reference [ fhir:v "Bundle/rep-content-bundle-example" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/resp-net/Organization/example-healthcare-org> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Bundle/rep-content-bundle-example> a fhir:us .
+
+<Bundle/rep-content-bundle-example> a fhir:Bundle ;
+  fhir:id [ fhir:v "rep--content-bundle-example"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2020-11-20T11:15:33-10:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "Composition/rep-composition-content-example"^^xsd:anyURI ] ;
+     fhir:resource ( <Composition/rep-composition-content-example> )
+  ] ) . # 
+
+<Composition/rep-composition-content-example> a fhir:Composition ;
+  fhir:id [ fhir:v "rep-composition-content-example"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "23" ] ;
+     fhir:lastUpdated [ fhir:v "2021-08-19T22:06:32.441+00:00"^^xsd:dateTime ] ;
+     fhir:source [ fhir:v "#6i8cijintDjJ8In2"^^xsd:anyURI ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Eve Everywoman data for RESP-NET</b></p></div>"
+  ] ; # 
+  fhir:identifier [
+     fhir:value [ fhir:v "c03eab8c-11e8-4d0c-ad2a-b385395e27db" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:75619-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "75619-7" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Eve Everywoman" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Encounter/resp-net-encounter-example> ;
+     fhir:reference [ fhir:v "Encounter/resp-net-encounter-example" ] ;
+     fhir:display [ fhir:v "Inpatient encounter" ]
+  ] ; # 
+  fhir:date [ fhir:v "2023-01-02T22:13:23Z"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-us-core-henry-seven" ] ;
+     fhir:display [ fhir:v "Henry Seven" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "RESP-NET Report"] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Reason for Visit Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:29299-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "29299-5" ] ;
+         fhir:display [ fhir:v "Reason for visit Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Reason for Visit: Influenza</p>\n</div>"
+     ]
+  ] [
+     fhir:title [ fhir:v "Problems Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Problem list - Reported" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Influenza</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://hl7.org/fhir/us/resp-net/Condition/influenza-example> ;
+       fhir:reference [ fhir:v "Condition/influenza-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Medications Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10160-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "10160-0" ] ;
+         fhir:display [ fhir:v "History of Medication use Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Take oseltamivir twice a day </div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://hl7.org/fhir/us/resp-net/MedicationAdministration/medicationadministration-oseltamivir> ;
+       fhir:reference [ fhir:v "MedicationAdministration/medicationadministration-oseltamivir" ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Encounter/resp-net-encounter-example> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Condition/influenza-example> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/MedicationAdministration/medicationadministration-oseltamivir> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

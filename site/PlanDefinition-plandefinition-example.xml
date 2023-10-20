@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="plandefinition-example"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+    <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Narrative</b></p><p><b>Receiver Endpoint Address</b>: <a>Generated Summary: id: example-nchs-endpoint; status: active; <span title="{http://terminology.hl7.org/CodeSystem/endpoint-connection-type hl7-fhir-rest}">HL7 FHIR</span>; name: PHAReceiver; endpointmanager@example.pha.org; period: 2020-11-20 --&gt; (ongoing); <span title="Codes: {http://hl7.org/fhir/resource-types Bundle}">Bundle</span>; payloadMimeType: application/fhir+xml, payloadMimeType: application/fhir+json; address: http://example.pha.org/fhir</a></p><p><b>Author</b></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-endpoint">
+    <valueReference>
+      <reference value="Endpoint/example-ph-endpoint"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pher"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/plandefinition-example"/>
+  <version value="0.1.0"/>
+  <name value="PlanDefinitionRespNetExample"/>
+  <title value="PlanDefinition RESP-NET Example"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="workflow-definition"/>
+      <display value="Workflow Definition"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2023-06-01T12:32:29.858-05:00"/>
+  <publisher value="HL7 International / Public Health"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+  </contact>
+  <description value="This is the RESP-NET Knowledge Artifact"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <effectivePeriod>
+    <start value="2021-11-01"/>
+  </effectivePeriod>
+  <relatedArtifact>
+    <type value="depends-on"/>
+    <label value="Health Care Survey Registered Participants"/>
+    <resource value="http://nchs/fhir/r4/Group/healthcare-survey-participants"/>
+  </relatedArtifact>
+  <action id="start-workflow">
+    <description value="This action represents the start of the reporting workflow in response to the encounter-end event"/>
+    <textEquivalent value="Start the reporting workflow in response to an encounter-end event"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+        <code value="initiate-reporting-workflow"/>
+      </coding>
+    </code>
+    <trigger id="encounter-end">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
+            <code value="encounter-end"/>
+            <display value="Indicates the end of an encounter"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <type value="named-event"/>
+      <name value="encounter-end"/>
+    </trigger>
+    <relatedAction>
+      <actionId value="check-reportability"/>
+      <relationship value="before-start"/>
+      <offsetDuration>
+        <value value="72"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="h"/>
+      </offsetDuration>
+    </relatedAction>
+  </action>
+  <action id="check-reportability">
+    <description value="This action represents the start of the check for reportable conditions in response to the encounter-end event. This is an example of executing a reporting workflow with other actions."/>
+    <textEquivalent value="Check Reportability"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+        <code value="execute-reporting-workflow"/>
+      </coding>
+    </code>
+    <action id="is-ambulatory-encounter-reportable">
+      <description value="This action represents the check for reportability of ambulatory encounters based on survey participation."/>
+      <textEquivalent value="Check Participation of Provider to report on the encounter"/>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+          <code value="evaluate-condition"/>
+        </coding>
+      </code>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/fhirpath"/>
+          <expression value="%closedEncounter.participant.individual.identifier.where(system = 'http://hl7.org/fhir/sid/us-npi).value.subsetOf(participantGroup.member.entity.identifier.where(system = 'http://hl7.org/fhir/sid/us-npi).value)'"/>
+        </expression>
+      </condition>
+      <input id="closedEncounter">
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+          <valueString value="Encounter/{{context.patientId}}"/>
+        </extension>
+        <type value="Encounter"/>
+      </input>
+      <input id="participantGroup">
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+          <valueString value="Group/{{context.nchsGroupId}}"/>
+        </extension>
+        <type value="Group"/>
+      </input>
+      <relatedAction>
+        <actionId value="create-resp-net-report"/>
+        <relationship value="before-start"/>
+      </relatedAction>
+    </action>
+    <action id="is-inpatient-encounter-reportable">
+      <description value="This action represents the check for reportability of inpatient encounters based on survey requirements."/>
+      <textEquivalent value="Check criteria to report on the encounter"/>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+          <code value="evaluate-condition"/>
+        </coding>
+      </code>
+      <condition>
+        <kind value="applicability"/>
+        <expression>
+          <language value="text/fhirpath"/>
+          <expression value="%closedEncounter.exists()"/>
+        </expression>
+      </condition>
+      <input id="inpatientEncounter">
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+          <valueString value="Encounter/{{context.patientId}}"/>
+        </extension>
+        <type value="Encounter"/>
+      </input>
+      <relatedAction>
+        <actionId value="create-resp-net-report"/>
+        <relationship value="before-start"/>
+      </relatedAction>
+    </action>
+  </action>
+  <action id="create-resp-net-report">
+    <description value="This action represents the creation, validation and submission of the RESP-NET report."/>
+    <textEquivalent value="Create Report and send to RESP-NET site."/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+        <code value="create-report"/>
+      </coding>
+    </code>
+    <input id="patient">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="Patient"/>
+    </input>
+    <input id="conditions">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Condition?patient=Patient/{{context.patientId}}&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active"/>
+      </extension>
+      <type value="Condition"/>
+    </input>
+    <input id="allergies">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="AllergyIntolerance?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="AllergyIntolerance"/>
+    </input>
+    <input id="careteam">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="CareTeam?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="CareTeam"/>
+    </input>
+    <input id="careplan">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="CarePlan?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="CarePlan"/>
+    </input>
+    <input id="goals">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Goal?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="Goal"/>
+    </input>
+    <input id="encounter">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Encounter/{{context.encounterId}}"/>
+      </extension>
+      <type value="Encounter"/>
+    </input>
+    <input id="medRequests">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="MedicationRequest?patient=Patient/{{context.patientId}}&amp;intent=order"/>
+      </extension>
+      <type value="MedicationRequest"/>
+    </input>
+    <input id="medStatements">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="MedicationStatement?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="MedicationStatement"/>
+    </input>
+    <input id="medAdms">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="MedicationAdministration?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="MedicationAdministration"/>
+    </input>
+    <input id="vitals">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Observation?patient=Patient/{{context.patientId}}&amp;category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs"/>
+      </extension>
+      <type value="Observation"/>
+    </input>
+    <input id="socialHistory">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Observation?patient=Patient/{{context.patientId}}&amp;category=http://terminology.hl7.org/CodeSystem/observation-category|social-history"/>
+      </extension>
+      <type value="Observation"/>
+    </input>
+    <input id="diagnosticOrders">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="DiagnosticReport?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="DiagnosticReport"/>
+    </input>
+    <input id="serviceRequests">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="ServiceRequest?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="ServiceRequest"/>
+    </input>
+    <input id="procedures">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Procedure?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="Procedure"/>
+    </input>
+    <input id="implantableDevices">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Device?patient=Patient/{{context.patientId}}"/>
+      </extension>
+      <type value="Device"/>
+    </input>
+    <input id="labs">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension">
+        <valueString value="Observation?patient=Patient/{{context.patientId}}&amp;category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory"/>
+      </extension>
+      <type value="Observation"/>
+    </input>
+    <output id="resp-net-report">
+      <type value="Bundle"/>
+      <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"/>
+    </output>
+    <relatedAction>
+      <actionId value="validate-resp-net-report"/>
+      <relationship value="before-start"/>
+    </relatedAction>
+  </action>
+  <action id="validate-resp-net-report">
+    <description value="This action represents the validation of the RESP-NET Report"/>
+    <textEquivalent value="Validate Report"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+        <code value="validate-report"/>
+      </coding>
+    </code>
+    <input id="created-resp-net-report">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension">
+        <valueString value="resp-net-report"/>
+      </extension>
+      <type value="Bundle"/>
+      <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"/>
+    </input>
+    <output id="validated-resp-net-report">
+      <type value="Bundle"/>
+      <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"/>
+    </output>
+    <relatedAction>
+      <actionId value="submit-resp-net-report"/>
+      <relationship value="before-start"/>
+    </relatedAction>
+  </action>
+  <action id="submit-resp-net-report">
+    <description value="This action represents the routing and sending of the RESP-NET Report"/>
+    <textEquivalent value="Route and send RESP-NET Report"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+        <code value="submit-report"/>
+      </coding>
+    </code>
+    <input id="valid-resp-net-report">
+      <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension">
+        <valueString value="validated-resp-net-report"/>
+      </extension>
+      <type value="Bundle"/>
+      <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"/>
+    </input>
+  </action>
+</PlanDefinition>

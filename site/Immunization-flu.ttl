@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Immunization/flu> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "flu"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative:</b> Immunization for Influenza, high dose seasonal</p><p><b>subject</b>: Eve Everywoman. Generated Summary:  Medical Record Number: 1032702; active; Eve Everywoman; ph: 1-(404)555-1212; gender: female; birthDate: 1974-11-24</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/cvx"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "135" ] ;
+       fhir:display [ fhir:v "Influenza, high dose seasonal" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2023-09-01"^^xsd:date] ; # 
+  fhir:primarySource [ fhir:v "true"^^xsd:boolean] . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

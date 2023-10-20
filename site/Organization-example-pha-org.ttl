@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Organization/example-pha-org> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-pha-org"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p> Public Health Organization</p> \n        </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.pha.org/fhir"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1063494177" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name [ fhir:v "Example PHA Organization"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(816)932-2000" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "3300 Washtenaw Avenue, Suite 227 Altanta GA" ] ;
+     fhir:line ( [ fhir:v "4401 Wornall Rd," ] ) ;
+     fhir:city [ fhir:v "Atlanta" ] ;
+     fhir:state [ fhir:v "GA" ] ;
+     fhir:postalCode [ fhir:v "81452" ]
+  ] ) ; # 
+  fhir:endpoint ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Endpoint/example-ph-endpoint> ;
+     fhir:reference [ fhir:v "Endpoint/example-ph-endpoint" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/resp-net/Endpoint/example-ph-endpoint> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Observation/observation-pregnancy-outcome-eve-everywoman> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-pregnancy-outcome-eve-everywoman"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "6" ] ;
+     fhir:lastUpdated [ fhir:v "2021-08-17T07:59:00.858+00:00"^^xsd:dateTime ] ;
+     fhir:source [ fhir:v "#BCXyWPUZO0vC56VR"^^xsd:anyURI ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-pregnancy-outcome-observation"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-pregnancy-outcome-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"observation-pregnancy-outcome-eve-everywoman\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;observation-pregnancy-outcome-eve-everywoman&quot; Version &quot;6&quot; Updated &quot;2021-08-17 07:59:00+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #BCXyWPUZO0vC56VR!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-us-ph-pregnancy-outcome-observation.html\">US Public Health Pregnancy Outcome Observation</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Outcome of pregnancy <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#63893-2)</span></p><p><b>subject</b>: <a href=\"Patient-patient-ecr-eve-everywoman.html\">Patient/patient-ecr-eve-everywoman: Eve Everywoman</a> &quot;&quot;</p><p><b>focus</b>: <a href=\"Observation-observation-pregnancy-status-eve-everywoman.html\">Observation/observation-pregnancy-status-eve-everywoman: Pregnancy (finding)</a></p><p><b>effective</b>: 2023-06-01</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-us-core-henry-seven.html\">Practitioner/practitioner-us-core-henry-seven</a> &quot; HENRY&quot;</p><p><b>value</b>: Term birth of newborn (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#21243004)</span></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Birth order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#73771-8)</span></td><td>1</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:63893-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "63893-2" ] ;
+       fhir:display [ fhir:v "Outcome of pregnancy" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Eve Everywoman" ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Observation/observation-pregnancy-status-eve-everywoman> ;
+     fhir:reference [ fhir:v "Observation/observation-pregnancy-status-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Pregnancy (finding)" ]
+  ] ) ; # 
+  fhir:effective [ fhir:v "2023-06-01"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-us-core-henry-seven" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:21243004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "21243004" ] ;
+       fhir:display [ fhir:v "Term birth of newborn (finding)" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:73771-8 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "73771-8" ] ;
+         fhir:display [ fhir:v "Birth order" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Observation/observation-pregnancy-status-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

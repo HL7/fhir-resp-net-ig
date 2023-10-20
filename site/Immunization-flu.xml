@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="flu"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Narrative:</b> Immunization for Influenza, high dose seasonal</p><p><b>subject</b>: Eve Everywoman. Generated Summary:  Medical Record Number: 1032702; active; Eve Everywoman; ph: 1-(404)555-1212; gender: female; birthDate: 1974-11-24</p></div>
+  </text>
+  <status value="completed"/>
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx"/>
+      <code value="135"/>
+      <display value="Influenza, high dose seasonal"/>
+    </coding>
+  </vaccineCode>
+  <patient>
+    <reference value="Patient/patient-ecr-eve-everywoman"/>
+  </patient>
+  <occurrenceDateTime value="2023-09-01"/>
+  <primarySource value="true"/>
+</Immunization>

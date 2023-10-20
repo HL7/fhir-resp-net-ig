@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="self-tylenol"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Narrative</b></p><p><b>id</b>: self-tylenol</p><p><b>identifier</b>: id: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>reported</b>: true</p><p><b>medication</b>: <span title="Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 1187314}">Tylenol PM Pill</span></p><p><b>subject</b>: <a href="Patient-patient-ecr-eve-everywoman.html">Eve Everywoman.</a></p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <system value="http://acme.org/prescriptions"/>
+    <value value="12345689"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="plan"/>
+  <reportedBoolean value="true"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="1187314"/>
+      <display value="Tylenol PM Pill"/>
+    </coding>
+    <text value="Tylenol PM Pill"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/patient-ecr-eve-everywoman"/>
+    <display value="Eve Everywoman"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/resp-net-encounter-example"/>
+    <display value="inpatient"/>
+  </encounter>
+  <authoredOn value="2019-06-24"/>
+  <requester>
+    <reference value="Patient/patient-ecr-eve-everywoman"/>
+    <display value="**self-prescribed**"/>
+  </requester>
+  <dosageInstruction>
+    <text value="Takes 1-2 tablets once daily at bedtime as needed for restless legs"/>
+  </dosageInstruction>
+</MedicationRequest>

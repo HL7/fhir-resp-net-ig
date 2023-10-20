@@ -1,0 +1,199 @@
+{
+  "package": "hl7.fhir.us.resp-net",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "US",
+  "extensions": [],
+  "profiles": {
+    "Composition": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition",
+        "title": "RESP-NET Composition"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle",
+        "title": "RESP-NET Surveys Reporting Bundle"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationadministration",
+        "title": "RESP-NET Medication Administration"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationstatement",
+        "title": "RESP-NET Medication Statement"
+      }
+    ],
+    "PlanDefinition": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition",
+        "title": "RESP-NET PlanDefinition"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-servicerequest",
+        "title": "RESP-NET Service Request"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/us-ph-patient",
+        "title": "US Public Health Patient"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource.interaction"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Patient.address",
+      "Patient.birthDate",
+      "Patient.communication.language",
+      "Patient.contact.address",
+      "Patient.contact.name",
+      "Patient.contact.telecom",
+      "Patient.gender",
+      "Patient.identifier",
+      "Patient.name",
+      "Patient.telecom"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthPlace": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "CapabilityStatement",
+      "ImplementationGuide",
+      "PlanDefinition",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-trigger-code-flag-extension": [
+      "Encounter.diagnosis"
+    ],
+    "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-date-determined-extension": [
+      "Observation",
+      "Observation.component"
+    ],
+    "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-date-recorded-extension": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-genderidentity-extension": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-tribal-affiliation-extension": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-async-indicator": [
+      "PlanDefinition"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension": [
+      "Bundle.entry.resource",
+      "MessageHeader",
+      "PlanDefinition"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encryption-algorithm": [
+      "PlanDefinition"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-expected-responsetime": [
+      "PlanDefinition"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension": [
+      "Bundle.entry.resource.action.action.input",
+      "Bundle.entry.resource.action.input",
+      "PlanDefinition.action.action.input",
+      "PlanDefinition.action.input"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype": [
+      "Bundle.entry.resource.action.trigger",
+      "PlanDefinition.action.trigger"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-endpoint": [
+      "PlanDefinition"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-jwks-url": [
+      "PlanDefinition"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension": [
+      "Bundle.entry.resource.action.input",
+      "PlanDefinition.action.input"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type": [
+      "Bundle.entry.resource",
+      "MessageHeader"
+    ],
+    "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-trust-service-endpoint": [
+      "PlanDefinition.action"
+    ],
+    "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-tribal-affiliation-extension": [
+      "Patient"
+    ]
+  }
+}

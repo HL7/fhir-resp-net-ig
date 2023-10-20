@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Organization/organization-ecr-salem-medical-center> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "organization-ecr-salem-medical-center"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "5" ] ;
+     fhir:lastUpdated [ fhir:v "2021-06-30T04:13:19.345+00:00"^^xsd:dateTime ] ;
+     fhir:source [ fhir:v "#xa4yJZjn68xVavoM"^^xsd:anyURI ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"organization-ecr-salem-medical-center\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;organization-ecr-salem-medical-center&quot; Version &quot;5&quot; Updated &quot;2021-06-30 04:13:19+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #xa4yJZjn68xVavoM!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-us-ph-organization.html\">US Public Health Organization</a></p></div><p><b>identifier</b>: id: 555555555</p><p><b>active</b>: true</p><p><b>name</b>: Salem Medical Center</p><p><b>telecom</b>: <a href=\"tel:+1-555-555-1111\">+1-555-555-1111</a>, <a href=\"mailto:mail@salemmedicalcenter.com\">mail@salemmedicalcenter.com</a></p><p><b>address</b>: 22222 Health Authority Drive Ann Arbor MI 99999 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hl7.org.fhir/sid/us-npi"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "555555555" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name [ fhir:v "Salem Medical Center"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+1-555-555-1111" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "mail@salemmedicalcenter.com" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "22222 Health Authority Drive" ] ) ;
+     fhir:city [ fhir:v "Ann Arbor" ] ;
+     fhir:state [ fhir:v "MI" ] ;
+     fhir:postalCode [ fhir:v "99999" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

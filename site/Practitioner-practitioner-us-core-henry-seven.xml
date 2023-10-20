@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-us-core-henry-seven"/>
+  <meta>
+    <versionId value="5"/>
+    <lastUpdated value="2021-08-17T08:00:32.356+00:00"/>
+    <source value="#2MfA6kIjmOmtAlIb"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Practitioner</b><a name="practitioner-us-core-henry-seven"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Practitioner &quot;practitioner-us-core-henry-seven&quot; Version &quot;5&quot; Updated &quot;2021-08-17 08:00:32+0000&quot; </p><p style="margin-bottom: 0px">Information Source: #2MfA6kIjmOmtAlIb!</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></p></div><p><b>identifier</b>: id: 9941339108</p><p><b>name</b>: Seven Henry </p><p><b>telecom</b>: <a href="mailto:henry.seven@example.com">henry.seven@example.com</a></p><p><b>address</b>: BMass Doctors 2100 North Ave Burlington MA 02368 US </p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="9941339108"/>
+  </identifier>
+  <name>
+    <family value="Henry"/>
+    <given value="Seven"/>
+    <suffix value="M.D."/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="henry.seven@example.com"/>
+  </telecom>
+  <address>
+    <line value="BMass Doctors"/>
+    <line value="2100 North Ave"/>
+    <city value="Burlington"/>
+    <state value="MA"/>
+    <postalCode value="02368"/>
+    <country value="US"/>
+  </address>
+</Practitioner>

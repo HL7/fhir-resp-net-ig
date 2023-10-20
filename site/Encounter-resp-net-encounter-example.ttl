@@ -1,0 +1,113 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Encounter/resp-net-encounter-example> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "resp-net-encounter-example"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2023-09-13T03:02:05.806+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-encounter"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"resp-net-encounter-example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;resp-net-encounter-example&quot; Version &quot;1&quot; Updated &quot;2023-09-13 03:02:05+0000&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-eicr-encounter.html\">eICR Encounter</a></p></div><p><b>identifier</b>: id: 9937012</p><p><b>status</b>: finished</p><p><b>class</b>: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'inpatient encounter')</p><p><b>type</b>: Inpatient stay for nine days <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#183807002)</span></p><p><b>subject</b>: <a href=\"Patient-patient-ecr-eve-everywoman.html\">Patient/patient-ecr-eve-everywoman: Eve Everywoman</a> &quot;&quot;</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td>attender <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-ParticipationType.html\">ParticipationType</a>#ATND)</span></td><td><a href=\"PractitionerRole-practitionerrole-henry-seven.html\">PractitionerRole/practitionerrole-henry-seven: Henry Seven</a></td></tr></table><p><b>period</b>: 2023-10-01 10:00:00-0500 --&gt; 2023-10-09 10:15:00-0500</p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Condition</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"Condition-influenza-example.html\">Condition/influenza-example</a></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-location-ecr-salem-medical-center.html\">Location/location-ecr-salem-medical-center: Clinic Bldg A, Salem Medical Center, 4646 Brown Rd, Salem, MA 02368</a> &quot;Clinic Bldg A, Salem Medical Center&quot;</td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-organization-ecr-salem-medical-center.html\">Organization/organization-ecr-salem-medical-center: Salem Medical Center, 22222 Health Authority Drive, Ann Arbor MI, 99999</a> &quot;Salem Medical Center&quot;</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hospital.smarthealthit.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9937012" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "IMP" ] ;
+     fhir:display [ fhir:v "inpatient encounter" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:183807002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "183807002" ]
+     ] ) ;
+     fhir:text [ fhir:v "Inpatient stay for nine days" ]
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Eve Everywoman" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ATND" ] ;
+         fhir:display [ fhir:v "attender" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:link <http://hl7.org/fhir/us/resp-net/PractitionerRole/practitionerrole-henry-seven> ;
+       fhir:reference [ fhir:v "PractitionerRole/practitionerrole-henry-seven" ] ;
+       fhir:display [ fhir:v "Henry Seven" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2023-10-01T10:00:00-05:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2023-10-09T10:15:00-05:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:diagnosis ( [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "triggerCodeValueSet"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "urn:oid:2.16.840.1.114222.4.11.7508"^^xsd:anyURI ]
+       ] [
+         fhir:url [ fhir:v "triggerCodeValueSetVersion"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "12/12/2018" ]
+       ] [
+         fhir:url [ fhir:v "triggerCode"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding, sct:6142004 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "6142004" ] ;
+           fhir:display [ fhir:v "Influenza (disorder)" ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-trigger-code-flag-extension"^^xsd:anyURI ]
+     ] ) ;
+     fhir:condition [
+       fhir:link <http://hl7.org/fhir/us/resp-net/Condition/influenza-example> ;
+       fhir:reference [ fhir:v "Condition/influenza-example" ]
+     ]
+  ] ) ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://hl7.org/fhir/us/resp-net/Location/location-ecr-salem-medical-center> ;
+       fhir:reference [ fhir:v "Location/location-ecr-salem-medical-center" ] ;
+       fhir:display [ fhir:v "Clinic Bldg A, Salem Medical Center, 4646 Brown Rd, Salem, MA 02368" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Organization/organization-ecr-salem-medical-center> ;
+     fhir:reference [ fhir:v "Organization/organization-ecr-salem-medical-center" ] ;
+     fhir:display [ fhir:v "Salem Medical Center, 22222 Health Authority Drive, Ann Arbor MI, 99999" ]
+  ] . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/PractitionerRole/practitionerrole-henry-seven> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Condition/influenza-example> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Location/location-ecr-salem-medical-center> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Organization/organization-ecr-salem-medical-center> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

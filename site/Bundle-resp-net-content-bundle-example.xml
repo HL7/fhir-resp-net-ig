@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="resp-net-content-bundle-example"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+    <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle"/>
+  </meta>
+  <type value="collection"/>
+  <timestamp value="2020-11-20T11:15:33-10:00"/>
+  <entry>
+    <fullUrl value="Composition/resp-net-composition-content-example"/>
+    <resource>
+      <Composition>
+        <id value="resp-net-composition-content-example"/>
+        <meta>
+          <versionId value="23"/>
+          <lastUpdated value="2021-08-19T22:06:32.441+00:00"/>
+          <source value="#6i8cijintDjJ8In2"/>
+          <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Eve Everywoman data for RESP-NET</b></p></div>
+        </text>
+        <identifier>
+          <value value="c03eab8c-11e8-4d0c-ad2a-b385395e27db"/>
+        </identifier>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="75619-7"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patient-ecr-eve-everywoman"/>
+          <display value="Eve Everywoman"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/resp-net-encounter-example"/>
+          <display value="RESP-NET Encounter Example"/>
+        </encounter>
+        <date value="2023-01-02T22:13:23Z"/>
+        <author>
+          <reference value="Practitioner/practitioner-us-core-henry-seven"/>
+          <display value="Henry Seven"/>
+        </author>
+        <title value="RESP-NET Report"/>
+        <section>
+          <title value="Reason for Visit Section"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29299-5"/>
+              <display value="Reason for visit Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p>Reason for Visit: Bad cough</p>
+</div>
+          </text>
+        </section>
+        <section>
+          <title value="Problems Section"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+              <display value="Problem list - Reported"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p>Influenza</p></div>
+          </text>
+          <entry>
+            <reference value="Condition/influenza-example"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Medications Section"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10160-0"/>
+              <display value="History of Medication use Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+ Take oseltamivir twice a day </div>
+          </text>
+          <entry>
+            <reference value="MedicationAdministration/medicationadministration-oseltamivir"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+</Bundle>

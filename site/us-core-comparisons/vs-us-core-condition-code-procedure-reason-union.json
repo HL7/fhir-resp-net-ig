@@ -1,0 +1,60 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "228e3b11-9762-431c-a6cc-241fadbab066-5",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/228e3b11-9762-431c-a6cc-241fadbab066-5",
+  "name" : "UnionUSCoreConditionCodeAndProcedureReasonCodes",
+  "title" : "Union of US Core Condition Code And Procedure Reason Codes",
+  "status" : "active",
+  "date" : "2023-10-06T11:27:47-05:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001"
+      }]
+    },
+    {
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "243796009"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "272379006"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}

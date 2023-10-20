@@ -1,0 +1,380 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Bundle/resp-net-specification-bundle-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "resp-net-specification-bundle-example"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-specification-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-specification-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:timestamp [ fhir:v "2020-11-20T11:15:33-10:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "PlanDefinition/plandefinition-resp-net-example"^^xsd:anyURI ] ;
+     fhir:resource ( <PlanDefinition/plandefinition-resp-net-example> )
+  ] ) . # 
+
+<PlanDefinition/plandefinition-resp-net-example> a fhir:PlanDefinition ;
+  fhir:id [ fhir:v "plandefinition-resp-net-example"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>Receiver Endpoint Address</b>: <a>Generated Summary: id: example-nchs-endpoint; status: active; <span title=\"{http://terminology.hl7.org/CodeSystem/endpoint-connection-type hl7-fhir-rest}\">HL7 FHIR</span>; name: PHAReceiver; endpointmanager@example.pha.org; period: 2020-11-20 --&gt; (ongoing); <span title=\"Codes: {http://hl7.org/fhir/resource-types Bundle}\">Bundle</span>; payloadMimeType: application/fhir+xml, payloadMimeType: application/fhir+json; address: http://example.pha.org/fhir</a></p><p><b>Author </b></p></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/plandefinition-resp-net-example"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0"] ; # 
+  fhir:name [ fhir:v "PlanDefinitionRespNetExample"] ; # 
+  fhir:title [ fhir:v "PlanDefinition RESP-NET Example"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "workflow-definition" ] ;
+       fhir:display [ fhir:v "Workflow Definition" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-06-01T12:32:29.858-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Public Health Work Group"] ; # 
+  fhir:description [ fhir:v "This is the RESP-NET Reporting Knowledge Artifact"] ; # 
+  fhir:effectivePeriod [
+     fhir:start [ fhir:v "2021-11-01"^^xsd:date ]
+  ] ; # 
+  fhir:relatedArtifact ( [
+     fhir:type [ fhir:v "depends-on" ] ;
+     fhir:label [ fhir:v "Health Care Survey Registered Participants" ] ;
+     fhir:resource [
+       fhir:v "http://nchs/fhir/r4/Group/healthcare-survey-participants"^^xsd:anyURI ;
+       fhir:link <http://nchs/fhir/r4/Group/healthcare-survey-participants>
+     ]
+  ] ) ; # 
+  fhir:action ( [
+     fhir:id [ fhir:v "start-workflow" ] ;
+     fhir:description [ fhir:v "This action represents the start of the reporting workflow in response to the encounter-end event" ] ;
+     fhir:textEquivalent [ fhir:v "Start the reporting workflow in response to an encounter-end event" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "initiate-reporting-workflow" ]
+       ] )
+     ] ) ;
+     fhir:trigger ( [
+       fhir:id [ fhir:v "encounter-end" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "encounter-end" ] ;
+             fhir:display [ fhir:v "Indicates the end of an encounter" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "named-event" ] ;
+       fhir:name [ fhir:v "encounter-end" ]
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "check-reportability" ] ;
+       fhir:relationship [ fhir:v "before-start" ] ;
+       fhir:offset [
+         a fhir:Duration ;
+         fhir:value [ fhir:v "72"^^xsd:decimal ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "h" ]
+       ]
+     ] )
+  ] [
+     fhir:id [ fhir:v "check-reportability" ] ;
+     fhir:description [ fhir:v "This action represents the start of the check for reportable conditions in response to the encounter-end event. This is an example of executing a reporting workflow with other actions." ] ;
+     fhir:textEquivalent [ fhir:v "Check Reportability" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "execute-reporting-workflow" ]
+       ] )
+     ] ) ;
+     fhir:action ( [
+       fhir:id [ fhir:v "is-ambulatory-encounter-reportable" ] ;
+       fhir:description [ fhir:v "This action represents the check for reportability of ambulatory encounters based on survey participation." ] ;
+       fhir:textEquivalent [ fhir:v "Check Participation of Provider to report on the encounter" ] ;
+       fhir:code ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "evaluate-condition" ]
+         ] )
+       ] ) ;
+       fhir:condition ( [
+         fhir:kind [ fhir:v "applicability" ] ;
+         fhir:expression [
+           fhir:language [ fhir:v "text/fhirpath" ] ;
+           fhir:expression [ fhir:v "%closedEncounter.participant.individual.identifier.where(system = 'http://hl7.org/fhir/sid/us-npi).value.subsetOf(participantGroup.member.entity.identifier.where(system = 'http://hl7.org/fhir/sid/us-npi).value)'" ]
+         ]
+       ] ) ;
+       fhir:input ( [
+         fhir:id [ fhir:v "closedEncounter" ] ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Encounter/{{context.patientId}}" ]
+         ] ) ;
+         fhir:type [ fhir:v "Encounter" ]
+       ] [
+         fhir:id [ fhir:v "participantGroup" ] ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Group/{{context.nchsGroupId}}" ]
+         ] ) ;
+         fhir:type [ fhir:v "Group" ]
+       ] ) ;
+       fhir:relatedAction ( [
+         fhir:actionId [ fhir:v "create-resp-net-report" ] ;
+         fhir:relationship [ fhir:v "before-start" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "is-inpatient-encounter-reportable" ] ;
+       fhir:description [ fhir:v "This action represents the check for reportability of inpatient encounters based on survey requirements." ] ;
+       fhir:textEquivalent [ fhir:v "Check criteria to report on the encounter" ] ;
+       fhir:code ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "evaluate-condition" ]
+         ] )
+       ] ) ;
+       fhir:condition ( [
+         fhir:kind [ fhir:v "applicability" ] ;
+         fhir:expression [
+           fhir:language [ fhir:v "text/fhirpath" ] ;
+           fhir:expression [ fhir:v "%closedEncounter.exists()" ]
+         ]
+       ] ) ;
+       fhir:input ( [
+         fhir:id [ fhir:v "inpatientEncounter" ] ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Encounter/{{context.patientId}}" ]
+         ] ) ;
+         fhir:type [ fhir:v "Encounter" ]
+       ] ) ;
+       fhir:relatedAction ( [
+         fhir:actionId [ fhir:v "create-resp-net-report" ] ;
+         fhir:relationship [ fhir:v "before-start" ]
+       ] )
+     ] )
+  ] [
+     fhir:id [ fhir:v "create-resp-net-report" ] ;
+     fhir:description [ fhir:v "This action represents the creation, validation and submission of the RESP-NET report." ] ;
+     fhir:textEquivalent [ fhir:v "Create Report and send to RESP-NET site." ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "create-report" ]
+       ] )
+     ] ) ;
+     fhir:input ( [
+       fhir:id [ fhir:v "patient" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "Patient" ]
+     ] [
+       fhir:id [ fhir:v "conditions" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition?patient=Patient/{{context.patientId}}&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active" ]
+       ] ) ;
+       fhir:type [ fhir:v "Condition" ]
+     ] [
+       fhir:id [ fhir:v "allergies" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "AllergyIntolerance" ]
+     ] [
+       fhir:id [ fhir:v "careteam" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CareTeam?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "CareTeam" ]
+     ] [
+       fhir:id [ fhir:v "careplan" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CarePlan?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "CarePlan" ]
+     ] [
+       fhir:id [ fhir:v "goals" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Goal?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "Goal" ]
+     ] [
+       fhir:id [ fhir:v "encounter" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Encounter/{{context.encounterId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "Encounter" ]
+     ] [
+       fhir:id [ fhir:v "medRequests" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest?patient=Patient/{{context.patientId}}&intent=order" ]
+       ] ) ;
+       fhir:type [ fhir:v "MedicationRequest" ]
+     ] [
+       fhir:id [ fhir:v "medStatements" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationStatement?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "MedicationStatement" ]
+     ] [
+       fhir:id [ fhir:v "medAdms" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationAdministration?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "MedicationAdministration" ]
+     ] [
+       fhir:id [ fhir:v "vitals" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs" ]
+       ] ) ;
+       fhir:type [ fhir:v "Observation" ]
+     ] [
+       fhir:id [ fhir:v "socialHistory" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|social-history" ]
+       ] ) ;
+       fhir:type [ fhir:v "Observation" ]
+     ] [
+       fhir:id [ fhir:v "diagnosticOrders" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DiagnosticReport?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "DiagnosticReport" ]
+     ] [
+       fhir:id [ fhir:v "serviceRequests" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "ServiceRequest" ]
+     ] [
+       fhir:id [ fhir:v "procedures" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Procedure?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "Procedure" ]
+     ] [
+       fhir:id [ fhir:v "implantableDevices" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Device?patient=Patient/{{context.patientId}}" ]
+       ] ) ;
+       fhir:type [ fhir:v "Device" ]
+     ] [
+       fhir:id [ fhir:v "labs" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory" ]
+       ] ) ;
+       fhir:type [ fhir:v "Observation" ]
+     ] ) ;
+     fhir:output ( [
+       fhir:id [ fhir:v "resp-net-report" ] ;
+       fhir:type [ fhir:v "Bundle" ] ;
+       fhir:profile ( [
+         fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle>
+       ] )
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "validate-resp-net-report" ] ;
+       fhir:relationship [ fhir:v "before-start" ]
+     ] )
+  ] [
+     fhir:id [ fhir:v "validate-resp-net-report" ] ;
+     fhir:description [ fhir:v "This action represents the validation of the RESP-NET Report" ] ;
+     fhir:textEquivalent [ fhir:v "Validate Report" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "validate-report" ]
+       ] )
+     ] ) ;
+     fhir:input ( [
+       fhir:id [ fhir:v "created-resp-net-report" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "resp-net-report" ]
+       ] ) ;
+       fhir:type [ fhir:v "Bundle" ] ;
+       fhir:profile ( [
+         fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle>
+       ] )
+     ] ) ;
+     fhir:output ( [
+       fhir:id [ fhir:v "validated-resp-net-report" ] ;
+       fhir:type [ fhir:v "Bundle" ] ;
+       fhir:profile ( [
+         fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle>
+       ] )
+     ] ) ;
+     fhir:relatedAction ( [
+       fhir:actionId [ fhir:v "submit-resp-net-report" ] ;
+       fhir:relationship [ fhir:v "before-start" ]
+     ] )
+  ] [
+     fhir:id [ fhir:v "submit-resp-net-report" ] ;
+     fhir:description [ fhir:v "This action represents the routing and sending of the RESP-NET Report" ] ;
+     fhir:textEquivalent [ fhir:v "Route and send RESP-NET Report" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "submit-report" ]
+       ] )
+     ] ) ;
+     fhir:input ( [
+       fhir:id [ fhir:v "valid-resp-net-report" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "validated-resp-net-report" ]
+       ] ) ;
+       fhir:type [ fhir:v "Bundle" ] ;
+       fhir:profile ( [
+         fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle>
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

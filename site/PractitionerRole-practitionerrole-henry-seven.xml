@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="practitionerrole-henry-seven"/>
+  <meta>
+    <versionId value="11"/>
+    <lastUpdated value="2021-08-17T08:00:32.355+00:00"/>
+    <source value="#KJ942UxvfdYWoHCF"/>
+    <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-practitionerrole"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PractitionerRole</b><a name="practitionerrole-henry-seven"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PractitionerRole &quot;practitionerrole-henry-seven&quot; Version &quot;11&quot; Updated &quot;2021-08-17 08:00:32+0000&quot; </p><p style="margin-bottom: 0px">Information Source: #KJ942UxvfdYWoHCF!</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-us-ph-practitionerrole.html">US Public Health PractitionerRole</a></p></div><p><b>identifier</b>: id: 9941339108</p><p><b>practitioner</b>: <a href="Practitioner-practitioner-us-core-henry-seven.html">Practitioner/practitioner-us-core-henry-seven: Henry Seven, MD</a> &quot; HENRY&quot;</p><p><b>organization</b>: <a href="Organization-organization-ecr-salem-medical-center.html">Organization/organization-ecr-salem-medical-center: Salem Medical Center</a> &quot;Salem Medical Center&quot;</p><p><b>code</b>: Primary Care Clinic/Center <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (provider-taxonomy#261QP2300X)</span></p><p><b>specialty</b>: Family practice <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#419772000)</span></p><p><b>location</b>: <a href="Location-location-ecr-salem-medical-center.html">Location/location-ecr-salem-medical-center: Salem Medical Center</a> &quot;Clinic Bldg A, Salem Medical Center&quot;</p><p><b>telecom</b>: <a href="mailto:henry.seven@example.com">henry.seven@example.com</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="9941339108"/>
+  </identifier>
+  <practitioner>
+    <reference value="Practitioner/practitioner-us-core-henry-seven"/>
+    <display value="Henry Seven, MD"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/organization-ecr-salem-medical-center"/>
+    <display value="Salem Medical Center"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://nucc.org/provider-taxonomy"/>
+      <code value="261QP2300X"/>
+      <display value="Primary Care Clinic/Center"/>
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="419772000"/>
+      <display value="Family practice"/>
+    </coding>
+  </specialty>
+  <location>
+    <reference value="Location/location-ecr-salem-medical-center"/>
+    <display value="Salem Medical Center"/>
+  </location>
+  <telecom>
+    <system value="email"/>
+    <value value="henry.seven@example.com"/>
+  </telecom>
+</PractitionerRole>

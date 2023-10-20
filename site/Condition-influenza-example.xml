@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="influenza-example"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-condition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Narrative</b></p><p><b>id</b>: influenza-example</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: Encounter Diagnosis</p><p><b>code</b>: <span title="Codes: {http://snomed.info/sct 442438000}"> Influenza caused by Influenza A virus (disorder) </span></p><p><b>subject</b>: <a href="Patient-patient-ecr-eve-everywoman.html">Eve Everywoman. Generated Summary: id: example; Medical Record Number: 1032702 (USUAL); active; Eve Everywoman; ph: 1-(404)555-1212(HOME), eve.everywoman@example.com; gender: female; birthDate: 1984-11-24</a></p><p><b>onset</b>: 2023-09-03</p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+    <text value="Active"/>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <text value="Confirmed"/>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+      <display value="Encounter Diagnosis"/>
+    </coding>
+    <text value="Encounter Diagnosis"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="442438000"/>
+      <display value="Influenza caused by Influenza A virus (disorder)"/>
+    </coding>
+    <text value="Influenza caused by Influenza A virus (disorder)"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-ecr-eve-everywoman"/>
+    <display value="Eve Everywoman"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/resp-net-encounter-example"/>
+  </encounter>
+  <onsetDateTime value="2023-10-01"/>
+  <asserter>
+    <reference value="Practitioner/practitioner-us-core-henry-seven"/>
+    <display value="Henry Seven, MD"/>
+  </asserter>
+</Condition>

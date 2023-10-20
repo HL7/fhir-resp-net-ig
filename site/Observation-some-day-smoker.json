@@ -1,0 +1,43 @@
+{
+  "resourceType" : "Observation",
+  "id" : "some-day-smoker",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>id</b>: some-day-smoker</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social History</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 72166-2}\">Tobacco smoking status</span></p><p><b>subject</b>: <a href=\"Patient-patient-ecr-eve-everywoman.html\">Eve Everywoman. Generated Summary: id: example; Medical Record Number: 1032702; active; Eve Everywoman ; ph: 51-(404)555-1212, eve.everywoman@example.com; gender: female; birthDate: 1974-11-24</a></p><p><b>issued</b>: 2023-03-18 </p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 428041000124106}\">Current some day smoker</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "social-history",
+      "display" : "Social History"
+    }],
+    "text" : "Social History"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "72166-2",
+      "display" : "Tobacco smoking status"
+    }],
+    "text" : "Tobacco smoking status"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-ecr-eve-everywoman"
+  },
+  "effectiveDateTime" : "2020-01-01",
+  "issued" : "2023-03-18T05:27:04Z",
+  "performer" : [{
+    "reference" : "Practitioner/practitioner-us-core-henry-seven"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "428041000124106"
+    }],
+    "text" : "Current some day smoker"
+  }
+}

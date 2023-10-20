@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="example"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationstatement"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b> Narrative: MedicationStatement</b></p></div>
+  </text>
+  <status value="entered-in-error"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="27658006"/>
+      <display value="Amoxicillin-containing product"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/patient-ecr-eve-everywoman"/>
+    <display value="Eve Everywoman"/>
+  </subject>
+  <effectiveDateTime value="2015-11-01"/>
+  <dateAsserted value="2015-11-01"/>
+  <informationSource>
+    <reference value="Patient/patient-ecr-eve-everywoman"/>
+  </informationSource>
+  <note>
+    <text value="Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin"/>
+  </note>
+</MedicationStatement>

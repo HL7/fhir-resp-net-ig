@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/PractitionerRole/practitionerrole-henry-seven> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "practitionerrole-henry-seven"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "11" ] ;
+     fhir:lastUpdated [ fhir:v "2021-08-17T08:00:32.355+00:00"^^xsd:dateTime ] ;
+     fhir:source [ fhir:v "#KJ942UxvfdYWoHCF"^^xsd:anyURI ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-practitionerrole"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PractitionerRole</b><a name=\"practitionerrole-henry-seven\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PractitionerRole &quot;practitionerrole-henry-seven&quot; Version &quot;11&quot; Updated &quot;2021-08-17 08:00:32+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #KJ942UxvfdYWoHCF!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-us-ph-practitionerrole.html\">US Public Health PractitionerRole</a></p></div><p><b>identifier</b>: id: 9941339108</p><p><b>practitioner</b>: <a href=\"Practitioner-practitioner-us-core-henry-seven.html\">Practitioner/practitioner-us-core-henry-seven: Henry Seven, MD</a> &quot; HENRY&quot;</p><p><b>organization</b>: <a href=\"Organization-organization-ecr-salem-medical-center.html\">Organization/organization-ecr-salem-medical-center: Salem Medical Center</a> &quot;Salem Medical Center&quot;</p><p><b>code</b>: Primary Care Clinic/Center <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (provider-taxonomy#261QP2300X)</span></p><p><b>specialty</b>: Family practice <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#419772000)</span></p><p><b>location</b>: <a href=\"Location-location-ecr-salem-medical-center.html\">Location/location-ecr-salem-medical-center: Salem Medical Center</a> &quot;Clinic Bldg A, Salem Medical Center&quot;</p><p><b>telecom</b>: <a href=\"mailto:henry.seven@example.com\">henry.seven@example.com</a></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-npi"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9941339108" ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-us-core-henry-seven" ] ;
+     fhir:display [ fhir:v "Henry Seven, MD" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Organization/organization-ecr-salem-medical-center> ;
+     fhir:reference [ fhir:v "Organization/organization-ecr-salem-medical-center" ] ;
+     fhir:display [ fhir:v "Salem Medical Center" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://nucc.org/provider-taxonomy"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "261QP2300X" ] ;
+       fhir:display [ fhir:v "Primary Care Clinic/Center" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:419772000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "419772000" ] ;
+       fhir:display [ fhir:v "Family practice" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Location/location-ecr-salem-medical-center> ;
+     fhir:reference [ fhir:v "Location/location-ecr-salem-medical-center" ] ;
+     fhir:display [ fhir:v "Salem Medical Center" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "henry.seven@example.com" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Organization/organization-ecr-salem-medical-center> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Location/location-ecr-salem-medical-center> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

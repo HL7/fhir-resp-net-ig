@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/MedicationAdministration/medicationadministration-oseltamivir> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicationadministration-oseltamivir"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationadministration"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>MedicationAdministration Narrative</b></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "261315" ] ;
+       fhir:display [ fhir:v "oseltamivir 75 MG Oral Capsule [Tamiflu]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Eve Everywomain" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2023-10-01T04:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2023-10-05T14:30:00+01:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-us-core-henry-seven" ]
+     ]
+  ] ) ; # 
+  fhir:dosage [
+     fhir:text [ fhir:v "75mg twice a day for 5 days" ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ] ;
+         fhir:display [ fhir:v "Oral use" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "75"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

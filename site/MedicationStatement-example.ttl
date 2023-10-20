@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/MedicationStatement/example> a fhir:MedicationStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationstatement"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationstatement>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Narrative: MedicationStatement</b></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "entered-in-error"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:27658006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "27658006" ] ;
+       fhir:display [ fhir:v "Amoxicillin-containing product" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Eve Everywoman" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2015-11-01"^^xsd:date] ; # 
+  fhir:dateAsserted [ fhir:v "2015-11-01"^^xsd:date] ; # 
+  fhir:informationSource [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

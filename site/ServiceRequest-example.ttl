@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/ServiceRequest/example> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-servicerequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-servicerequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Narrative: ServiceRequest</b></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "original-order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:103693007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "103693007" ] ;
+       fhir:display [ fhir:v "Diagnostic procedure (procedure)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Diagnostics Procedure" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:24627-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "24627-2" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chest CT" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2013-05-08T09:33:27+07:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-us-core-henry-seven" ]
+  ] . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

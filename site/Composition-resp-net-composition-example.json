@@ -1,0 +1,146 @@
+{
+  "resourceType" : "Composition",
+  "id" : "resp-net-composition-example",
+  "meta" : {
+    "versionId" : "23",
+    "lastUpdated" : "2021-08-19T22:06:32.441+00:00",
+    "source" : "#6i8cijintDjJ8In2",
+    "profile" : ["http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Eve Everywoman data for RESP-NET</b></p></div>"
+  },
+  "identifier" : {
+    "value" : "c03eab8c-11e8-4d0c-ad2a-b385395e27db"
+  },
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "75619-7"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient-ecr-eve-everywoman",
+    "display" : "Eve Everywoman"
+  },
+  "encounter" : {
+    "reference" : "Encounter/resp-net-encounter-example",
+    "display" : "RESP-NET Encounter Example"
+  },
+  "date" : "2023-01-02T22:13:23Z",
+  "author" : [{
+    "reference" : "Practitioner/practitioner-us-core-henry-seven",
+    "display" : "Henry Seven"
+  }],
+  "title" : "RESP-NET Report",
+  "section" : [{
+    "title" : "Reason for Visit Section",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "29299-5",
+        "display" : "Reason for visit Narrative"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Reason for Visit: Bad cough</p>\n</div>"
+    }
+  },
+  {
+    "title" : "Problems Section",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "11450-4",
+        "display" : "Problem list - Reported"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Influenza</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Condition/influenza-example"
+    }]
+  },
+  {
+    "title" : "Medications Section",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "10160-0",
+        "display" : "History of Medication use Narrative"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Take oseltamivir twice a day</div>"
+    },
+    "entry" : [{
+      "reference" : "MedicationAdministration/medicationadministration-oseltamivir"
+    }]
+  },
+  {
+    "title" : "Results Section",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "30954-2",
+        "display" : "Relevant diagnostic tests/laboratory data Narrative"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Results Section </div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/influenza"
+    }]
+  },
+  {
+    "title" : "Immunizations Section",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "11369-6",
+        "display" : "History of Immunization Narrative"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Immunizations Section </div>"
+    },
+    "entry" : [{
+      "reference" : "Immunization/flu"
+    }]
+  },
+  {
+    "title" : "Social History Section",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "29762-2",
+        "display" : "Social history Narrative"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Social History Section </div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/some-day-smoker"
+    },
+    {
+      "reference" : "Observation/observation-pregnancy-outcome-eve-everywoman"
+    },
+    {
+      "reference" : "Observation/observation-pregnancy-status-eve-everywoman"
+    },
+    {
+      "reference" : "Observation/observation-characteristics-of-home-environment-eve-everywoman"
+    }]
+  }]
+}

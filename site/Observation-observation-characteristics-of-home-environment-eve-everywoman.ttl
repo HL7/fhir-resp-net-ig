@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Observation/observation-characteristics-of-home-environment-eve-everywoman> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-characteristics-of-home-environment-eve-everywoman"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "5" ] ;
+     fhir:lastUpdated [ fhir:v "2021-06-30T05:17:19.330+00:00"^^xsd:dateTime ] ;
+     fhir:source [ fhir:v "#cgLJymHVJKry789c"^^xsd:anyURI ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-characteristics-of-home-environment"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-characteristics-of-home-environment>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"observation-characteristics-of-home-environment-eve-everywoman\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;observation-characteristics-of-home-environment-eve-everywoman&quot; Version &quot;5&quot; Updated &quot;2021-06-30 05:17:19+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #cgLJymHVJKry789c!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/ecr/STU2.1/StructureDefinition-us-ph-characteristics-of-home-environment.html\">US Public Health Characteristics of Home Environment</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Characteristics of residence <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75274-1)</span></p><p><b>subject</b>: <a href=\"Patient-patient-ecr-eve-everywoman.html\">Patient/patient-ecr-eve-everywoman: Eve Everywoman</a> &quot;&quot;</p><p><b>effective</b>: 2023-05-18 22:33:22+0000</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-us-core-henry-seven.html\">Practitioner/practitioner-us-core-henry-seven</a> &quot; HENRY&quot;</p><p><b>value</b>: Homeless <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#32911000)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:75274-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "75274-1" ] ;
+       fhir:display [ fhir:v "Characteristics of residence" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> ;
+     fhir:reference [ fhir:v "Patient/patient-ecr-eve-everywoman" ] ;
+     fhir:display [ fhir:v "Eve Everywoman" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-05-18T22:33:22Z"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-us-core-henry-seven" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:32911000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "32911000" ] ;
+       fhir:display [ fhir:v "Homeless" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/us/resp-net/Patient/patient-ecr-eve-everywoman> a fhir:us .
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

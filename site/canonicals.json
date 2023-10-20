@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "resp-net-data-source",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.org/fhir/us/resp-net/CapabilityStatement/resp-net-data-source",
+    "version" : "0.1.0",
+    "name" : "RespNetEHRCapabilityStatement"
+  },
+  {
+    "id" : "hl7.fhir.us.resp-net",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.org/fhir/us/resp-net/ImplementationGuide/hl7.fhir.us.resp-net",
+    "version" : "0.1.0",
+    "name" : "RESPNET"
+  },
+  {
+    "id" : "plandefinition-example",
+    "type" : "PlanDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/plandefinition-example",
+    "version" : "0.1.0",
+    "name" : "PlanDefinitionRespNetExample"
+  },
+  {
+    "id" : "resp-net-composition",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition",
+    "version" : "0.1.0",
+    "name" : "RESPNETComposition"
+  },
+  {
+    "id" : "resp-net-content-bundle",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle",
+    "version" : "0.1.0",
+    "name" : "RespNetContentBundle"
+  },
+  {
+    "id" : "resp-net-medicationadministration",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationadministration",
+    "version" : "0.1.0",
+    "name" : "RESP-NET MedicationAdministration"
+  },
+  {
+    "id" : "resp-net-medicationstatement",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationstatement",
+    "version" : "0.1.0",
+    "name" : "RESP-NET MedicationStatement"
+  },
+  {
+    "id" : "resp-net-plandefinition",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition",
+    "version" : "0.1.0",
+    "name" : "RESPNETPlanDefinition"
+  },
+  {
+    "id" : "resp-net-reporting-bundle",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle",
+    "version" : "0.1.0",
+    "name" : "RespNetReportingBundle"
+  },
+  {
+    "id" : "resp-net-servicerequest",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-servicerequest",
+    "version" : "0.1.0",
+    "name" : "RESP-NET ServiceRequest"
+  },
+  {
+    "id" : "us-ph-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/resp-net/StructureDefinition/us-ph-patient",
+    "version" : "0.1.0",
+    "name" : "USPublicHealthPatient"
+  }
+]

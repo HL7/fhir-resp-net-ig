@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="resp-net-reporting-bundle-example"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+    <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"/>
+  </meta>
+  <type value="message"/>
+  <timestamp value="2020-11-20T11:15:33-10:00"/>
+  <entry>
+    <fullUrl value="MessageHeader/messageheader-example-reportheader"/>
+    <resource>
+      <MessageHeader>
+        <id value="messageheader-example-reportheader"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+          <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <p>Reporting Data</p> 
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension">
+          <valueBoolean value="false"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"/>
+              <code value="subscription-notification"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <eventCoding>
+          <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/>
+          <code value="cancer-report-message"/>
+        </eventCoding>
+        <destination>
+          <name value="PHA endpoint"/>
+          <endpoint value="http://example.pha.org/fhir"/>
+        </destination>
+        <sender>
+          <reference value="Organization/example-healthcare-org"/>
+        </sender>
+        <source>
+          <name value="Healthcare Organization"/>
+          <software value="Backend Service App"/>
+          <version value="3.1.45.AABB"/>
+          <contact>
+            <system value="phone"/>
+            <value value="+1 (917) 123 4567"/>
+          </contact>
+          <endpoint value="http://example.healthcare.org/fhir"/>
+        </source>
+        <reason>
+          <coding>
+            <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
+            <code value="encounter-end"/>
+          </coding>
+        </reason>
+        <focus>
+          <reference value="Bundle/rep-content-bundle-example"/>
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Bundle/rep-content-bundle-example"/>
+    <resource>
+      <Bundle>
+        <id value="rep--content-bundle-example"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
+          <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle"/>
+        </meta>
+        <type value="collection"/>
+        <timestamp value="2020-11-20T11:15:33-10:00"/>
+        <entry>
+          <fullUrl value="Composition/rep-composition-content-example"/>
+          <resource>
+            <Composition>
+              <id value="rep-composition-content-example"/>
+              <meta>
+                <versionId value="23"/>
+                <lastUpdated value="2021-08-19T22:06:32.441+00:00"/>
+                <source value="#6i8cijintDjJ8In2"/>
+                <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"/>
+              </meta>
+              <text>
+                <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Eve Everywoman data for RESP-NET</b></p></div>
+              </text>
+              <identifier>
+                <value value="c03eab8c-11e8-4d0c-ad2a-b385395e27db"/>
+              </identifier>
+              <status value="final"/>
+              <type>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="75619-7"/>
+                </coding>
+              </type>
+              <subject>
+                <reference value="Patient/patient-ecr-eve-everywoman"/>
+                <display value="Eve Everywoman"/>
+              </subject>
+              <encounter>
+                <reference value="Encounter/resp-net-encounter-example"/>
+                <display value="Inpatient encounter"/>
+              </encounter>
+              <date value="2023-01-02T22:13:23Z"/>
+              <author>
+                <reference value="Practitioner/practitioner-us-core-henry-seven"/>
+                <display value="Henry Seven"/>
+              </author>
+              <title value="RESP-NET Report"/>
+              <section>
+                <title value="Reason for Visit Section"/>
+                <code>
+                  <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="29299-5"/>
+                    <display value="Reason for visit Narrative"/>
+                  </coding>
+                </code>
+                <text>
+                  <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p>Reason for Visit: Influenza</p>
+</div>
+                </text>
+              </section>
+              <section>
+                <title value="Problems Section"/>
+                <code>
+                  <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="11450-4"/>
+                    <display value="Problem list - Reported"/>
+                  </coding>
+                </code>
+                <text>
+                  <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p>Influenza</p></div>
+                </text>
+                <entry>
+                  <reference value="Condition/influenza-example"/>
+                </entry>
+              </section>
+              <section>
+                <title value="Medications Section"/>
+                <code>
+                  <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="10160-0"/>
+                    <display value="History of Medication use Narrative"/>
+                  </coding>
+                </code>
+                <text>
+                  <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+ Take oseltamivir twice a day </div>
+                </text>
+                <entry>
+                  <reference value="MedicationAdministration/medicationadministration-oseltamivir"/>
+                </entry>
+              </section>
+            </Composition>
+          </resource>
+        </entry>
+      </Bundle>
+    </resource>
+  </entry>
+</Bundle>

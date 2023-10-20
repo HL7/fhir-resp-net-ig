@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Practitioner/practitioner-us-core-henry-seven> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "practitioner-us-core-henry-seven"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "5" ] ;
+     fhir:lastUpdated [ fhir:v "2021-08-17T08:00:32.356+00:00"^^xsd:dateTime ] ;
+     fhir:source [ fhir:v "#2MfA6kIjmOmtAlIb"^^xsd:anyURI ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"practitioner-us-core-henry-seven\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;practitioner-us-core-henry-seven&quot; Version &quot;5&quot; Updated &quot;2021-08-17 08:00:32+0000&quot; </p><p style=\"margin-bottom: 0px\">Information Source: #2MfA6kIjmOmtAlIb!</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitioner.html\">US Core Practitioner Profile</a></p></div><p><b>identifier</b>: id: 9941339108</p><p><b>name</b>: Seven Henry </p><p><b>telecom</b>: <a href=\"mailto:henry.seven@example.com\">henry.seven@example.com</a></p><p><b>address</b>: BMass Doctors 2100 North Ave Burlington MA 02368 US </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-npi"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9941339108" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Henry" ] ;
+     fhir:given ( [ fhir:v "Seven" ] ) ;
+     fhir:suffix ( [ fhir:v "M.D." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "henry.seven@example.com" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "BMass Doctors" ] [ fhir:v "2100 North Ave" ] ) ;
+     fhir:city [ fhir:v "Burlington" ] ;
+     fhir:state [ fhir:v "MA" ] ;
+     fhir:postalCode [ fhir:v "02368" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

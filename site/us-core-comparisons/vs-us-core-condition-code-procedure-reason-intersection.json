@@ -1,0 +1,18 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "228e3b11-9762-431c-a6cc-241fadbab066-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/228e3b11-9762-431c-a6cc-241fadbab066-6",
+  "name" : "IntersectionUSCoreConditionCodeAndProcedureReasonCodes",
+  "title" : "Intersection of US Core Condition Code And Procedure Reason Codes",
+  "status" : "active",
+  "date" : "2023-10-06T11:27:47-05:00",
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    }]
+  }
+}

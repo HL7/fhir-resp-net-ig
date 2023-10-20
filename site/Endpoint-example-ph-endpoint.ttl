@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/resp-net/Endpoint/example-ph-endpoint> a fhir:Endpoint ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-ph-endpoint"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-11-29T02:03:28.045+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-endpoint"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-endpoint>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Public Health Agency Receiver</p>  \n    </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.pha.org/enpoint-identifier"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pha-endpoint-id" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:connectionType [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/endpoint-connection-type"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "hl7-fhir-rest" ]
+  ] ; # 
+  fhir:name [ fhir:v "PHAReceiver"] ; # 
+  fhir:managingOrganization [
+     fhir:link <http://hl7.org/fhir/us/resp-net/Organization/example-pha-org> ;
+     fhir:reference [ fhir:v "Organization/example-pha-org" ]
+  ] ; # 
+  fhir:contact ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "endpointmanager@example.pha.org" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2020-11-20"^^xsd:date ]
+  ] ; # 
+  fhir:payloadType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/resource-types"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Bundle" ]
+     ] )
+  ] ) ; # 
+  fhir:payloadMimeType ( [ fhir:v "application/fhir+xml"] [ fhir:v "application/fhir+json"] ) ; # 
+  fhir:address [ fhir:v "http://example.pha.org/fhir"^^xsd:anyURI] . # 
+
+<http://hl7.org/fhir/us/resp-net/Organization/example-pha-org> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+
