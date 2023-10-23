@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+  <id value="resp-net-ig"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+	<valueCode value="pher"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/resp-net/ImplementationGuide/resp-net"/>
+  <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden  -->
+  <version value="0.1.0"/>
+  <name value="RESPNET"/>
+  <title value="Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International / Public Health"/>
+  <contact>
+    <telecom>
+      <!-- Or whatever URL and/or email address(es) are appropriate -->
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+  </contact>
+  <description value="The RESP-NET Content IG focuses on the respiratory virus surveillance data that will be extracted from EHRs via FHIR and APIs and sent to RESP-NET sites."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.us.resp-net"/>
+ <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
+  <license value="CC0-1.0"/>
+  <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="uscoreR4">
+    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+    <packageId value="hl7.fhir.us.core"/>
+    <version value="3.1.1"/>
+  </dependsOn>
+  <dependsOn id="medmorphIg">
+    <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph"/>
+    <packageId value="hl7.fhir.us.medmorph"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <dependsOn id="smartapplaunch">
+    <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
+    <packageId value="hl7.fhir.uv.smart-app-launch"/>
+    <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="subscriptionsIg">
+    <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
+    <packageId value="hl7.fhir.uv.subscriptions-backport.r4"/>
+    <version value="1.1.0"/>
+  </dependsOn>
+ <!--  <dependsOn id="uspublichealthprofileslibraryIg">
+    <uri value="http://hl7.org/fhir/us/ph-library/ImplementationGuide/hl7.fhir.us.ph-library"/>
+    <packageId value="hl7.fhir.us.ph-library"/>
+    <version value="1.0.0"/>
+  </dependsOn> -->
+  <dependsOn id="ecrIg">
+    <uri value="http://hl7.org/fhir/us/ecr/ImplementationGuide/hl7.fhir.us.ecr"/>
+    <packageId value="hl7.fhir.us.ecr"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <definition>
+  <resource>
+      <reference>
+        <reference value="Bundle/resp-net-reporting-bundle-example"/>
+      </reference>
+      <name value="RESP-NET Reporting Bundle Example"/>
+      <description value="An example showing a Reporting Bundle for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="PlanDefinition/plandefinition-example"/>
+      </reference>
+      <name value="RESP-NET PlanDefinition Example"/>
+      <description value="An example showing a PlanDefinition for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Condition/influenza-example"/>
+      </reference>
+      <name value="Condition Influenza Example"/>
+      <description value="An example showing an Influenza Condition for RESP-NET."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ServiceRequest/example"/>
+      </reference>
+      <name value="ServiceRequest Example"/>
+      <description value="An example showing a ServiceRequest for RESP-NET."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="MedicationStatement/example"/>
+      </reference>
+      <name value="MedicationStatement Example"/>
+      <description value="An example showing a MedicationStatement for RESP-NET."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Encounter/resp-net-encounter-example"/>
+      </reference>
+      <name value="RESP-NET Encounter Example"/>
+      <description value="An Encounter example for RESP-NET."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="MedicationRequest/self-tylenol"/>
+      </reference>
+      <name value="MedicationRequest Example"/>
+      <description value="An example showing a MedicationRequest for RESP-NET."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Composition/resp-net-composition-example"/>
+      </reference>
+      <name value="Composition Example"/>
+      <description value="An example showing a Composition for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="MedicationAdministration/medicationadministration-oseltamivir"/>
+      </reference>
+      <name value="RESP-NET Medication Administration Example"/>
+      <description value="An example showing a Medication Administration resource"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Observation/influenza"/>
+      </reference>
+      <name value="RESP-NET Observation Example"/>
+      <description value="An example showing an Observation for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Immunization/flu"/>
+      </reference>
+      <name value="RESP-NET Immunization Example"/>
+      <description value="An example showing an Immunization for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Patient/patient-ecr-eve-everywoman"/>
+      </reference>
+      <name value="US Public Health Patient Example"/>
+      <description value="An example showing a Patient for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Practitioner/practitioner-us-core-henry-seven" />
+        <display value="Practitioner Seven Henry" />
+      </reference>
+      <name value="US Core Practitioner Example: Henry Seven" />
+      <description value="US Core Practitioner (Henry Seven) Example" />
+      <exampleBoolean value="true" />
+   </resource>
+   <resource>
+      <reference>
+        <reference value="PractitionerRole/practitionerrole-henry-seven" />
+        <display value="Practitioner Role Henry Seven" />
+      </reference>
+      <name value="US Core Practitioner Role Example: Henry Seven" />
+      <description value="US Core Practitioner Role (Henry Seven) Example" />
+      <exampleBoolean value="true" />
+   </resource>
+    <resource>
+      <reference>
+        <reference value="Organization/example-pha-org"/>
+      </reference>
+      <name value="Public Health Organization Example"/>
+      <description value="An example showing a Public Health Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Organization/example-healthcare-org"/>
+      </reference>
+      <name value="Healthcare Organization Example"/>
+      <description value="An example showing a HealthCare Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Organization/organization-ecr-salem-medical-center"/>
+      </reference>
+      <name value="Organization Example"/>
+      <description value="An example showing an Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/location-ecr-salem-medical-center"/>
+      </reference>
+      <name value="Location Example"/>
+      <description value="An example showing a Location."/>
+      <exampleBoolean value="true"/>
+   </resource>
+    <resource>
+      <reference>
+        <reference value="Endpoint/example-ph-endpoint"/>
+      </reference>
+      <name value="Public Health Organization Endpoint example"/>
+      <description value="An example showing a Public Health Organization Endpoint"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Endpoint/example-healthcare-endpoint"/>
+      </reference>
+      <name value="Healthcare Organization Endpoint example"/>
+      <description value="An example showing a Healthcare Organization Endpoint"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MessageHeader/messageheader-example-reportheader"/>
+      </reference>
+      <name value="MessageHeader example used in the RESP-NET Bundle sent to a RESP-NET site"/>
+      <description value="MessageHeader example used in the RESP-NET Bundle sent to a RESP-NET site"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/resp-net-content-bundle-example"/>
+      </reference>
+      <name value="Example of a Content Bundle containing Composition resource"/>
+      <description value="Example of a Content Bundle containing Composition resource"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/resp-net-specification-bundle-example"/>
+      </reference>
+      <name value="Example of a Specification Bundle containing PlanDefinition"/>
+      <description value="Example of a Specification Bundle containing PlanDefinition"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/observation-characteristics-of-home-environment-eve-everywoman"/>
+      </reference>
+      <name value="Example of Characteristic of Home Environment"/>
+      <description value="Example of a Characteristic of Home Environment"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/observation-pregnancy-outcome-eve-everywoman"/>
+      </reference>
+      <name value="Example of a Pregnancy Outcome"/>
+      <description value="Example of a Pregnancy Outcome"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/observation-pregnancy-status-eve-everywoman"/>
+      </reference>
+      <name value="Example of a Pregnancy Status"/>
+      <description value="Example of Pregnancy Status"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/some-day-smoker"/>
+      </reference>
+      <name value="Example of Smoking Status"/>
+      <description value="Example of Smoking Status"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content IG Home"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="spec.html"/>
+        <title value="Detailed Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Useful Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="credits.html"/>
+        <title value="Credits"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="changes.html"/>
+        <title value="IG Change History"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2021+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="STU1 Release 1"/>
+    </parameter>
+    <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
+    </parameter>
+    <parameter>
+      <code value="path-binary"/>
+      <value value="input\cql"/>
+    </parameter>
+    <parameter>
+      <code value="path-liquid"/>
+      <value value="templates\liquid"/>
+    </parameter>
+    <parameter>
+      <code value="path-expansion-params"/>
+      <value value="terminology-settings.json"/>
+    </parameter>
+    <parameter>
+      <code value="shownav"/>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

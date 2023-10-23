@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="resp-net-content-bundle"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-08-13T05:43:12.456+00:00"/>
+        <source value="#op9qv8RqccCL7zOB"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    	<valueCode value="pher"/> 
+  	</extension> 
+    <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle"/>
+    <version value="1.0.0"/>
+    <name value="RespNetContentBundle"/>
+    <title value="RESP-NET Content Bundle"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <date value="2019-09-01"/>
+    <publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="Bundle Resource profile for RESP-NET report content. This bundle is always part of the RESP-NET Reporting Bundle and organizes the information using a Composition resource and will contain all the resources referenced from a Composition resource."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Bundle"/>
+    <baseDefinition value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-content-bundle"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Bundle.entry">
+            <path value="Bundle.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resource"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:composition">
+            <path value="Bundle.entry"/>
+            <sliceName value="composition"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:composition.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"/>
+            </type>
+        </element>
+        <element id="Bundle.entry:allResources">
+            <path value="Bundle.entry"/>
+            <sliceName value="resources"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:allResources.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

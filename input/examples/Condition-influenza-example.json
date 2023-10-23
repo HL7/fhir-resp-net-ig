@@ -1,0 +1,67 @@
+{
+  "resourceType": "Condition",
+  "id": "influenza-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-condition"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>id</b>: influenza-example</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: Encounter Diagnosis</p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 442438000}\"> Influenza caused by Influenza A virus (disorder) </span></p><p><b>subject</b>: <a href=\"Patient-patient-ecr-eve-everywoman.html\">Eve Everywoman. Generated Summary: id: example; Medical Record Number: 1032702 (USUAL); active; Eve Everywoman; ph: 1-(404)555-1212(HOME), eve.everywoman@example.com; gender: female; birthDate: 1984-11-24</a></p><p><b>onset</b>: 2023-09-03</p></div>"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active",
+        "display": "Active"
+      }
+    ],
+    "text": "Active"
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed",
+        "display": "Confirmed"
+      }
+    ],
+    "text": "Confirmed"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        }
+      ],
+      "text": "Encounter Diagnosis"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "442438000",
+        "display": "Influenza caused by Influenza A virus (disorder)"
+      }
+    ],
+    "text": "Influenza caused by Influenza A virus (disorder)"
+  },
+  "subject": {
+    "reference": "Patient/patient-ecr-eve-everywoman",
+    "display": "Eve Everywoman"
+  },
+  "encounter": {
+  	"reference": "Encounter/resp-net-encounter-example"
+  },
+  "onsetDateTime": "2023-10-01",
+  "asserter": {
+    "reference": "Practitioner/practitioner-us-core-henry-seven",
+    "display": "Henry Seven, MD"
+  }
+}
