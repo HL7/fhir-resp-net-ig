@@ -1,2 +1,2 @@
 # fhir-resp-net-ig
-FHIR Respiratory Virus Hospitalization Surveillance Content Implementation Guide
+FHIR Respiratory Virus Hospitalization Surveillance Content Implementation Guide for CDC.
