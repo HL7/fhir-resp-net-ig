@@ -3,7 +3,7 @@
   "id" : "example",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-servicerequest"
+      "http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-servicerequest"
     ]
   },
   "text" : {

@@ -69,7 +69,7 @@
                 <ordered value="true"/>
                 <rules value="open"/>
             </slicing>
-            <min value="5"/>
+            <min value="6"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action.code">
@@ -229,6 +229,134 @@
             </example>
         </element>
 
+	<!--  Added workflow for Lab Result -->
+	<element id="PlanDefinition.action:positiveLabResultWorkflow">
+            <path value="PlanDefinition.action"/>
+            <sliceName value="positiveLabResultWorkflow"/>
+            <short value="Start Workflow Action due to a positive lab result"/>
+            <definition value="Defines the &quot;startr&quot; action"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.id">
+            <path value="PlanDefinition.action.id"/>
+            <min value="1"/>
+            <fixedString value="start-workflow-for-positive-lab-result"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.description">
+            <path value="PlanDefinition.action.description"/>
+            <short value="Starts the workflow due to a positive lab result"/>
+            <definition value="Description of the start workflow action."/>
+            <min value="1"/>
+            <fixedString value="This action represents the start of the reporting workflow in response to the labresult-change (e.g new lab result or modified existing lab result) event"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.textEquivalent">
+            <path value="PlanDefinition.action.textEquivalent"/>
+            <short value="Text equivalent of the start workflow action for positive lab result."/>
+            <definition value="Text equivalent of the start workflow action."/>
+            <min value="1"/>
+            <fixedString value="Start the reporting workflow in response to an labresult-change event"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.code">
+            <path value="PlanDefinition.action.code"/>
+            <short value="Code for the &quot;start&quot; action."/>
+            <definition value="The US-PH-PlanDefinition-Action code for the &quot;start&quot; action."/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <code value="initiate-reporting-workflow"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger">
+            <path value="PlanDefinition.action.trigger"/>
+            <short value="When the &quot;start&quot; action should be triggered."/>
+            <definition value="When the &quot;start&quot; action should be triggered."/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.extension">
+            <path value="PlanDefinition.action.trigger.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <description value="Extensions are always sliced by (at least) url"/>
+                <rules value="open"/>
+            </slicing>
+            <short value="Additional content defined by implementations"/>
+            <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+            <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+            <alias value="extensions"/>
+            <alias value="user content"/>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="Element.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+            </type>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.extension:namedEventType">
+            <path value="PlanDefinition.action.trigger.extension"/>
+            <sliceName value="namedEventType"/>
+            <short value="Indicates the types of named events to subscribe to from the EHR."/>
+            <definition value="Indicates the types of named events to subscribe to from the EHR."/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="Element.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype"/>
+            </type>
+            <mustSupport value="true"/>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.type">
+            <path value="PlanDefinition.action.trigger.type"/>
+            <fixedCode value="named-event"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.name">
+            <path value="PlanDefinition.action.trigger.name"/>
+            <definition value="The name of the event, labresult-change in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable $labresult"/>
+            <fixedString value="labresult-change"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.relatedAction">
+            <path value="PlanDefinition.action.relatedAction"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.relatedAction.actionId">
+            <path value="PlanDefinition.action.relatedAction.actionId"/>
+            <fixedId value="check-reportability"/>
+        </element>
+        <element id="PlanDefinition.action:positiveLabResultWorkflow.relatedAction.relationship">
+            <path value="PlanDefinition.action.relatedAction.relationship"/>
+            <fixedCode value="before-start"/>
+        </element>
 
     <element id="PlanDefinition.action:executeReportingWorkflow">
       <path value="PlanDefinition.action" />
