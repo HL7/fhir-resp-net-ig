@@ -58,22 +58,6 @@
   "title": "RESP-NET Report",
   "section": [
     {
-      "title": "Reason for Visit Section",
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "29299-5",
-            "display": "Reason for visit Narrative"
-          }
-        ]
-      },
-      "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Reason for Visit: Bad cough</p>\n</div>"
-      }
-    },
-    {
       "title": "Problems Section",
       "code": {
         "coding": [

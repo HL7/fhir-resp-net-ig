@@ -729,47 +729,5 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceCarePlanSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
-      <path value="Composition.section" />
-      <sliceName value="sliceCarePlanSection" />
-      <short value="Care Plan Section" />
-      <definition value="This section lists and describes the patient's care plan." />
-      <min value="0" />
-      <max value="1" />
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element>
-    <element id="Composition.section:sliceCarePlanSection.code">
-      <path value="Composition.section.code" />
-      <short value="Care Plan Section code" />
-      <definition value="Care Plan Section code" />
-      <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="18776-5" />
-        </coding>
-      </patternCodeableConcept>
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element>
-    <element id="Composition.section:sliceCarePlanSection.text">
-      <path value="Composition.section.text" />
-      <short value="Care Plan Section narrative" />
-      <definition value="Care Plan Section narrative" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:sliceCarePlanSection.entry">
-      <path value="Composition.section.entry" />
-      <mustSupport value="true" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan" />
-      </type>
-    </element>
   </differential>
 </StructureDefinition>

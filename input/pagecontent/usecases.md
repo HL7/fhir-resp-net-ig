@@ -49,7 +49,7 @@ The descriptions for each step in the above diagram include:
 * Step 7: The HDEA submits the created report to the Data Receiver.
 
 
-{% include img.html img="resp-net-actors-and-systems-no-HDEA.png" caption="Figure 2.2 - RESP-NET Actors and Systems without HDEA" %}
+{% include img.html img="resp-net-actors-and-systems-no-hdea.png" caption="Figure 2.2 - RESP-NET Actors and Systems without HDEA" %}
 The descriptions for each step in the above diagram include:
 * Step 1: The Data Receiver (e.g., RESP-NET Site) creates a Knowledge Artifact and makes it available via the Knowledge Artifact Repository.
      * Step 1a: Knowledge Artifact Repositories which implement notifications, can optionally notify the subscribers (Data Source, Administrators) of changes in the Knowledge Artifacts.
