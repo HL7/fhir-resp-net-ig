@@ -62,31 +62,6 @@
             <mustSupport value="true"/>
             <isModifier value="false"/>
         </element>
- <!--        <element id="Patient.extension:genderIdentity">
-            <path value="Patient.extension"/>
-            <sliceName value="genderIdentity"/>
-            <min value="0"/>
-            <max value="*"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity"/>
-            </type>
-            <mustSupport value="true"/>
-            <isModifier value="false"/>
-        </element> -->
-        <element id="Patient.extension:tribalAffiliation">
-            <path value="Patient.extension"/>
-            <sliceName value="tribalAffiliation"/>
-            <short value="Tribal affiliation and membership of the patient"/>
-            <min value="0"/>
-            <max value="*"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-tribal-affiliation-extension"/>
-            </type>
-            <mustSupport value="true"/>
-            <isModifier value="false"/>
-        </element>
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
             <min value="1"/>

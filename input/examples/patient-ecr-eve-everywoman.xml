@@ -46,18 +46,6 @@
       </valueCodeableConcept>
     </extension>
   </extension>
-  <extension url="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-tribal-affiliation-extension">
-    <extension url="TribeName">
-      <valueCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS" />
-        <code value="91" />
-        <display value="Fort Mojave Indian Tribe of Arizona, California &amp; Nevada" />
-      </valueCoding>
-    </extension>
-    <extension url="EnrolledTribeMember">
-      <valueBoolean value="true" />
-    </extension>
-  </extension>
   <identifier>
     <use value="usual" />
     <type>

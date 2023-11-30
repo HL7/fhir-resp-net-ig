@@ -41,9 +41,9 @@
         <element id="Bundle.entry">
             <path value="Bundle.entry"/>
             <slicing>
-                <discriminator>
-                    <type value="profile"/>
-                    <path value="$this.resource"/>
+                 <discriminator>
+                    <type value="type"/>
+                    <path value="resource"/>
                 </discriminator>
                 <rules value="open"/>
             </slicing>
@@ -61,20 +61,6 @@
             <type>
                 <code value="Resource"/>
                 <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"/>
-            </type>
-        </element>
-        <element id="Bundle.entry:allResources">
-            <path value="Bundle.entry"/>
-            <sliceName value="resources"/>
-            <min value="0"/>
-            <max value="*"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Bundle.entry:allResources.resource">
-            <path value="Bundle.entry.resource"/>
-            <type>
-                <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
             </type>
         </element>
     </differential>

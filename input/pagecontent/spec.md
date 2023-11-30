@@ -1,4 +1,4 @@
-This section defines the specific requirements for systems wishing to conform to actors specified in this Respiratory Virus Hospitalization Surveillance Content Implementation Guide (IG). The specification focuses on using the Health Data Exchange App (HDEA), Making Electronic Data More available for Research and Public Health's (MedMorph) backend services app, to report the data to Respiratory Virus Hospitalization Surveillance Network (RESP-NET) sites.
+This section defines the specific requirements for systems wishing to conform to actors specified in this Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide (IG). The specification focuses on using the Health Data Exchange App (HDEA), Making Electronic Data More available for Research and Public Health's (MedMorph) backend services app, to report the data to RESP-NET sites.
 
 ### Pre-reading
 Before reading this formal specification, implementers should first be familiar with the [Use Cases](usecases.html) page which provides the business context and general process flow.
