@@ -13,7 +13,7 @@
     <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-reporting-bundle"/>
     <version value="1.0.0"/>
     <name value="RespNetReportingBundle"/>
-    <title value="RESP-NET Surveys Reporting Bundle"/>
+    <title value="RESP-NET Reporting Bundle"/>
     <status value="draft"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
