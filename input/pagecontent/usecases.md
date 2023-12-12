@@ -32,7 +32,7 @@ The following actors from the [MedMorph RA IG]({{site.data.fhir.ver.medmorphIg}}
 * Data Receiver (e.g., RESP-NET Site)
 
 #### Interactions between MedMorph RA Actors and Systems for RESP-NET
-This section outlines the high-level interactions between the various MedMorph Actors and Systems listed above. These interactions are shown in Figures 2.1 and Figure 2.2 along with the descriptions of each step.
+This section outlines the high-level interactions between the various MedMorph Actors and Systems listed above. There are two ways for a RESP-NET report to be created. The first is to use the MedMorph HDEA which is described in Figure 2.1 below. Figure 2.2 is for a Data Source who wishes to use their own functionality (not the HDEA) to create a RESP-NET report.
 
 {% include img.html img="resp-net-actors-and-systems.png" caption="Figure 2.1 - RESP-NET Actors and Systems with HDEA" %}
 
@@ -50,6 +50,9 @@ The descriptions for each step in the above diagram include:
 
 
 {% include img.html img="resp-net-actors-and-systems-no-hdea.png" caption="Figure 2.2 - RESP-NET Actors and Systems without HDEA" %}
+
+For a Data Source that doesn't want to use the HDEA, we have provided an alternate workflow for creating a RESP-NET report. The descriptions for each step in the above diagram include:
+
 The descriptions for each step in the above diagram include:
 * Step 1: The Data Receiver (e.g., RESP-NET Site) creates a Knowledge Artifact and makes it available via the Knowledge Artifact Repository.
      * Step 1a: Knowledge Artifact Repositories which implement notifications, can optionally notify the subscribers (Data Source, Administrators) of changes in the Knowledge Artifacts.

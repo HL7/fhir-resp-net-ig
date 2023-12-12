@@ -23,8 +23,8 @@
     "coding" : [
     {
       "system" : "http://snomed.info/sct",
-      "code" : "103693007",
-      "display" : "Diagnostic procedure (procedure)"
+      "code" : "363679005",
+      "display" : "Imaging"
     }
     ],
     "text" : "Diagnostics Procedure"
