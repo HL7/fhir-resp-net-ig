@@ -8,10 +8,10 @@
         <source value="#xa4yJZjn68xVavoM"/>
         <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-organization"/>
     </meta>
-    <identifier>
-        <system value="http://hl7.org.fhir/sid/us-npi"/>
+  <!--    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
         <value value="555555555"/>
-    </identifier>
+    </identifier> -->
     <active value="true"/>
     <name value="Salem Medical Center"/>
     <telecom>
