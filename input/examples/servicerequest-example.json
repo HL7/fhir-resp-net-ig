@@ -10,6 +10,12 @@
     "status" : "extensions",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Narrative: ServiceRequest</b></p></div>"
   },
+  "identifier" : [
+    {
+      "system" : "http://lab.smarthealthit.org",
+      "value" : "061ef612-344f-4e7b-81a8-1059ae7bbe11"
+    }
+  ],
   "status" : "active",
   "intent" : "original-order",
   "category" : [

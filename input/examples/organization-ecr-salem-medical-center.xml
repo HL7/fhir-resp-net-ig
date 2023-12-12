@@ -9,13 +9,9 @@
         <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-organization"/>
     </meta>
     <identifier>
-   	 	<system value="http://example.healthcare.org/fhir"/>
-    	<value value="1063494177"/>
-  	</identifier>
- <!--    <identifier>
         <system value="http://hl7.org.fhir/sid/us-npi"/>
         <value value="555555555"/>
-    </identifier> -->
+    </identifier>
     <active value="true"/>
     <name value="Salem Medical Center"/>
     <telecom>

@@ -12,14 +12,6 @@
     "status": "extensions",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>Receiver Endpoint Address</b>: <a>Generated Summary: id: example-nchs-endpoint; status: active; <span title=\"{http://terminology.hl7.org/CodeSystem/endpoint-connection-type hl7-fhir-rest}\">HL7 FHIR</span>; name: PHAReceiver; endpointmanager@example.pha.org; period: 2020-11-20 --&gt; (ongoing); <span title=\"Codes: {http://hl7.org/fhir/resource-types Bundle}\">Bundle</span>; payloadMimeType: application/fhir+xml, payloadMimeType: application/fhir+json; address: http://example.pha.org/fhir</a></p><p><b>Author</b></p></div>"
   },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-endpoint",
-      "valueReference": {
-        "reference": "Endpoint/example-ph-endpoint"
-      }
-    }
-  ],
   "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/plandefinition-example",
   "version": "1.0",
   "name": "PlanDefinitionRespNetExample",
@@ -82,6 +74,53 @@
           ],
           "type": "named-event",
           "name": "encounter-end"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "check-reportability",
+          "relationship": "before-start",
+          "offsetDuration": {
+            "value": 72,
+            "system": "http://unitsofmeasure.org",
+            "code": "h"
+          }
+        }
+      ]
+    },
+    {
+      "id": "start-workflow-for-positive-lab-result",
+      "description": "This action represents the start of the reporting workflow in response to the labresult-change (e.g new lab result or modified existing lab result) event",
+      "textEquivalent": "Start the reporting workflow in response to an labresult-change event",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+              "code": "initiate-reporting-workflow"
+            }
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "id": "labresult-change",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
+                    "code": "labresult-change",
+                    "display": "Indicates change in a patient's labresults"
+                  }
+                ]
+              }
+            }
+          ],
+          "type": "named-event",
+          "name": "labresult-change"
         }
       ],
       "relatedAction": [
