@@ -12,7 +12,7 @@
   "timestamp": "2020-11-20T11:15:33-10:00",
   "entry": [
     {
-      "fullUrl": "MessageHeader/messageheader-example-reportheader",
+      "fullUrl": "http://hl7.org/fhir/us/resp-net/MessageHeader/messageheader-example-reportheader",
       "resource": {
         "resourceType": "MessageHeader",
         "id": "messageheader-example-reportheader",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "fullUrl": "Bundle/rep-content-bundle-example",
+      "fullUrl": "http://hl7.org/fhir/us/resp-net/Bundle/rep-content-bundle-example",
       "resource": {
         "resourceType": "Bundle",
         "id": "rep--content-bundle-example",
@@ -98,7 +98,7 @@
         "timestamp": "2020-11-20T11:15:33-10:00",
         "entry": [
           {
-            "fullUrl": "Composition/rep-composition-content-example",
+            "fullUrl": "http://hl7.org/fhir/us/resp-net/Composition/rep-composition-content-example",
             "resource": {
               "resourceType": "Composition",
               "id": "rep-composition-content-example",
@@ -180,6 +180,27 @@
                     }
                   ]
                 },
+                {
+      "title": "Results Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "30954-2",
+            "display": "Relevant diagnostic tests/laboratory data Narrative"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Results Section </div>"
+      },
+      "entry": [
+        {
+          "reference": "Observation/influenza"
+        }
+      ]
+    },
                 {
                   "title": "Medications Section",
                   "code": {

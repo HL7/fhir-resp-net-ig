@@ -12,7 +12,7 @@
   "timestamp": "2020-11-20T11:15:33-10:00",
   "entry": [
     {
-      "fullUrl": "PlanDefinition/plandefinition-resp-net-example",
+      "fullUrl": "http://hl7.org/fhir/us/resp-net/PlanDefinition/plandefinition-resp-net-example",
       "resource": {
         "resourceType": "PlanDefinition",
         "id": "plandefinition-resp-net-example",
@@ -103,6 +103,53 @@
               }
             ]
           },
+          {
+      "id": "start-workflow-for-positive-lab-result",
+      "description": "This action represents the start of the reporting workflow in response to the labresult-change (e.g new lab result or modified existing lab result) event",
+      "textEquivalent": "Start the reporting workflow in response to an labresult-change event",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+              "code": "initiate-reporting-workflow"
+            }
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "id": "labresult-change",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
+                    "code": "labresult-change",
+                    "display": "Indicates change in a patient's labresults"
+                  }
+                ]
+              }
+            }
+          ],
+          "type": "named-event",
+          "name": "labresult-change"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "check-reportability",
+          "relationship": "before-start",
+          "offsetDuration": {
+            "value": 72,
+            "system": "http://unitsofmeasure.org",
+            "code": "h"
+          }
+        }
+      ]
+    },
           {
             "id": "check-reportability",
             "description": "This action represents the start of the check for reportable conditions in response to the encounter-end event. This is an example of executing a reporting workflow with other actions.",

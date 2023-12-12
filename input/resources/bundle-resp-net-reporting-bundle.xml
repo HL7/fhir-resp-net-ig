@@ -61,7 +61,7 @@
         <element id="Bundle.entry:sliceMessageHeader.resource">
             <path value="Bundle.entry.resource"/>
             <type>
-                <code value="Resource"/>
+                <code value="MessageHeader"/>
                 <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
             </type>
         </element>
@@ -75,7 +75,7 @@
         <element id="Bundle.entry:contentBundle.resource">
             <path value="Bundle.entry.resource"/>
             <type>
-                <code value="Resource"/>
+                <code value="Bundle"/>
                 <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-content-bundle"/>
             </type>
         </element>
