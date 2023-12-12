@@ -55,7 +55,7 @@
           }
         ],
         "sender": {
-          "reference": "http://hl7.org/fhir/us/resp-net/Organization/example-healthcare-org"
+          "reference": "Organization/example-healthcare-org"
         },
         "source": {
           "name": "Healthcare Organization",
