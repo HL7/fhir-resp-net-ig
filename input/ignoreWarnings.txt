@@ -3,7 +3,7 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
-# This has to be fixed prior to publishing: The following zulip thread documents the issue: (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Bundle.20creation.20issue.20with.20references.20to.20other.20resources)
+# This has to be fixed prior to publishing and is documented in the following [Bundle Zulip Thread](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Bundle.20creation.20issue.20with.20references.20to.20other.20resources)
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
 Can't find 'Patient/patient-ecr-eve-everywoman' in the bundle (Bundle.entry[1].resource.entry[0].resource.subject)
 Can't find 'Encounter/resp-net-encounter-example' in the bundle (Bundle.entry[1].resource.entry[0].resource.encounter)
@@ -12,7 +12,7 @@ Can't find 'Condition/influenza-example' in the bundle (Bundle.entry[1].resource
 Can't find 'Observation/influenza' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[1].entry[0])
 Can't find 'MedicationAdministration/medicationadministration-oseltamivir' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[2].entry[0])
 
-# This has to be fixed prior to publishing: The following issue is documented in the zulip thread: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/WG.20definition.20extension.20from.20ig.2Exml.20being.20propagated
+# This has to be fixed prior to publishing and is documented in the following [Extension Propagation Zulip Thread](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/WG.20definition.20extension.20from.20ig.2Exml.20being.20propagated)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # The following is a known issue with the Terminology

@@ -717,7 +717,18 @@
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus" />
       </type>
       <mustSupport value="true" />
-    </element>      
+    </element> 
+    <element id="Composition.section:sliceSocialHistorySection.entry:sliceDisabilityStatus">
+     <path value="Composition.section.entry" />
+      <sliceName value="sliceDisabilityStatus" />
+      <short value="Disability Status" />
+      <definition value="Disability Status entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-disability-status" />
+      </type>
+      <mustSupport value="true" />
+    </element>     
     <element id="Composition.section:sliceSocialHistorySection.entry:sliceCharacteristicsOfHomeEnvironment">
       <path value="Composition.section.entry" />
       <sliceName value="sliceCharacteristicsOfHomeEnvironment" />
@@ -729,5 +740,62 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:slicePregnancySection">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <sliceName value="slicePregnancySection" />
+      <short value="Pregnancy Section" />
+      <definition value="This section contains pregnancy data" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:slicePregnancySection.code">
+      <path value="Composition.section.code" />
+      <short value="Pregnancy Section code" />
+      <definition value="Pregnancy Section code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="90767-5" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:slicePregnancySection.text">
+      <path value="Composition.section.text" />
+      <short value="Pregnancy Section narrative" />
+      <definition value="Pregnancy Section narrative" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:slicePregnancySection.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:slicePregnancySection.entry:slicePregnancyOutcome">
+     <path value="Composition.section.entry" />
+      <sliceName value="slicePregnancyOutcome" />
+      <short value="Pregnancy Outcome" />
+      <definition value="Pregnancy Outcome entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-pregnancy-outcome-observation" />
+      </type>
+      <mustSupport value="true" />
+    </element> 
+    
   </differential>
 </StructureDefinition>
