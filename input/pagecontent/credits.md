@@ -10,7 +10,7 @@
 
 ##### Primary Lead:
 
-* Carrie Reed 
+* Carrie Reed
 
 ##### RESP-NET SMEs:
 
