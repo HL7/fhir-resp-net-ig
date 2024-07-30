@@ -9,7 +9,7 @@
 	Influenza, and RSV (known as COVID-NET, FluSurv-NET, and RSV-NET, respectively) cover more than 29 million people and include an estimated 8-10% of the U.S. population.
 	</p>
 	<p>
-	This guide leverages the [US Core]({{site.data.fhir.ver.uscoreR4}}), [Subscriptions Backport IG]({{site.data.fhir.ver.subscriptionsIg}}/index.html), [US Public Health Profiles Library IG]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/index.html),
+	This guide leverages the <a href="site.data.fhir.ver.uscoreR4">US Core</a>, [Subscriptions Backport IG]({{site.data.fhir.ver.subscriptionsIg}}/index.html), [US Public Health Profiles Library IG]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/index.html),
   and [electronic Case Reporting (eCR) IG]({{site.data.fhir.ver.ecrIg}}/index.html) along with other relevant existing health data and 
 	exchange standards to provide the profiles and necessary extensions required for patient-level data exchange on persons 
 	hospitalized with respiratory viruses to public health surveillance partners in RESP-NET.  The goal is 
