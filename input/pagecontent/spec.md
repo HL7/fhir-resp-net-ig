@@ -46,7 +46,7 @@ This IG leverages the [Subscriptions Backport IG]({{site.data.fhir.ver.subscript
 This IG leverages the [US Public Health Profiles Library IG]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/index.html) defined by the Public Health WG as a collection of reusable architecture and content profiles representing common public health concepts and patterns. The USPHPL IG is intended to be a complement to US Core used to ease implementation burden of healthcare organizations, electronic health record companies, public health agencies, and others involved in the US public health endeavor.
 
 #### electronic Case Reporting (eCR) IG Usage
-This IG leverages the [electronic Case Reporting (eCR) IG]({{site.data.fhir.ver.ecrIg}}/index.html) defined by the Public Health WG specifies the appropriate FHIR resources and transactions needed for the eCR process. FHIR offers opportunities to further enable automated triggering and reporting of cases from EHRs, to ease implementation and integration, to support the acquisition of public health investigation supplemental data, and to connect public health information (e.g., guidelines) with clinical workflows.
+This IG leverages the [electronic Case Reporting (eCR) IG]({{site.data.fhir.ver.ecrIg}}/index.html) defined by the Public Health WG which specifies the appropriate FHIR resources and transactions needed for the eCR process. FHIR offers opportunities to further enable automated triggering and reporting of cases from EHRs, to ease implementation and integration, to support the acquisition of public health investigation supplemental data, and to connect public health information (e.g., guidelines) with clinical workflows.
 
 ### Implementation Requirements
 
