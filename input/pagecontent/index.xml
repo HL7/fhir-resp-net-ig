@@ -9,13 +9,14 @@
 	Influenza, and RSV (known as COVID-NET, FluSurv-NET, and RSV-NET, respectively) cover more than 29 million people and include an estimated 8-10% of the U.S. population.
 	</p>
 	<p>
-	This guide leverages the <a href="site.data.fhir.ver.uscoreR4">US Core</a>, [Subscriptions Backport IG]({{site.data.fhir.ver.subscriptionsIg}}/index.html), [US Public Health Profiles Library IG]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/index.html),
-  and [electronic Case Reporting (eCR) IG]({{site.data.fhir.ver.ecrIg}}/index.html) along with other relevant existing health data and 
+	This guide leverages the <a href="site.data.fhir.ver.uscoreR4">US Core IG</a>, <a href="site.data.fhir.ver.subscriptionsIg">Subscriptions Backport IG</a>, 
+  <a href="site.data.fhir.ver.uspublichealthprofileslibraryIg">US Public Health Profiles Library IG</a>,
+  and <a href="site.data.fhir.ver.ecrIg">electronic Case Reporting (eCR) IG</a> along with other relevant existing health data and 
 	exchange standards to provide the profiles and necessary extensions required for patient-level data exchange on persons 
 	hospitalized with respiratory viruses to public health surveillance partners in RESP-NET.  The goal is 
 	to improve the availability of EHR data for public health surveillance of hospitalized persons with influenza and 
 	other respiratory viruses and reduce the burden of data collection on surveillance officers and healthcare facilities 
-	and complement ongoing CDC data modernization initiatives. It also refers to the [MedMorph Reference Architecture (RA) IG]({{site.data.fhir.ver.medmorphIg}}/index.html)
+	and complement ongoing CDC data modernization initiatives. It also refers to the <a href="site.data.fhir.ver.medmorphIg">MedMorph Reference Architecture (RA) IG</a>
   for organizations who utilize the Health Data Exchange App (HDEA) in their implementations.
 	</p>
 	

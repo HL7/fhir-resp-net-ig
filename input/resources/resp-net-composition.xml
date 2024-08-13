@@ -367,7 +367,7 @@
       <short value="Lab Result Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab" />
+        <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-lab-result-observation" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -567,6 +567,7 @@
     </element>
     <element id="Composition.section:sliceImmunizationsSection.entry">
       <path value="Composition.section.entry" />
+      <sliceName value="sliceImmunizations"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization" />
@@ -611,6 +612,7 @@
     </element>
     <element id="Composition.section:sliceProceduresSection.entry">
       <path value="Composition.section.entry" />
+      <sliceName value="sliceProcedures"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-procedure" />
@@ -655,6 +657,7 @@
     </element>
     <element id="Composition.section:sliceVitalSignsSection.entry">
       <path value="Composition.section.entry" />
+      <sliceName value="sliceVitalSigns"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs" />
@@ -796,6 +799,28 @@
       </type>
       <mustSupport value="true" />
     </element> 
+    <element id="Composition.section:slicePregnancySection.entry:slicePregnancyStatusObservation">
+     <path value="Composition.section.entry" />
+      <sliceName value="slicePregnancyStatusObservation" />
+      <short value="Pregnancy Status Observation" />
+      <definition value="Pregnancy Status Observation entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-pregnancy-status-observation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:slicePregnancySection.entry:slicePostpartumStatus">
+     <path value="Composition.section.entry" />
+      <sliceName value="slicePostpartumStatus" />
+      <short value="Postpartum Status" />
+      <definition value="Postpartum Status entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-postpartum-status" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     
   </differential>
 </StructureDefinition>

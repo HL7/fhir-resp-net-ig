@@ -22,7 +22,7 @@ The goals of the RESP-NET reporting use cases include:
 * Assessment of the data quality of the content extracted from the data source
 * Changes to existing provider workflow or existing data entry
 * Policies of the clinical care setting to collect consent for data sharing
-* Cases where the influenza, RSV, or COVID-19 test is not accessible in hospital system
+* Cases where the influenza, RSV, or SARSCoV-2 test result is not accessible in hospital system
 
 ### RESP-NET Actors
 The following actors from the [MedMorph RA IG]({{site.data.fhir.ver.medmorphIg}}/usecases.html#medmorph-actors-and-definitions) are used by the RESP-NET use cases:
@@ -62,43 +62,69 @@ The descriptions for each step in the above diagram include:
 * Step 4: The Data Source creates and submits the report to the Data Receiver.
 
 ### Use Case 1: Hospital-based influenza case detection and minimum data elements AND Use Case 2: Hospital-based clinical influenza surveillance
-These use cases will identify patients hospitalized with laboratory-confirmed influenza among residents of the FluSurv-NET catchment area (defined by patient county of residence) for active population-based surveillance. The cases are reported along with minimum patient-level data and transmitted to the FluSurv-NET surveillance officers in the relevant state/local jurisdiction.
+This use case will identify patients hospitalized with laboratory-confirmed influenza among residents of the FluSurv-NET catchment area (defined by patient state and county of residence (or other geographic regions)) for active population-based surveillance. The cases are reported along with minimum patient-level data and transmitted to the FluSurv-NET surveillance officers in the relevant state/local jurisdiction.
 
-Use Case 1 is reported within one week of case identification. Minimum data elements include state and county of residence (or other geographic regions) to define the catchment area, patient age or date of birth, sex, race/ethnicity, hospital admission date, positive influenza testing data (test type, test result, test date), and influenza type and subtype (if available). 
+Use Case 1 is reported when case identification is met. Minimum data elements to define the catchment area, patient age or date of birth, sex, race/ethnicity, hospital admission date, hospital facility name, positive influenza testing data (test type, test result, test date), and influenza type and subtype (if available). 
 
+<!--Use Case 2 focuses on the more detailed clinical surveillance data collected in FluSurv-NET by site surveillance officers. Patient-level data from EHRs about persons hospitalized with influenza include data on important outcomes and indicators of disease severity such as ICU admission, mechanical ventilation, in-hospital death, and length of hospital stay. Additional elements include health history (underlying conditions, tobacco, alcohol, substance use), clinical course, viral and bacterial codetections, findings from chest imaging, diagnoses, vaccination, and treatment. This use case will include person-level clinical data elements that are currently collected in FluSurv-NET on a standardized case report form for all identified cases. Not all of the current data elements may be reachable in a FHIR-based approach; proposed solutions should recognize that this may evolve over time and surveillance officers may still need to conduct medical chart review on data elements.-->
+
+#### User Stories for Use Case 1
+* Scenario 1: A patient is admitted to the hospital. An influenza test is ordered, and the test results are positive.
+* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive influenza test result, which was within 14 days before admission at the hospital.
+* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.
+
+#### Workflow for Use Case 1
+The positive influenza test results in a notification to the HDEA. The HDEA queries for a limited set of PII, including the patient’s address. If the patient is not a resident of a catchment area, the HDEA stops all activity regarding this patient. If the patient is a resident of a catchment area, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET Site.
+
+{% include img.html img="resp-net-use-case-1.png" caption="Figure 2.3 - Use Case 1 Workflow" %} 
+
+### Use Case 2: Hospital-based clinical influenza surveillance
 Use Case 2 focuses on the more detailed clinical surveillance data collected in FluSurv-NET by site surveillance officers. Patient-level data from EHRs about persons hospitalized with influenza include data on important outcomes and indicators of disease severity such as ICU admission, mechanical ventilation, in-hospital death, and length of hospital stay. Additional elements include health history (underlying conditions, tobacco, alcohol, substance use), clinical course, viral and bacterial codetections, findings from chest imaging, diagnoses, vaccination, and treatment. This use case will include person-level clinical data elements that are currently collected in FluSurv-NET on a standardized case report form for all identified cases. Not all of the current data elements may be reachable in a FHIR-based approach; proposed solutions should recognize that this may evolve over time and surveillance officers may still need to conduct medical chart review on data elements.
 
-#### User Stories for Use Cases 1 and 2
-* Scenario 1: A patient is admitted to the hospital and has symptoms consistent with a case of influenza. An influenza test is ordered, and the test results are positive.
-* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive influenza test result, which was within 14 days of admission at the hospital.
-* Scenario 3: A patient arrives at the emergency room (ER) and has symptoms consistent with a case of influenza. The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded within 14 days of admission or at any time during their hospitalization.
+#### User Stories for Use Case 2
+* Scenario 1: A patient is admitted to the hospital. An influenza test is ordered, and the test results are positive.
+* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive influenza test result, which was within 14 days before admission at the hospital.
+* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.
 
-#### Workflow for Use Cases 1 and 2
-The positive influenza test results in a notification to the HDEA/BSA. The HDEA queries for a limited set of PII, including the patient’s address. If the patient is not a resident of a catchment area, the HDEA stops all activity regarding this patient. If the patient is a resident of a catchment area the HDEA then regularly monitors the patient’s record until discharge occurs. Upon discharge, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. This limited data set includes PII and other data. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET Site.
+#### Workflow for Use Case 2
+The close of an encounter results in a notification to the HDEA. The HDEA (after a 72 hour delay for lab results) queries for a limited set of data, including the patient’s address, in-patient status, and influenza lab result. If the patient is not a resident of a catchment area, the HDEA stops all activity regarding this patient. If the patient is a resident of a catchment area, was admitted to the hospital, and has a positive influenza lab result, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET Site.
 
-{% include img.html img="resp-net-use-case-1.png" caption="Figure 2.3 - Use Case 1 and 2 Workflow" %} 
+{% include img.html img="resp-net-use-case-2.png" caption="Figure 2.4 - Use Case 2 Workflow" %} 
 
-### Use Case 3: Influenza Disease Burden Project
-Because testing for influenza and other respiratory viruses is done at the discretion of the clinician and testing practices may vary widely among facilities and over time, some people hospitalized with influenza may not be recognized and diagnosed. To better estimate the full burden of influenza, CDC collects additional information from FluSurv-NET hospitals on the proportion of patients with acute respiratory illnesses (ARI) who are tested for influenza, SARS-CoV-2, and RSV. This use case will focus on obtaining data on respiratory viral testing practices for CDC’s influenza disease burden project and transmitting it directly to CDC throughout the season. This project collects anonymized patient-level data on persons hospitalized with ARI (based on ICD-10 diagnosis codes) along with information about whether or not the patient was tested for influenza, SARS-CoV-2, or RSV and if so, the test result and test type used for all tests performed (patients may be tested multiple times). Additional data elements include state, age, race/ethnicity, week of admission, ICD-10 discharge diagnoses, and if possible, whether the patient had been admitted to the ICU or died during the hospital stay.
+For those implementations using FHIR subscriptions, please refer to Figure 2.4.1.
 
-#### User Stories
+{% include img.html img="resp-net-use-case-2-subscription.png" caption="Figure 2.4.1 - Use Case 2 with Subscription Workflow " %} 
+
+### Use Case 3: RESP-NET Disease Burden Project
+Because testing for influenza and other respiratory viruses is done at the discretion of the clinician and testing practices may vary widely among facilities and over time, some people hospitalized with influenza may not be recognized and diagnosed. To better estimate the full burden of influenza, CDC collects additional information from FluSurv-NET hospitals on the proportion of patients with acute respiratory illnesses (ARI) who are tested for influenza, SARS-CoV-2, and RSV. This use case will focus on obtaining data on respiratory viral testing practices for CDC’s RESP-NET disease burden project. This project collects patient-level data on persons hospitalized with ARI (based on ICD-10 diagnosis codes) along with information about whether or not the patient was tested for influenza, SARS-CoV-2, or RSV and if so, the test result and test type used for all tests performed (patients may be tested multiple times). Additional data elements include state, age, race/ethnicity, week of admission, ICD-10 discharge diagnoses, and if possible, whether the patient had been admitted to the ICU or died during the hospital stay.
+
+#### User Stories for Use Case 3
 * Scenario 1: A patient is admitted to the hospital and has a diagnosis consistent with an ARI (match into ARI value set). 
 * Scenario 2: A patient visits the ED, has a diagnosis consistent with an ARI (match into ARI value set). (May or may not be admitted to hospital.)
 
-#### Workflow
-The diagnosis results in a notification to the HDEA/BSA. The HDEA queries for a limited set of PII, including the patient’s address. The HDEA then regularly monitors the patient’s record until discharge occurs. Upon discharge, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. This limited data set includes PII and other data. The data reported includes testing status for influenza, SARS-CoV-2, and RSV occurred. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET site.
+#### Workflow for Use Case 3
+The close of an encounter results in a notification to the HDEA. The HDEA (after a 72 hour delay for lab results) queries for a limited set of PII data, including the patient’s address, in-patient status, and ARI lab result. If the patient is not a resident of a catchment area, the HDEA stops all activity regarding this patient. If the patient is a resident of a catchment area, was admitted to the hospital, and has a positive ARI lab result, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET site.
 
-{% include img.html img="resp-net-use-case-3.png" caption="Figure 2.4 - Use Case 3 Workflow" %} 
+{% include img.html img="resp-net-use-case-3.png" caption="Figure 2.5 - Use Case 3 Workflow" %} 
+
+For those implementations using FHIR subscriptions, please refer to Figure 2.5.1.
+
+{% include img.html img="resp-net-use-case-3-subscription.png" caption="Figure 2.5.1 - Use Case 3 with Subscription Workflow " %} 
 
 ### Use Case 4: Hospital-based Surveillance for SARSCoV-2 AND Use Case 5: Hospital-based surveillance for Respiratory Syncytial Virus (RSV)
-These use cases focus on collecting equivalent data to Use Cases 1-2 but for patients who test positive for SARSCoV-2 (the virus that causes COVID-19) or Respiratory Syncytial Virus (RSV). Public health surveillance through COVID-NET and RSV-NET is conducted in the same sites as FluSurv-NET, collects many of the same data elements, with some additional data elements specific to these viral illnesses.
+These use cases focus on collecting equivalent data to Use Case 2 but for patients who test positive for SARSCoV-2 (the virus that causes COVID-19) or Respiratory Syncytial Virus (RSV). Public health surveillance through COVID-NET and RSV-NET is conducted in many of the same sites as FluSurv-NET, collects many of the same data elements, with some additional data elements specific to these viral illnesses.
 
 #### User Stories for Use Cases 4 and 5
-* Scenario 1: A patient is admitted to the hospital and has symptoms consistent with a case of COVID-19 or RSV. A COVID or RSV test is ordered, and the test results are positive.
-* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive COVID or RSV test result, which was within 14 days of admission at the hospital.
-* Scenario 3: A patient arrives at the emergency room (ER) and has symptoms consistent with a case of COVID or RSV. The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded within 14 days of admission or at any time during their hospitalization.
+* Scenario 1: A patient is admitted to the hospital. A SARSCoV-2 or RSV test is ordered, and the test results are positive.
+* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive SARSCoV-2 or RSV test result, which was within 14 days before admission at the hospital.
+* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.
 
 #### Workflow for Use Cases 4 and 5
-The positive COVID or RSV test results in a notification to the HDEA/BSA. The HDEA queries for a limited set of PII, including the patient’s address. If the patient is not a resident of a catchment area, the HDEA stops all activity regarding this patient. If the patient is a resident of a catchment area the HDEA then regularly monitors the patient’s record until discharge occurs. Upon discharge, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. This limited data set includes PII and other data. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET Site.
+The close of an encounter results in a notification to the HDEA. The HDEA (after a 72 hour delay for lab results) queries for a limited set of data, including the patient’s address, in-patient status, and ARI lab result. If the patient is not a resident of a catchment area, the HDEA stops all activity regarding this patient. If the patient is a resident of a catchment area, was admitted to the hospital, and has a positive SARSCoV-2 or RSV lab result, the HDEA requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are validated (e.g., checked to see if they are conformant to the appropriate FHIR profiles), bundled, and transmitted to the RESP-NET site.
 
-{% include img.html img="resp-net-use-case-4.png" caption="Figure 2.5 - Use Case 4 and 5 Workflow" %}   
+
+{% include img.html img="resp-net-use-case-4.png" caption="Figure 2.6 - Use Cases 4 and 5 Workflow" %}   
+
+For those implementations using FHIR subscriptions, please refer to Figure 2.6.1.
+
+{% include img.html img="resp-net-use-case-4-subscription.png" caption="Figure 2.6.1 - Use Cases 4 and 5 with Subscription Workflow " %} 

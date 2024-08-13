@@ -38,7 +38,7 @@
 
       <p>
       The Data Source (e.g EHR) <b>SHALL</b> implement the 
-      <a href="http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-server.html">US Core Server capability statement</a> as foundational FHIR APIs needed by the health care surveys IG.
+      <a href="http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-server.html">US Core Server capability statement</a> as foundational FHIR APIs needed by the RESP-NET Content IG.
       </p>
       <br/>
 
@@ -253,7 +253,7 @@
             <tr>
               <th>
                 <a name="Subscription-delete"> </a>
-                <span>update</span>
+                <span>delete</span>
               </th>
               <td>
                 <p>Allows deletion of Subscription instances</p>
@@ -363,7 +363,7 @@
       <h3>
         <a href="http://hl7.org/fhir/medicationadministration.html">MedicationAdministation</a>
       </h3>
-      <p>Profile: ("resp-net-medicationadministration.html")
+      <p>Profile: ("us-ph-medicationadministration.html")
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
