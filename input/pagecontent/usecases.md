@@ -61,7 +61,7 @@ The descriptions for each step in the above diagram include:
 * Step 3: Providers as part of their clinical workflows update the data in the Data Source’s patient chart.
 * Step 4: The Data Source creates and submits the report to the Data Receiver.
 
-### Use Case 1: Hospital-based influenza case detection and minimum data elements AND Use Case 2: Hospital-based clinical influenza surveillance
+### Use Case 1: Hospital-based influenza case detection and minimum data elements
 This use case will identify patients hospitalized with laboratory-confirmed influenza among residents of the FluSurv-NET catchment area (defined by patient state and county of residence (or other geographic regions)) for active population-based surveillance. The cases are reported along with minimum patient-level data and transmitted to the FluSurv-NET surveillance officers in the relevant state/local jurisdiction.
 
 Use Case 1 is reported when case identification is met. Minimum data elements to define the catchment area, patient age or date of birth, sex, race/ethnicity, hospital admission date, hospital facility name, positive influenza testing data (test type, test result, test date), and influenza type and subtype (if available). 

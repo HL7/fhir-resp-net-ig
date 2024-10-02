@@ -60,7 +60,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org" />
-          <code value="75619-7" />
+          <code value="55751-2" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -488,6 +488,16 @@
     </element>
     <element id="Composition.section:slicePlanOfTreatmentSection.entry">
       <path value="Composition.section.entry" />
+      <sliceName value="sliceServiceRequests"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-servicerequest" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <!--<element id="Composition.section:slicePlanOfTreatmentSection.entry">
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
           <type value="profile" />
@@ -529,7 +539,7 @@
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
-    </element>
+    </element>-->
     <element id="Composition.section:sliceImmunizationsSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
