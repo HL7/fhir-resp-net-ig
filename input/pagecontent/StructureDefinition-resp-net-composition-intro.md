@@ -16,7 +16,7 @@ The following sections and population criteria should be used to create the comp
 * Procedures section: Procedures performed during the encounter limited to status = completed, in-progress 
 * Immunizations section: Immunizations associated with the patient
 * Notes section: Clinical notes and diagnostic reports (for report and note exchange) created during the encounter 
-* Plan of Treatment section: Medications or procedures ordered during the encounter. Status = active, completed. Intent = order
+* Plan of Treatment section: Procedures ordered during the encounter. Status = active, completed. Intent = order
 * Social History section: Smoking status, disability status, and characteristics of home environment with status = final, amended
 * Pregnancy section: Pregnancy status, pregnancy outcome, postpartum status for the patient during the encounter
 
