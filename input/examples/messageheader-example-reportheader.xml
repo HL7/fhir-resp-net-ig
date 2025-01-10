@@ -22,13 +22,13 @@
       <coding>
         <system
                 value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"/>
-        <code value="subscription-notification"/>
+        <code value="alternately-initiated"/>
       </coding>
     </valueCodeableConcept>
   </extension>
   <eventCoding> 
     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/> 
-    <code value="healthcare-survey-report-message"/> 
+    <code value="message-report"/> 
   </eventCoding> 
   <destination> 
     <name value="PHA endpoint"/> 

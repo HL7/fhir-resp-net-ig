@@ -33,7 +33,7 @@
   "effectivePeriod": {
     "start": "2021-11-01"
   },
-  "relatedArtifact": [
+    "relatedArtifact": [
     {
       "type": "depends-on",
       "label": "Health Care Survey Registered Participants",
