@@ -406,7 +406,7 @@
       </slicing>
       <min value="2" />
     </element>
-
+<!--
     <element id="PlanDefinition.action:executeReportingWorkflow.action:isAmbulatoryEncounterReportable">
       <path value="PlanDefinition.action.action" />
       <sliceName value="isAmbulatoryEncounterReportable" />
@@ -472,7 +472,7 @@
     <element id="PlanDefinition.action:executeReportingWorkflow.action:isAmbulatoryEncounterReportable.relatedAction.relationship">
       <path value="PlanDefinition.action.action.relatedAction.relationship" />
       <fixedCode value="before-start" />
-    </element>
+    </element>-->
 
     <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable">
       <path value="PlanDefinition.action.action" />
