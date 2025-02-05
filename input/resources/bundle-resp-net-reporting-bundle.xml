@@ -62,7 +62,7 @@
             <path value="Bundle.entry.resource"/>
             <type>
                 <code value="MessageHeader"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
+                <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-messageheader"/>
             </type>
         </element>
         <element id="Bundle.entry:contentBundle">

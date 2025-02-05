@@ -34,7 +34,7 @@
     "text": "Influenza virus A and B and Respiratory syncytial virus RNA panel - Upper respiratory specimen by NAA with probe detection"
   },
   "subject": {
-    "reference": "Patient/patient-ecr-eve-everywoman"
+    "reference": "Patient/patient-respnet-eve-everywoman"
   },
   "encounter": {
     "reference": "Encounter/resp-net-encounter-example"

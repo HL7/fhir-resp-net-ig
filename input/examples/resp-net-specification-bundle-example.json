@@ -5,7 +5,7 @@
     "versionId": "1",
     "lastUpdated": "2020-11-29T02:03:28.045+00:00",
     "profile": [
-      "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-specification-bundle"
+      "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-specification-bundle"
     ]
   },
   "type": "collection",
@@ -64,7 +64,7 @@
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code": "initiate-reporting-workflow"
                   }
                 ]
@@ -75,20 +75,20 @@
                 "id": "encounter-end",
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension",
                     "valueCodeableConcept": {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
-                          "code": "encounter-end",
-                          "display": "Indicates the end of an encounter"
+                          "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-triggerdefinition-namedevents",
+                          "code": "encounter-close",
+                          "display": "Indicates the close of an encounter"
                         }
                       ]
                     }
                   }
                 ],
                 "type": "named-event",
-                "name": "encounter-end"
+                "name": "encounter-close"
               }
             ],
             "relatedAction": [
@@ -111,7 +111,7 @@
         {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+              "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
               "code": "initiate-reporting-workflow"
             }
           ]
@@ -122,13 +122,13 @@
           "id": "labresult-change",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype",
+              "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension",
               "valueCodeableConcept": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-triggerdefinition-namedevents",
                     "code": "labresult-change",
-                    "display": "Indicates change in a patient's labresults"
+                    "display": "Indicates a change in the patient's labresults"
                   }
                 ]
               }
@@ -158,7 +158,7 @@
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code": "execute-reporting-workflow"
                   }
                 ]
@@ -171,7 +171,7 @@
                     "coding": [
                       {
                         "code": "evaluate-condition",
-                        "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
                       }
                     ]
                   }
@@ -191,7 +191,7 @@
                   {
                     "extension": [
                       {
-                        "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                         "valueString": "Encounter/{{context.patientId}}"
                       }
                     ],
@@ -201,7 +201,7 @@
                   {
                     "extension": [
                       {
-                        "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                         "valueString": "Group/{{context.nchsGroupId}}"
                       }
                     ],
@@ -223,7 +223,7 @@
                     "coding": [
                       {
                         "code": "evaluate-condition",
-                        "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
                       }
                     ]
                   }
@@ -243,7 +243,7 @@
                   {
                     "extension": [
                       {
-                        "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                         "valueString": "Encounter/{{context.patientId}}"
                       }
                     ],
@@ -269,7 +269,7 @@
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code": "create-report"
                   }
                 ]
@@ -279,7 +279,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Patient/{{context.patientId}}"
                   }
                 ],
@@ -289,7 +289,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Condition?patient=Patient/{{context.patientId}}&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active"
                   }
                 ],
@@ -299,7 +299,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "AllergyIntolerance?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -309,7 +309,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "CareTeam?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -319,7 +319,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "CarePlan?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -329,7 +329,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Goal?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -339,7 +339,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Encounter/{{context.encounterId}}"
                   }
                 ],
@@ -349,7 +349,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "MedicationRequest?patient=Patient/{{context.patientId}}&intent=order"
                   }
                 ],
@@ -359,7 +359,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "MedicationStatement?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -369,7 +369,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "MedicationAdministration?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -379,7 +379,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs"
                   }
                 ],
@@ -389,7 +389,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|social-history"
                   }
                 ],
@@ -399,7 +399,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "DiagnosticReport?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -409,7 +409,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "ServiceRequest?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -419,7 +419,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Procedure?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -429,7 +429,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Device?patient=Patient/{{context.patientId}}"
                   }
                 ],
@@ -439,7 +439,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                     "valueString": "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory"
                   }
                 ],
@@ -471,7 +471,7 @@
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code": "validate-report"
                   }
                 ]
@@ -481,7 +481,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
                     "valueString": "resp-net-report"
                   }
                 ],
@@ -516,7 +516,7 @@
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code": "submit-report"
                   }
                 ]
@@ -526,7 +526,7 @@
               {
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-relateddata-extension",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
                     "valueString": "validated-resp-net-report"
                   }
                 ],

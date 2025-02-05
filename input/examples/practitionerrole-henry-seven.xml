@@ -17,7 +17,7 @@
         <display value="Henry Seven, MD"/>
     </practitioner>
     <organization>
-        <reference value="Organization/organization-ecr-salem-medical-center"/>
+        <reference value="Organization/organization-salem-medical-center"/>
         <display value="Salem Medical Center"/>
     </organization>
     <code>
@@ -35,7 +35,7 @@
         </coding>
     </specialty>
     <location>
-        <reference value="Location/location-ecr-salem-medical-center"/>
+        <reference value="Location/location-salem-medical-center"/>
         <display value="Salem Medical Center"/>
     </location>
     <telecom>

@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>id</b>: some-day-smoker</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social History</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 72166-2}\">Tobacco smoking status</span></p><p><b>subject</b>: <a href=\"Patient-patient-ecr-eve-everywoman.html\">Eve Everywoman. Generated Summary: id: example; Medical Record Number: 1032702; active; Eve Everywoman ; ph: 51-(404)555-1212, eve.everywoman@example.com; gender: female; birthDate: 1974-11-24</a></p><p><b>issued</b>: 2023-03-18 </p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 428041000124106}\">Current some day smoker</span></p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>id</b>: some-day-smoker</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social History</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 72166-2}\">Tobacco smoking status</span></p><p><b>subject</b>: <a href=\"Patient-patient-respnet-eve-everywoman.html\">Eve Everywoman. Generated Summary: id: example; Medical Record Number: 1032702; active; Eve Everywoman ; ph: 51-(404)555-1212, eve.everywoman@example.com; gender: female; birthDate: 1974-11-24</a></p><p><b>issued</b>: 2023-03-18 </p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 428041000124106}\">Current some day smoker</span></p></div>"
   },
   "status": "final",
   "category": [
@@ -34,7 +34,7 @@
     "text": "Tobacco smoking status"
   },
   "subject": {
-    "reference": "Patient/patient-ecr-eve-everywoman"
+    "reference": "Patient/patient-respnet-eve-everywoman"
   },
   "performer": [
     {
