@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+	xmlns="http://hl7.org/fhir">
+	<id value="respnet-catchment-area-zipcodes-tn"/>
+	<url value="http://hl7.org/fhir/us/resp-net/ValueSet/respnet-catchment-area-zipcodes-tn"/>
+	<version value="1.0.1"/>
+	<name value="RESPNETCatchmentAreaZipCodesTN"/>
+	<title value="RESPNET Catchment Area Zip Codes TN"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2024-08-14"/>
+	<publisher value="HL7 International / Public Health"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.hl7.org/Special/committees/pher"/>
+		</telecom>
+	</contact>
+	<description value="The valueset contains US Zip Codes for catchment areas for RESP-NET Reportability determination. These are just sample set of codes for the state of Tennessee."/>
+	<copyright value="This value set includes content from the United States Postal Service. See http://terminology.hl7.org/CodeSystem/USZIPCODES."/>
+	<compose>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/USZIPCODES"/>
+			<concept>
+				<code value="37010"/>
+			</concept>
+			<concept>
+				<code value="37012"/>
+			</concept>
+			<concept>
+				<code value="37013"/>
+			</concept>
+			<concept>
+				<code value="37014"/>
+			</concept>
+			<concept>
+				<code value="37015"/>
+			</concept>
+			<concept>
+				<code value="37016"/>
+			</concept>
+			<concept>
+				<code value="37020"/>
+			</concept>
+			<concept>
+				<code value="37022"/>
+			</concept>
+			<concept>
+				<code value="37025"/>
+			</concept>
+			<concept>
+				<code value="37027"/>
+			</concept>
+			<concept>
+				<code value="37029"/>
+			</concept>
+			<concept>
+				<code value="37031"/>
+			</concept>
+			<concept>
+				<code value="37032"/>
+			</concept>
+			<concept>
+				<code value="37035"/>
+			</concept>
+			<concept>
+				<code value="37036"/>
+			</concept>
+			<concept>
+				<code value="37037"/>
+			</concept>
+			<concept>
+				<code value="37043"/>
+			</concept>
+			<concept>
+				<code value="37046"/>
+			</concept>
+			<concept>
+				<code value="37048"/>
+			</concept>
+			<concept>
+				<code value="37049"/>
+			</concept>
+			<concept>
+				<code value="37051"/>
+			</concept>
+			<concept>
+				<code value="37055"/>
+			</concept>
+			<concept>
+				<code value="37060"/>
+			</concept>
+			<concept>
+				<code value="37062"/>
+			</concept>
+			<concept>
+				<code value="37064"/>
+			</concept>
+			<concept>
+				<code value="37066"/>
+			</concept>
+			<concept>
+				<code value="37067"/>
+			</concept>
+			<concept>
+				<code value="37069"/>
+			</concept>
+			<concept>
+				<code value="37072"/>
+			</concept>
+			<concept>
+				<code value="37073"/>
+			</concept>
+			<concept>
+				<code value="37075"/>
+			</concept>
+			<concept>
+				<code value="37076"/>
+			</concept>
+			<concept>
+				<code value="37080"/>
+			</concept>
+			<concept>
+				<code value="37082"/>
+			</concept>
+			<concept>
+				<code value="37085"/>
+			</concept>
+			<concept>
+				<code value="37086"/>
+			</concept>
+			<concept>
+				<code value="37087"/>
+			</concept>
+			<concept>
+				<code value="37090"/>
+			</concept>
+			<concept>
+				<code value="37095"/>
+			</concept>
+			<concept>
+				<code value="37115"/>
+			</concept>
+			<concept>
+				<code value="37118"/>
+			</concept>
+			<concept>
+				<code value="37122"/>
+			</concept>
+			<concept>
+				<code value="37127"/>
+			</concept>
+			<concept>
+				<code value="37128"/>
+			</concept>
+			<concept>
+				<code value="37129"/>
+			</concept>
+			<concept>
+				<code value="37130"/>
+			</concept>
+			<concept>
+				<code value="37132"/>
+			</concept>
+			<concept>
+				<code value="37135"/>
+			</concept>
+			<concept>
+				<code value="37138"/>
+			</concept>
+			<concept>
+				<code value="37141"/>
+			</concept>
+			<concept>
+				<code value="37143"/>
+			</concept>
+			<concept>
+				<code value="37146"/>
+			</concept>
+			<concept>
+				<code value="37148"/>
+			</concept>
+			<concept>
+				<code value="37149"/>
+			</concept>
+			<concept>
+				<code value="37153"/>
+			</concept>
+			<concept>
+				<code value="37165"/>
+			</concept>
+			<concept>
+				<code value="37167"/>
+			</concept>
+			<concept>
+				<code value="37172"/>
+			</concept>
+			<concept>
+				<code value="37174"/>
+			</concept>
+			<concept>
+				<code value="37179"/>
+			</concept>
+			<concept>
+				<code value="37181"/>
+			</concept>
+			<concept>
+				<code value="37184"/>
+			</concept>
+			<concept>
+				<code value="37186"/>
+			</concept>
+			<concept>
+				<code value="37187"/>
+			</concept>
+			<concept>
+				<code value="37188"/>
+			</concept>
+			<concept>
+				<code value="37189"/>
+			</concept>
+			<concept>
+				<code value="37201"/>
+			</concept>
+			<concept>
+				<code value="37203"/>
+			</concept>
+			<concept>
+				<code value="37204"/>
+			</concept>
+			<concept>
+				<code value="37205"/>
+			</concept>
+			<concept>
+				<code value="37206"/>
+			</concept>
+			<concept>
+				<code value="37207"/>
+			</concept>
+			<concept>
+				<code value="37208"/>
+			</concept>
+			<concept>
+				<code value="37209"/>
+			</concept>
+			<concept>
+				<code value="37210"/>
+			</concept>
+			<concept>
+				<code value="37211"/>
+			</concept>
+			<concept>
+				<code value="37212"/>
+			</concept>
+			<concept>
+				<code value="37213"/>
+			</concept>
+			<concept>
+				<code value="37214"/>
+			</concept>
+			<concept>
+				<code value="37215"/>
+			</concept>
+			<concept>
+				<code value="37216"/>
+			</concept>
+			<concept>
+				<code value="37217"/>
+			</concept>
+			<concept>
+				<code value="37218"/>
+			</concept>
+			<concept>
+				<code value="37219"/>
+			</concept>
+			<concept>
+				<code value="37220"/>
+			</concept>
+			<concept>
+				<code value="37221"/>
+			</concept>
+			<concept>
+				<code value="37228"/>
+			</concept>
+			<concept>
+				<code value="37240"/>
+			</concept>
+			<concept>
+				<code value="37243"/>
+			</concept>
+			<concept>
+				<code value="37246"/>
+			</concept>
+			<concept>
+				<code value="38401"/>
+			</concept>
+			<concept>
+				<code value="38476"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

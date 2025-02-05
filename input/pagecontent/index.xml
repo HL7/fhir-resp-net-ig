@@ -9,33 +9,17 @@
 	Influenza, and RSV (known as COVID-NET, FluSurv-NET, and RSV-NET, respectively) cover more than 29 million people and include an estimated 8-10% of the U.S. population.
 	</p>
 	<p>
-	This guide leverages the MedMorph Reference Architecture along with other relevant existing health data and 
+	This guide leverages the <a href="{{site.data.fhir.ver.uscoreR4}}/index.html">US Core IG</a>, <a href="{{site.data.fhir.ver.subscriptionsIg}}/index.html">Subscriptions Backport IG</a>, 
+  <a href="{{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/index.html">US Public Health Profiles Library IG</a>,
+  and <a href="{{site.data.fhir.ver.ecrIg}}/index.html">electronic Case Reporting (eCR) IG</a> along with other relevant existing health data and 
 	exchange standards to provide the profiles and necessary extensions required for patient-level data exchange on persons 
-	hospitalized with respiratory viruses to public health surveillance partners in RESP-NET. The goal is 
+	hospitalized with respiratory viruses to public health surveillance partners in RESP-NET.  The goal is 
 	to improve the availability of EHR data for public health surveillance of hospitalized persons with influenza and 
 	other respiratory viruses and reduce the burden of data collection on surveillance officers and healthcare facilities 
-	and complement ongoing CDC data modernization initiatives.
+	and complement ongoing CDC data modernization initiatives. It also refers to the <a href="{{site.data.fhir.ver.medmorphIg}}/index.html">MedMorph Reference Architecture (RA) IG</a>
+  for organizations who utilize the Health Data Exchange App (HDEA) in their implementations.
 	</p>
-	<p>
-    The Making Electronic Data More Available for Research and Public Health (MedMorph) project seeks to advance public health and patient-centered outcomes
-	by using emerging health data and exchange standards, such as Health Level 7 (HL7<sup>®</sup>) Fast Healthcare Interoperability Resources (FHIR<sup>®</sup>) and Clinical Quality 
-    Language (CQL), to develop and implement an interoperable solution that will enable access to clinical data. The MedMorph project fits within the 
-    Centers for Disease Control and Prevention (CDC) strategic imperative of transforming how data are collected, used, and shared through modern 
-    Information Technology (IT) capabilities to save lives and improve health. The MedMorph project is funded by the Health and Human Services (HHS) 
-    Assistant Secretary for Planning and Evaluation (ASPE) Patient-Centered Outcomes Research Trust Fund (PCORTF) and executed by the Center for 
-    Surveillance, Epidemiology, and Laboratory Services (CSELS) Public Health Informatics Office (PHIO) to advance research and public health goals.
-    </p>
-    <p>   
-    The MedMorph project aims to leverage the maturation of standards and requirements for certification of health IT by the Office of the 
-    National Coordinator for Health IT (ONC) that underpin many electronic health records (EHRs). Standards and regulations such as FHIR, the 
-    ONC 2015 Edition Common Clinical Data Set (CCDS), 2015 Edition Cures Update - United States Core Data for Interoperability (USCDI) Version 1, 
-    February 2020 and standardized application programming interfaces (API) for patient services have created a health IT environment that is ripe 
-    for developing standards-based scalable and extensible solutions to overcome interoperability challenges.
-    </p>
-    <p>
-    The RESP-NET Content Implementation Guide (IG) specifies how the MedMorph Reference Architecture (RA) IG is leveraged to
-    enable health care organizations to implement <a href="usecases.html">RESP-NET Use Cases</a> outlined in the IG. 
-   	</p>
+	
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>
     <p>

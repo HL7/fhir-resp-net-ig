@@ -1,0 +1,1919 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu",
+  "version": "1",
+  "title": "resp-net-labtest-flu",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "85476-0",
+            "display": "Influenza virus A & B & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "95942-9",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus+SARS coronavirus 2 Ag panel"
+          },
+          {
+            "code": "97099-6",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 Ag panel"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "95380-2",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & SARS-related coronavirus RNA panel"
+          },
+          {
+            "code": "95423-0",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 identified"
+          },
+          {
+            "code": "95422-2",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "100345-8",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "43812-7",
+            "display": "Deprecated Influenza virus A Ab [Presence] in Serum"
+          },
+          {
+            "code": "22821-3",
+            "display": "Deprecated Influenza virus A Ab [Titer] in Serum"
+          },
+          {
+            "code": "31241-3",
+            "display": "Deprecated Influenza virus A Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "44091-7",
+            "display": "Deprecated Influenza virus A hemagglutinin H5 RNA [Presence] in Unspecified specimen by Probe & target amplification method"
+          },
+          {
+            "code": "49530-9",
+            "display": "Deprecated Influenza virus A neuraminidase cDNA [Presence] in Isolate by Amplification/Sequencing"
+          },
+          {
+            "code": "40981-3",
+            "display": "Deprecated Influenza virus A RNA [Presence] in Unspecified specimen by Probe & target amplification method"
+          },
+          {
+            "code": "48310-7",
+            "display": "Influenza virus A [Presence] in specimen by Organism specific culture"
+          },
+          {
+            "code": "57896-3",
+            "display": "Influenza virus A 2009 H1N1v.neuraminidase inhibitor resistance [Susceptibility] in Unspecified specimen by Genotype method"
+          },
+          {
+            "code": "53381-0",
+            "display": "Influenza virus A Ab [Identifier] in Serum"
+          },
+          {
+            "code": "50696-4",
+            "display": "Influenza virus A Ab [Identifier] in Serum by Neutralization test"
+          },
+          {
+            "code": "44557-7",
+            "display": "Influenza virus A Ab [Presence] in Body fluid"
+          },
+          {
+            "code": "44876-1",
+            "display": "Influenza virus A Ab [Presence] in Cerebral spinal fluid"
+          },
+          {
+            "code": "22096-2",
+            "display": "Influenza virus A Ab [Presence] in Serum"
+          },
+          {
+            "code": "47232-4",
+            "display": "Influenza virus A Ab [Presence] in Serum --1st specimen"
+          },
+          {
+            "code": "47233-2",
+            "display": "Influenza virus A Ab [Presence] in Serum --2nd specimen"
+          },
+          {
+            "code": "44556-9",
+            "display": "Influenza virus A Ab [Presence] in Serum by Complement fixation"
+          },
+          {
+            "code": "20862-9",
+            "display": "Influenza virus A Ab [Presence] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "15444-3",
+            "display": "Influenza virus A Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "code": "22822-1",
+            "display": "Influenza virus A Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "9531-5",
+            "display": "Influenza virus A Ab [Titer] in Cerebral spinal fluid"
+          },
+          {
+            "code": "22365-1",
+            "display": "Influenza virus A Ab [Titer] in Serum"
+          },
+          {
+            "code": "24289-1",
+            "display": "Influenza virus A Ab [Titer] in Serum --1st specimen"
+          },
+          {
+            "code": "24290-9",
+            "display": "Influenza virus A Ab [Titer] in Serum --2nd specimen"
+          },
+          {
+            "code": "22823-9",
+            "display": "Influenza virus A Ab [Titer] in Serum by Agglutination"
+          },
+          {
+            "code": "5229-0",
+            "display": "Influenza virus A Ab [Titer] in Serum by Complement fixation"
+          },
+          {
+            "code": "24215-6",
+            "display": "Influenza virus A Ab [Titer] in Serum by Complement fixation --1st specimen"
+          },
+          {
+            "code": "24216-4",
+            "display": "Influenza virus A Ab [Titer] in Serum by Complement fixation --2nd specimen"
+          },
+          {
+            "code": "22824-7",
+            "display": "Influenza virus A Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "17012-6",
+            "display": "Influenza virus A Ab [Units/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "7920-2",
+            "display": "Influenza virus A Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "39536-8",
+            "display": "Influenza virus A Ab [Units/volume] in Serum by Complement fixation"
+          },
+          {
+            "code": "38273-9",
+            "display": "Influenza virus A Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "34153-7",
+            "display": "Influenza virus A Ab [Units/volume] in specimen"
+          },
+          {
+            "code": "90323-7",
+            "display": "Influenza virus A Ab/Positive control in Serum by Immunoassay"
+          },
+          {
+            "code": "50697-2",
+            "display": "Influenza virus A Ag [Identifier] in Isolate"
+          },
+          {
+            "code": "44562-7",
+            "display": "Influenza virus A Ag [Presence] in Bronchial specimen"
+          },
+          {
+            "code": "44559-3",
+            "display": "Influenza virus A Ag [Presence] in Bronchial specimen by Immunofluorescence"
+          },
+          {
+            "code": "77383-8",
+            "display": "Influenza virus A Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
+          },
+          {
+            "code": "49529-1",
+            "display": "Influenza virus A Ag [Presence] in Isolate by Immunofluorescence"
+          },
+          {
+            "code": "88904-8",
+            "display": "Influenza virus A Ag [Presence] in Lower respiratory specimen by Immunofluorescence"
+          },
+          {
+            "code": "43874-7",
+            "display": "Influenza virus A Ag [Presence] in Nasopharynx"
+          },
+          {
+            "code": "46082-4",
+            "display": "Influenza virus A Ag [Presence] in Nasopharynx by Immunoassay"
+          },
+          {
+            "code": "44558-5",
+            "display": "Influenza virus A Ag [Presence] in Nasopharynx by Immunofluorescence"
+          },
+          {
+            "code": "80382-5",
+            "display": "Influenza virus A Ag [Presence] in Nasopharynx by Rapid immunoassay"
+          },
+          {
+            "code": "44563-5",
+            "display": "Influenza virus A Ag [Presence] in Nose"
+          },
+          {
+            "code": "44564-3",
+            "display": "Influenza virus A Ag [Presence] in Nose by Immunoassay"
+          },
+          {
+            "code": "44560-1",
+            "display": "Influenza virus A Ag [Presence] in Nose by Immunofluorescence"
+          },
+          {
+            "code": "31858-4",
+            "display": "Influenza virus A Ag [Presence] in Throat"
+          },
+          {
+            "code": "5860-2",
+            "display": "Influenza virus A Ag [Presence] in Throat by Immunoassay"
+          },
+          {
+            "code": "5861-0",
+            "display": "Influenza virus A Ag [Presence] in Throat by Immunofluorescence"
+          },
+          {
+            "code": "86565-9",
+            "display": "Influenza virus A Ag [Presence] in Tissue by Immunofluorescence"
+          },
+          {
+            "code": "44561-9",
+            "display": "Influenza virus A Ag [Presence] in Trachea by Immunofluorescence"
+          },
+          {
+            "code": "31859-2",
+            "display": "Influenza virus A Ag [Presence] in specimen"
+          },
+          {
+            "code": "22825-4",
+            "display": "Influenza virus A Ag [Presence] in specimen by Immune diffusion (ID)"
+          },
+          {
+            "code": "5862-8",
+            "display": "Influenza virus A Ag [Presence] in specimen by Immunoassay"
+          },
+          {
+            "code": "5863-6",
+            "display": "Influenza virus A Ag [Presence] in specimen by Immunofluorescence"
+          },
+          {
+            "code": "44010-7",
+            "display": "Influenza virus A and B Ab [Interpretation] in Body fluid"
+          },
+          {
+            "code": "72365-0",
+            "display": "Influenza virus A and B Ag [Identifier] in Nose by Immunofluorescence"
+          },
+          {
+            "code": "72366-8",
+            "display": "Influenza virus A and B Ag [Identifier] in Nose by Rapid immunoassay"
+          },
+          {
+            "code": "61102-0",
+            "display": "Influenza virus A and B Ag [Identifier] in specimen by Immunofluorescence"
+          },
+          {
+            "code": "72356-9",
+            "display": "Influenza virus A and B Ag [Identifier] in specimen by Rapid immunoassay"
+          },
+          {
+            "code": "80381-7",
+            "display": "Influenza virus A and B Ag panel – Upper Respiratory specimen by Rapid immunoassay"
+          },
+          {
+            "code": "82461-5",
+            "display": "Influenza virus A and B and H1 2009 pandemic RNA [Identifier] in Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "80204-1",
+            "display": "Influenza virus A and B identified in Nasopharynx by Shell vial culture"
+          },
+          {
+            "code": "49012-8",
+            "display": "Influenza virus A and B identified in specimen by Bioassay"
+          },
+          {
+            "code": "49537-4",
+            "display": "Influenza virus A and B RNA [Identifier] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "48509-4",
+            "display": "Influenza virus A and B RNA [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "33383-1",
+            "display": "Influenza virus A Bangkok Ab [Titer] in Cerebral spinal fluid"
+          },
+          {
+            "code": "7921-0",
+            "display": "Influenza virus A Bangkok Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6639-9",
+            "display": "Influenza virus A Bangkok Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "38381-0",
+            "display": "Influenza virus A cDNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "7922-8",
+            "display": "Influenza virus A England Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6635-7",
+            "display": "Influenza virus A England Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "60529-5",
+            "display": "Influenza virus A H1 2009 pandemic Ab [Titer] in Serum"
+          },
+          {
+            "code": "60494-2",
+            "display": "Influenza virus A H1 2009 pandemic and Influenza virus A swine origin RNA [Interpretation] in specimen Qualitative by NAA with probe detection"
+          },
+          {
+            "code": "81305-5",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "86317-5",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "94395-1",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "82168-6",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+          },
+          {
+            "code": "77028-9",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "55465-9",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "55466-7",
+            "display": "Influenza virus A H1 2009 pandemic RNA panel - specimen by NAA with probe detection"
+          },
+          {
+            "code": "47444-5",
+            "display": "Influenza virus A H1 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39296-9",
+            "display": "Influenza virus A H1 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "50701-2",
+            "display": "Influenza virus A H1 Ag [Presence] in Isolate by Immunofluorescence"
+          },
+          {
+            "code": "85802-7",
+            "display": "Influenza virus A H1 Ag [Titer] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "80589-5",
+            "display": "Influenza virus A H1 HA gene [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "74038-1",
+            "display": "Influenza virus A H1 RNA [Cycle Threshold #] in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "49520-0",
+            "display": "Influenza virus A H1 RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "94396-9",
+            "display": "Influenza virus A H1 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "82167-8",
+            "display": "Influenza virus A H1 RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+          },
+          {
+            "code": "77026-3",
+            "display": "Influenza virus A H1 RNA [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "49521-8",
+            "display": "Influenza virus A H1 RNA [Presence] in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "92809-3",
+            "display": "Influenza virus A H1 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "57895-5",
+            "display": "Influenza virus A H1.neuraminidase inhibitor resistance [Susceptibility] in specimen by Genotype method"
+          },
+          {
+            "code": "60538-6",
+            "display": "Influenza virus A H1+H3+B RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "47445-2",
+            "display": "Influenza virus A H10 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39297-7",
+            "display": "Influenza virus A H10 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47446-0",
+            "display": "Influenza virus A H11 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39298-5",
+            "display": "Influenza virus A H11 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47447-8",
+            "display": "Influenza virus A H12 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39299-3",
+            "display": "Influenza virus A H12 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47448-6",
+            "display": "Influenza virus A H13 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39300-9",
+            "display": "Influenza virus A H13 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47449-4",
+            "display": "Influenza virus A H14 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39301-7",
+            "display": "Influenza virus A H14 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47450-2",
+            "display": "Influenza virus A H15 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39302-5",
+            "display": "Influenza virus A H15 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "51460-4",
+            "display": "Influenza virus A H16 Ab [Titer] in Serum"
+          },
+          {
+            "code": "49519-2",
+            "display": "Influenza virus A H16 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47451-0",
+            "display": "Influenza virus A H2 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39303-3",
+            "display": "Influenza virus A H2 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "57985-4",
+            "display": "Influenza virus A H2 RNA [Presence] in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "47452-8",
+            "display": "Influenza virus A H3 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39304-1",
+            "display": "Influenza virus A H3 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "49522-6",
+            "display": "Influenza virus A H3 Ag [Presence] in Isolate by Immunofluorescence"
+          },
+          {
+            "code": "85803-5",
+            "display": "Influenza virus A H3 Ag [Titer] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "80590-3",
+            "display": "Influenza virus A H3 HA gene [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "74039-9",
+            "display": "Influenza virus A H3 RNA [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "49523-4",
+            "display": "Influenza virus A H3 RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "94394-4",
+            "display": "Influenza virus A H3 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "82169-4",
+            "display": "Influenza virus A H3 RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+          },
+          {
+            "code": "77027-1",
+            "display": "Influenza virus A H3 RNA [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "49524-2",
+            "display": "Influenza virus A H3 RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "92808-5",
+            "display": "Influenza virus A H3 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "47453-6",
+            "display": "Influenza virus A H4 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39305-8",
+            "display": "Influenza virus A H4 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "49525-9",
+            "display": "Influenza virus A H5 Ab [Presence] in Serum"
+          },
+          {
+            "code": "47454-4",
+            "display": "Influenza virus A H5 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39306-6",
+            "display": "Influenza virus A H5 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "85804-3",
+            "display": "Influenza virus A H5 Ag [Titer] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "81320-4",
+            "display": "Influenza virus A H5 Asian RNA [Cycle Threshold #] in Respiratory specimen by Nucleic acid amplification using primer-probe set H5a"
+          },
+          {
+            "code": "81321-2",
+            "display": "Influenza virus A H5 Asian RNA [Cycle Threshold #] in Respiratory specimen by Nucleic acid amplification using primer-probe set H5b"
+          },
+          {
+            "code": "44795-3",
+            "display": "Influenza virus A H5 Asian RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "77605-4",
+            "display": "Influenza virus A H5 icA RNA [Cycle Threshold #] in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "49526-7",
+            "display": "Influenza virus A H5 RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "38272-1",
+            "display": "Influenza virus A H5 RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "44264-0",
+            "display": "Influenza virus A H5 RNA [Units/volume] (viral load) in specimen by NAA with probe detection"
+          },
+          {
+            "code": "68986-9",
+            "display": "Influenza virus A H5a RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "68987-7",
+            "display": "Influenza virus A H5b RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "47455-1",
+            "display": "Influenza virus A H6 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39307-4",
+            "display": "Influenza virus A H6 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "38271-3",
+            "display": "Influenza virus A H6 RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "44265-7",
+            "display": "Influenza virus A H6 RNA [Units/volume] (viral load) in specimen by NAA with probe detection"
+          },
+          {
+            "code": "47456-9",
+            "display": "Influenza virus A H7 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39308-2",
+            "display": "Influenza virus A H7 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "85805-0",
+            "display": "Influenza virus A H7 Ag [Titer] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "81307-1",
+            "display": "Influenza virus A H7 Eurasia RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "81428-5",
+            "display": "Influenza virus A H7 Eurasia RNA [Presence] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "49527-5",
+            "display": "Influenza virus A H7 RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "38270-5",
+            "display": "Influenza virus A H7 RNA [Presence] in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "44266-5",
+            "display": "Influenza virus A H7 RNA [Units/volume] (viral load) in specimen by NAA with probe detection"
+          },
+          {
+            "code": "47457-7",
+            "display": "Influenza virus A H8 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39309-0",
+            "display": "Influenza virus A H8 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "47458-5",
+            "display": "Influenza virus A H9 Ab [Titer] in Serum"
+          },
+          {
+            "code": "39310-8",
+            "display": "Influenza virus A H9 Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "60530-3",
+            "display": "Influenza virus A H9 RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "49528-3",
+            "display": "Influenza virus A H9 RNA [Presence] in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "87715-9",
+            "display": "Influenza virus A HA gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "55133-3",
+            "display": "Influenza virus A hemagglutinin cDNA [Identifier] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "39102-9",
+            "display": "Influenza virus A hemagglutinin cDNA [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "39025-2",
+            "display": "Influenza virus A hemagglutinin cDNA [Identifier] in specimen by Sequencing"
+          },
+          {
+            "code": "72767-7",
+            "display": "Influenza virus A hemagglutinin segment sequence identifier"
+          },
+          {
+            "code": "59424-2",
+            "display": "Influenza virus A hemagglutinin type RNA [Identifier] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "49532-5",
+            "display": "Influenza virus A hemagglutinin type RNA [Identifier] in Isolate by Sequencing"
+          },
+          {
+            "code": "59423-4",
+            "display": "Influenza virus A hemagglutinin type RNA [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "7923-6",
+            "display": "Influenza virus A Hong Kong Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6634-0",
+            "display": "Influenza virus A Hong Kong Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "22826-2",
+            "display": "Influenza virus A identified in specimen by Bioassay"
+          },
+          {
+            "code": "49074-8",
+            "display": "Influenza virus A IgA Ab [Mass/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "43851-5",
+            "display": "Influenza virus A IgA Ab [Presence] in Serum"
+          },
+          {
+            "code": "72266-0",
+            "display": "Influenza virus A IgA Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "49073-0",
+            "display": "Influenza virus A IgG Ab [Mass/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "43837-4",
+            "display": "Influenza virus A IgG Ab [Presence] in Serum"
+          },
+          {
+            "code": "86566-7",
+            "display": "Influenza virus A IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "9532-3",
+            "display": "Influenza virus A IgG Ab [Titer] in Serum"
+          },
+          {
+            "code": "31437-7",
+            "display": "Influenza virus A IgG Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "47313-2",
+            "display": "Influenza virus A IgG Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "57324-6",
+            "display": "Influenza virus A IgG Ab [Units/volume] in Serum by Immunoassay --1st specimen"
+          },
+          {
+            "code": "57325-3",
+            "display": "Influenza virus A IgG Ab [Units/volume] in Serum by Immunoassay --2nd specimen"
+          },
+          {
+            "code": "49075-5",
+            "display": "Influenza virus A IgM Ab [Mass/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "43838-2",
+            "display": "Influenza virus A IgM Ab [Presence] in Serum"
+          },
+          {
+            "code": "86567-5",
+            "display": "Influenza virus A IgM Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "9533-1",
+            "display": "Influenza virus A IgM Ab [Titer] in Serum"
+          },
+          {
+            "code": "31438-5",
+            "display": "Influenza virus A IgM Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "47312-4",
+            "display": "Influenza virus A IgM Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "57326-1",
+            "display": "Influenza virus A IgM Ab [Units/volume] in Serum by Immunoassay --1st specimen"
+          },
+          {
+            "code": "57327-9",
+            "display": "Influenza virus A IgM Ab [Units/volume] in Serum by Immunoassay --2nd specimen"
+          },
+          {
+            "code": "7924-4",
+            "display": "Influenza virus A Leningrad Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6642-3",
+            "display": "Influenza virus A Leningrad Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "87714-2",
+            "display": "Influenza virus A M gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "80588-7",
+            "display": "Influenza virus A M gene [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "50702-0",
+            "display": "Influenza virus A matrix protein RNA [Presence] in Isolate by Sequencing"
+          },
+          {
+            "code": "72201-7",
+            "display": "Influenza virus A matrix protein segment sequence identifier"
+          },
+          {
+            "code": "7925-1",
+            "display": "Influenza virus A Mississippi Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6641-5",
+            "display": "Influenza virus A Mississippi Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "41142-1",
+            "display": "Influenza virus A N1 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39311-6",
+            "display": "Influenza virus A N1 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "56024-3",
+            "display": "Influenza virus A N1 RNA [Units/volume] (viral load) in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "41141-3",
+            "display": "Influenza virus A N2 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39312-4",
+            "display": "Influenza virus A N2 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "74040-7",
+            "display": "Influenza virus A N2 RNA [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "41140-5",
+            "display": "Influenza virus A N3 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39313-2",
+            "display": "Influenza virus A N3 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "41139-7",
+            "display": "Influenza virus A N4 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39314-0",
+            "display": "Influenza virus A N4 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "41138-9",
+            "display": "Influenza virus A N5 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39315-7",
+            "display": "Influenza virus A N5 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "41137-1",
+            "display": "Influenza virus A N6 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39316-5",
+            "display": "Influenza virus A N6 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "41136-3",
+            "display": "Influenza virus A N7 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39317-3",
+            "display": "Influenza virus A N7 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "41135-5",
+            "display": "Influenza virus A N8 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39318-1",
+            "display": "Influenza virus A N8 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "41134-8",
+            "display": "Influenza virus A N9 Ab [Presence] in Serum"
+          },
+          {
+            "code": "39319-9",
+            "display": "Influenza virus A N9 Ab [Presence] in Serum by Neutralization test"
+          },
+          {
+            "code": "87716-7",
+            "display": "Influenza virus A NA gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "39103-7",
+            "display": "Influenza virus A neuraminidase cDNA [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "55134-1",
+            "display": "Influenza virus A neuraminidase RNA [Identifier] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "61101-2",
+            "display": "Influenza virus A neuraminidase RNA [Type] in specimen by Sequencing"
+          },
+          {
+            "code": "72200-9",
+            "display": "Influenza virus A neuraminidase segment sequence identifier"
+          },
+          {
+            "code": "50705-3",
+            "display": "Influenza virus A non-structural protein RNA [Presence] in Isolate by Sequencing"
+          },
+          {
+            "code": "93762-3",
+            "display": "Influenza virus A NP gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "93763-1",
+            "display": "Influenza virus A NS1 gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "50704-6",
+            "display": "Influenza virus A nucleoprotein RNA [Presence] in Isolate by Sequencing"
+          },
+          {
+            "code": "93761-5",
+            "display": "Influenza virus A PA gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "93760-7",
+            "display": "Influenza virus A PB1 gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "93759-9",
+            "display": "Influenza virus A PB2 gene [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "7926-9",
+            "display": "Influenza virus A Phillipines Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6640-7",
+            "display": "Influenza virus A Phillipines Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "50706-1",
+            "display": "Influenza virus A polymerase A RNA [Presence] in Isolate by Sequencing"
+          },
+          {
+            "code": "50707-9",
+            "display": "Influenza virus A polymerase B1 cDNA [Presence] in Isolate by Sequencing"
+          },
+          {
+            "code": "50708-7",
+            "display": "Influenza virus A polymerase B2 RNA [Presence] in Isolate by Sequencing"
+          },
+          {
+            "code": "50711-1",
+            "display": "Influenza virus A polymerase RNA [Identifier] in Isolate by Sequencing"
+          },
+          {
+            "code": "7927-7",
+            "display": "Influenza virus A Port Chalmers Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6636-5",
+            "display": "Influenza virus A Port Chalmers Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "53250-7",
+            "display": "Influenza virus A RNA [#/volume] (viral load) in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "81308-9",
+            "display": "Influenza virus A RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "76077-7",
+            "display": "Influenza virus A RNA [Presence] in Bronchoalveolar lavage by NAA with probe detection"
+          },
+          {
+            "code": "86568-3",
+            "display": "Influenza virus A RNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+          },
+          {
+            "code": "88193-8",
+            "display": "Influenza virus A RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+          },
+          {
+            "code": "49531-7",
+            "display": "Influenza virus A RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "92977-8",
+            "display": "Influenza virus A RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+          },
+          {
+            "code": "88599-6",
+            "display": "Influenza virus A RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "82166-0",
+            "display": "Influenza virus A RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+          },
+          {
+            "code": "76078-5",
+            "display": "Influenza virus A RNA [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "88600-2",
+            "display": "Influenza virus A RNA [Presence] in Pericardial fluid by NAA with probe detection"
+          },
+          {
+            "code": "92142-9",
+            "display": "Influenza virus A RNA [Presence] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "86569-1",
+            "display": "Influenza virus A RNA [Presence] in Tissue by NAA with probe detection"
+          },
+          {
+            "code": "34487-9",
+            "display": "Influenza virus A RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "85477-8",
+            "display": "Influenza virus A RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "44263-2",
+            "display": "Influenza virus A RNA [Units/volume] (viral load) in specimen by NAA with probe detection"
+          },
+          {
+            "code": "85535-3",
+            "display": "Influenza virus A RNA TCID50 [#/volume] in specimen"
+          },
+          {
+            "code": "88187-0",
+            "display": "Influenza virus A subtype [Identifier] in Cornea or Conjunctiva by NAA with probe detection"
+          },
+          {
+            "code": "91072-9",
+            "display": "Influenza virus A subtype [Identifier] in Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "22828-8",
+            "display": "Influenza virus A subtype [Identifier] in specimen by Immune diffusion (ID)"
+          },
+          {
+            "code": "22827-0",
+            "display": "Influenza virus A subtype [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "91771-6",
+            "display": "Influenza virus A subtype [Identifier] in Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "88835-4",
+            "display": "Influenza virus A swine origin RNA [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "55463-4",
+            "display": "Influenza virus A swine origin RNA [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "55464-2",
+            "display": "Influenza virus A swine origin RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "7928-5",
+            "display": "Influenza virus A Texas Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6638-1",
+            "display": "Influenza virus A Texas Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "7929-3",
+            "display": "Influenza virus A Victoria Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "6637-3",
+            "display": "Influenza virus A Victoria Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "85532-0",
+            "display": "Influenza virus A whole genome [Nucleotide sequence] in Isolate by Sequencing"
+          },
+          {
+            "code": "50699-8",
+            "display": "Influenza virus A.adamantane resistance [Presence]"
+          },
+          {
+            "code": "50698-0",
+            "display": "Influenza virus A.adamantane resistance [Presence] by Phenotype method"
+          },
+          {
+            "code": "50700-4",
+            "display": "Influenza virus A.adamantane resistant RNA [Presence] by NAA with probe detection"
+          },
+          {
+            "code": "50703-8",
+            "display": "Influenza virus A.neuraminidase inhibitor resistance [Susceptibility] Qualitative by Phenotype method"
+          },
+          {
+            "code": "45279-7",
+            "display": "Influenza virus A+B Ab [Presence] in Body fluid"
+          },
+          {
+            "code": "44565-0",
+            "display": "Influenza virus A+B Ab [Presence] in Serum"
+          },
+          {
+            "code": "22366-9",
+            "display": "Influenza virus A+B Ab [Titer] in Serum"
+          },
+          {
+            "code": "50693-1",
+            "display": "Influenza virus A+B Ab [Titer] in Serum by Complement fixation"
+          },
+          {
+            "code": "6434-5",
+            "display": "Influenza virus A+B Ab [Titer] in Serum by Immunofluorescence"
+          },
+          {
+            "code": "7930-1",
+            "display": "Influenza virus A+B Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "17013-4",
+            "display": "Influenza virus A+B Ab [Units/volume] in Serum by Immunofluorescence"
+          },
+          {
+            "code": "44566-8",
+            "display": "Influenza virus A+B Ag [Presence] in Bronchial specimen"
+          },
+          {
+            "code": "33535-6",
+            "display": "Influenza virus A+B Ag [Presence] in Nasopharynx"
+          },
+          {
+            "code": "44567-6",
+            "display": "Influenza virus A+B Ag [Presence] in Nose"
+          },
+          {
+            "code": "72367-6",
+            "display": "Influenza virus A+B Ag [Presence] in Nose by Rapid immunoassay"
+          },
+          {
+            "code": "31860-0",
+            "display": "Influenza virus A+B Ag [Presence] in Throat"
+          },
+          {
+            "code": "6435-2",
+            "display": "Influenza virus A+B Ag [Presence] in Throat by Immunoassay"
+          },
+          {
+            "code": "6436-0",
+            "display": "Influenza virus A+B Ag [Presence] in Throat by Immunofluorescence"
+          },
+          {
+            "code": "24015-0",
+            "display": "Influenza virus A+B Ag [Presence] in specimen"
+          },
+          {
+            "code": "6437-8",
+            "display": "Influenza virus A+B Ag [Presence] in specimen by Immunoassay"
+          },
+          {
+            "code": "6438-6",
+            "display": "Influenza virus A+B Ag [Presence] in specimen by Immunofluorescence"
+          },
+          {
+            "code": "62462-7",
+            "display": "Influenza virus A+B RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "57897-1",
+            "display": "Influenza virus A+B.neuraminidase inhibitor resistance [Susceptibility] in specimen by Genotype method"
+          },
+          {
+            "code": "31861-8",
+            "display": "Influenza virus A+B+C Ag [Presence] in Throat"
+          },
+          {
+            "code": "6439-4",
+            "display": "Influenza virus A+B+C Ag [Presence] in Throat by Immunoassay"
+          },
+          {
+            "code": "6440-2",
+            "display": "Influenza virus A+B+C Ag [Presence] in Throat by Immunofluorescence"
+          },
+          {
+            "code": "31862-6",
+            "display": "Influenza virus A+B+C Ag [Presence] in specimen"
+          },
+          {
+            "code": "6441-0",
+            "display": "Influenza virus A+B+C Ag [Presence] in specimen by Immunoassay"
+          },
+          {
+            "code": "6442-8",
+            "display": "Influenza virus A+B+C Ag [Presence] in specimen by Immunofluorescence"
+          },
+          {
+            "code": "49518-4",
+            "display": "Influenza virus Ab [Titer] in Serum"
+          },
+          {
+            "code": "18233-7",
+            "display": "Influenza virus Ab [Units/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "54240-7",
+            "display": "Influenza virus Ag [Presence] in specimen"
+          },
+          {
+            "code": "38382-8",
+            "display": "Influenza virus B [Presence] in specimen by Organism specific culture"
+          },
+          {
+            "code": "44569-2",
+            "display": "Influenza virus B Ab [Presence] in Body fluid"
+          },
+          {
+            "code": "44570-0",
+            "display": "Influenza virus B Ab [Presence] in Serum"
+          },
+          {
+            "code": "44568-4",
+            "display": "Influenza virus B Ab [Presence] in Serum by Complement fixation"
+          },
+          {
+            "code": "49533-3",
+            "display": "Influenza virus B Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "9534-9",
+            "display": "Influenza virus B Ab [Titer] in Cerebral spinal fluid"
+          },
+          {
+            "code": "22367-7",
+            "display": "Influenza virus B Ab [Titer] in Serum"
+          },
+          {
+            "code": "24291-7",
+            "display": "Influenza virus B Ab [Titer] in Serum --1st specimen"
+          },
+          {
+            "code": "24292-5",
+            "display": "Influenza virus B Ab [Titer] in Serum --2nd specimen"
+          },
+          {
+            "code": "5230-8",
+            "display": "Influenza virus B Ab [Titer] in Serum by Complement fixation"
+          },
+          {
+            "code": "24217-2",
+            "display": "Influenza virus B Ab [Titer] in Serum by Complement fixation --1st specimen"
+          },
+          {
+            "code": "24218-0",
+            "display": "Influenza virus B Ab [Titer] in Serum by Complement fixation --2nd specimen"
+          },
+          {
+            "code": "50709-5",
+            "display": "Influenza virus B Ab [Titer] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "17014-2",
+            "display": "Influenza virus B Ab [Units/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "7931-9",
+            "display": "Influenza virus B Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "52974-3",
+            "display": "Influenza virus B Ab [Units/volume] in Serum by Complement fixation"
+          },
+          {
+            "code": "39537-6",
+            "display": "Influenza virus B Ab [Units/volume] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "34154-5",
+            "display": "Influenza virus B Ab [Units/volume] in Unspecified specimen"
+          },
+          {
+            "code": "44576-7",
+            "display": "Influenza virus B Ag [Presence] in Bronchial specimen"
+          },
+          {
+            "code": "44572-6",
+            "display": "Influenza virus B Ag [Presence] in Bronchial specimen by Immunofluorescence"
+          },
+          {
+            "code": "77384-6",
+            "display": "Influenza virus B Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
+          },
+          {
+            "code": "54241-5",
+            "display": "Influenza virus B Ag [Presence] in Isolate"
+          },
+          {
+            "code": "49534-1",
+            "display": "Influenza virus B Ag [Presence] in Isolate by Immunofluorescence"
+          },
+          {
+            "code": "88905-5",
+            "display": "Influenza virus B Ag [Presence] in Lower respiratory specimen by Immunofluorescence"
+          },
+          {
+            "code": "43895-2",
+            "display": "Influenza virus B Ag [Presence] in Nasopharynx"
+          },
+          {
+            "code": "46083-2",
+            "display": "Influenza virus B Ag [Presence] in Nasopharynx by Immunoassay"
+          },
+          {
+            "code": "44571-8",
+            "display": "Influenza virus B Ag [Presence] in Nasopharynx by Immunofluorescence"
+          },
+          {
+            "code": "80383-3",
+            "display": "Influenza virus B Ag [Presence] in Nasopharynx by Rapid immunoassay"
+          },
+          {
+            "code": "44577-5",
+            "display": "Influenza virus B Ag [Presence] in Nose"
+          },
+          {
+            "code": "44575-9",
+            "display": "Influenza virus B Ag [Presence] in Nose by Immunoassay"
+          },
+          {
+            "code": "44573-4",
+            "display": "Influenza virus B Ag [Presence] in Nose by Immunofluorescence"
+          },
+          {
+            "code": "31863-4",
+            "display": "Influenza virus B Ag [Presence] in Throat"
+          },
+          {
+            "code": "5864-4",
+            "display": "Influenza virus B Ag [Presence] in Throat by Immunoassay"
+          },
+          {
+            "code": "5865-1",
+            "display": "Influenza virus B Ag [Presence] in Throat by Immunofluorescence"
+          },
+          {
+            "code": "88194-6",
+            "display": "Influenza virus B Ag [Presence] in Tissue by Immunofluorescence"
+          },
+          {
+            "code": "44574-2",
+            "display": "Influenza virus B Ag [Presence] in Trachea by Immunofluorescence"
+          },
+          {
+            "code": "31864-2",
+            "display": "Influenza virus B Ag [Presence] in specimen"
+          },
+          {
+            "code": "5866-9",
+            "display": "Influenza virus B Ag [Presence] in specimen by Immunoassay"
+          },
+          {
+            "code": "5867-7",
+            "display": "Influenza virus B Ag [Presence] in specimen by Immunofluorescence"
+          },
+          {
+            "code": "49076-3",
+            "display": "Influenza virus B IgA Ab [Mass/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "43852-3",
+            "display": "Influenza virus B IgA Ab [Presence] in Serum"
+          },
+          {
+            "code": "72265-2",
+            "display": "Influenza virus B IgA Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "49077-1",
+            "display": "Influenza virus B IgG Ab [Mass/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "43839-0",
+            "display": "Influenza virus B IgG Ab [Presence] in Serum"
+          },
+          {
+            "code": "88903-0",
+            "display": "Influenza virus B IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "9535-6",
+            "display": "Influenza virus B IgG Ab [Titer] in Serum"
+          },
+          {
+            "code": "17015-9",
+            "display": "Influenza virus B IgG Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "47314-0",
+            "display": "Influenza virus B IgG Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "49078-9",
+            "display": "Influenza virus B IgM Ab [Mass/volume] in Cerebral spinal fluid"
+          },
+          {
+            "code": "43840-8",
+            "display": "Influenza virus B IgM Ab [Presence] in Serum"
+          },
+          {
+            "code": "86570-9",
+            "display": "Influenza virus B IgM Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "9536-4",
+            "display": "Influenza virus B IgM Ab [Titer] in Serum"
+          },
+          {
+            "code": "17016-7",
+            "display": "Influenza virus B IgM Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "47315-7",
+            "display": "Influenza virus B IgM Ab [Units/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "57328-7",
+            "display": "Influenza virus B IgM Ab [Units/volume] in Serum by Immunoassay --1st specimen"
+          },
+          {
+            "code": "57329-5",
+            "display": "Influenza virus B IgM Ab [Units/volume] in Serum by Immunoassay --2nd specimen"
+          },
+          {
+            "code": "74784-0",
+            "display": "Influenza virus B lineage RNA [Identifier] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "80591-1",
+            "display": "Influenza virus B NS gene [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "53251-5",
+            "display": "Influenza virus B RNA [#/volume] (viral load) in Unspecified specimen by NAA with probe detection"
+          },
+          {
+            "code": "81309-7",
+            "display": "Influenza virus B RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "90886-3",
+            "display": "Influenza virus B RNA [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "49536-6",
+            "display": "Influenza virus B RNA [Identifier] in Isolate by Sequencing"
+          },
+          {
+            "code": "76079-3",
+            "display": "Influenza virus B RNA [Presence] in Bronchoalveolar lavage by NAA with probe detection"
+          },
+          {
+            "code": "86571-7",
+            "display": "Influenza virus B RNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+          },
+          {
+            "code": "88195-3",
+            "display": "Influenza virus B RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+          },
+          {
+            "code": "49535-8",
+            "display": "Influenza virus B RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "92976-0",
+            "display": "Influenza virus B RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+          },
+          {
+            "code": "88592-1",
+            "display": "Influenza virus B RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "82170-2",
+            "display": "Influenza virus B RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+          },
+          {
+            "code": "76080-1",
+            "display": "Influenza virus B RNA [Presence] in Nasopharynx by NAA with probe detection"
+          },
+          {
+            "code": "88596-2",
+            "display": "Influenza virus B RNA [Presence] in Pericardial fluid by NAA with probe detection"
+          },
+          {
+            "code": "92141-1",
+            "display": "Influenza virus B RNA [Presence] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "86572-5",
+            "display": "Influenza virus B RNA [Presence] in Tissue by NAA with probe detection"
+          },
+          {
+            "code": "40982-1",
+            "display": "Influenza virus B RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "85478-6",
+            "display": "Influenza virus B RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "74787-3",
+            "display": "Influenza virus B Victoria and Yamagata lineage RNA panel - specimen"
+          },
+          {
+            "code": "85821-7",
+            "display": "Influenza virus B Victoria lineage Ag [Presence] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "81327-9",
+            "display": "Influenza virus B Victoria lineage RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "74785-7",
+            "display": "Influenza virus B Victoria lineage RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "86318-3",
+            "display": "Influenza virus B Yamagata lineage Ag [Presence] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "85801-9",
+            "display": "Influenza virus B Yamagata lineage Ag [Titer] in Isolate by Hemagglutination inhibition"
+          },
+          {
+            "code": "81325-3",
+            "display": "Influenza virus B Yamagata lineage RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "74786-5",
+            "display": "Influenza virus B Yamagata lineage RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "44579-1",
+            "display": "Influenza virus C Ab [Presence] in Serum"
+          },
+          {
+            "code": "44578-3",
+            "display": "Influenza virus C Ab [Presence] in Serum by Complement fixation"
+          },
+          {
+            "code": "22368-5",
+            "display": "Influenza virus C Ab [Titer] in Serum"
+          },
+          {
+            "code": "5231-6",
+            "display": "Influenza virus C Ab [Titer] in Serum by Complement fixation"
+          },
+          {
+            "code": "7932-7",
+            "display": "Influenza virus C Ab [Units/volume] in Serum"
+          },
+          {
+            "code": "31865-9",
+            "display": "Influenza virus C Ag [Presence] in specimen"
+          },
+          {
+            "code": "29721-8",
+            "display": "Influenza virus C Ag [Presence] in specimen by Immunofluorescence"
+          },
+          {
+            "code": "60267-2",
+            "display": "Influenza virus C RNA [Presence] in Isolate by NAA with probe detection"
+          },
+          {
+            "code": "62860-2",
+            "display": "Influenza virus C RNA [Presence] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "85526-2",
+            "display": "Influenza virus D PB2 gene [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "90885-5",
+            "display": "Influenza virus D RNA [Cycle Threshold #] in specimen by NAA with probe detection"
+          },
+          {
+            "code": "88200-1",
+            "display": "Influenza virus identified in Cornea or Conjunctiva by Organism specific culture"
+          },
+          {
+            "code": "54242-3",
+            "display": "Influenza virus identified in Isolate"
+          },
+          {
+            "code": "88568-1",
+            "display": "Influenza virus identified in Lower respiratory specimen by Organism specific culture"
+          },
+          {
+            "code": "6601-9",
+            "display": "Influenza virus identified in Sputum by Organism specific culture"
+          },
+          {
+            "code": "6602-7",
+            "display": "Influenza virus identified in Sputum tracheal aspirate by Organism specific culture"
+          },
+          {
+            "code": "6603-5",
+            "display": "Influenza virus identified in Throat by Organism specific culture"
+          },
+          {
+            "code": "54244-9",
+            "display": "Influenza virus identified in specimen"
+          },
+          {
+            "code": "6604-3",
+            "display": "Influenza virus identified in specimen by Organism specific culture"
+          },
+          {
+            "code": "49538-2",
+            "display": "Influenza virus identified in specimen by Shell vial culture"
+          },
+          {
+            "code": "91772-4",
+            "display": "Influenza virus identified in Upper respiratory specimen by Organism specific culture"
+          },
+          {
+            "code": "55262-0",
+            "display": "Influenza virus immunization status"
+          },
+          {
+            "code": "54243-1",
+            "display": "Influenza virus RNA [Identifier] in specimen by Probe"
+          },
+          {
+            "code": "50710-3",
+            "display": "Influenza virus susceptibility panel"
+          },
+          {
+            "code": "81233-9",
+            "display": "Influenza virus types A and B and subtypes panel - Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "90456-5",
+            "display": "Influenza virus types A and B panel - Cerebral spinal fluid by NAA with probe detection"
+          },
+          {
+            "code": "90455-7",
+            "display": "Influenza virus types A and B panel - Cornea or Conjunctiva by NAA with probe detection"
+          },
+          {
+            "code": "88601-0",
+            "display": "Influenza virus types A and B panel - Lower respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "90457-3",
+            "display": "Influenza virus types A and B panel - Tissue by NAA with probe detection"
+          },
+          {
+            "code": "92882-0",
+            "display": "Influenza virus types A and B panel - Upper respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "50713-7",
+            "display": "Influenza virus.neuraminidase inhibitor resistance [Susceptibility] by Genotype method"
+          },
+          {
+            "code": "50712-9",
+            "display": "Influenza virus.neuraminidase inhibitor resistance [Susceptibility] Qualitative"
+          },
+          {
+            "code": "23437-7",
+            "display": "Swine influenza virus Ab [Presence] in Serum"
+          },
+          {
+            "code": "23438-5",
+            "display": "Swine influenza virus Ab [Presence] in Serum by Hemagglutination inhibition"
+          },
+          {
+            "code": "23782-6",
+            "display": "Swine influenza virus Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "code": "23781-8",
+            "display": "Swine influenza virus Ag [Presence] in Tissue by Immunofluorescence"
+          },
+          {
+            "code": "85534-6",
+            "display": "Influenza virus A avian origin nucleoprotein Ab/Negative control in Serum by Immunoassay"
+          },
+          {
+            "code": "101293-9",
+            "display": "Influenza virus A H1 2009 pandemic RNA [Presence] in Throat by NAA with non-probe detection"
+          },
+          {
+            "code": "101423-2",
+            "display": "Influenza virus A H1 RNA [Presence] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "101424-0",
+            "display": "Influenza virus A H3 RNA [Presence] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "101292-1",
+            "display": "Influenza virus A RNA [Presence] in Throat by NAA with non-probe detection"
+          },
+          {
+            "code": "101294-7",
+            "display": "Influenza virus A H3 RNA [Presence] in Throat by NAA with non-probe detection"
+          },
+          {
+            "code": "100973-7",
+            "display": "Influenza virus A RNA [Presence] in Nose by NAA with non-probe detection"
+          },
+          {
+            "code": "100344-1",
+            "display": "Influenza virus A RNA [Presence] in Saliva (oral fluid) by NAA with probe detection"
+          },
+          {
+            "code": "99623-1",
+            "display": "Influenza virus A N1 RNA [Presence] in Specimen by NAA with probe detection"
+          },
+          {
+            "code": "100974-5",
+            "display": "Influenza virus B RNA [Presence] in Nose by NAA with non-probe detection"
+          },
+          {
+            "code": "100343-3",
+            "display": "Influenza virus B RNA [Presence] in Saliva (oral fluid) by NAA with probe detection"
+          },
+          {
+            "code": "101295-4",
+            "display": "Influenza virus B RNA [Presence] in Throat by NAA with non-probe detection"
+          },
+          {
+            "code": "95658-1",
+            "display": "Influenza virus A H7 Eurasia RNA [Presence] in Specimen by NAA with probe detection"
+          },
+          {
+            "code": "97733-0",
+            "display": "Influenza virus types A and B and subtypes RNA panel - Specimen by NAA with probe detection"
+          },
+          {
+            "code": "81307-1",
+            "display": "Influenza virus A H7 Eurasia RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+          },
+          {
+            "code": "88129-2",
+            "display": "Respiratory pathogens panel - Throat by Immunofluorescence"
+          },
+          {
+            "code": "87964-3",
+            "display": "Respiratory pathogens panel - Bronchoalveolar lavage by Immunofluorescence"
+          },
+          {
+            "code": "88137-5",
+            "display": "Respiratory pathogens panel - Nasopharynx by Immunofluorescence"
+          },
+          {
+            "code": "55101-0",
+            "display": "Respiratory pathogens panel - Specimen by Organism specific culture"
+          },
+          {
+            "code": "50219-5",
+            "display": "Respiratory pathogens DNA and RNA 12a panel - Specimen by NAA with probe detection"
+          },
+          {
+            "code": "60566-7",
+            "display": "Respiratory pathogens DNA and RNA 12b panel - Specimen by NAA with probe detection"
+          }
+        ]
+      },
+      {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "concept": [
+          {
+            "code": "87637",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), influenza virus types A and B, and respiratory syncytial virus, multiplex amplified probe technique"
+          },
+          {
+            "code": "87631",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87632",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87633",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87636",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]) and influenza virus types A and B, multiplex amplified probe technique"
+          },
+          {
+            "code": "0098U",
+            "display": "Detection of respiratory infectious agent by multiplex reverse transcription and multiplex amplified probe technique for adenovirus, coronavirus, human metapneumovirus, influenza A, influenza A subtype H1, influenza A subtype H3, influenza A subtype H1-2009, influenza B, parainfluenza virus, human rhinovirus/enterovirus, respiratory syncytial virus, Bordetella pertussis, Chlamydophila pneumoniae, Mycoplasma pneumoniae"
+          },
+          {
+            "code": "0099U",
+            "display": "Test for detection of respiratory disease-causing organism using amplified probe, 20 target organisms (adenovirus, coronavirus 229E, coronavirus HKU1, coronavirus, coronavirus OC43, human metapneumovirus, influenza A, influenza A subtype, influenza A subtype H3, influenza A subtype H1-2009, influenza, parainfluenza virus, parainfluenza virus 2, parainfluenza virus 3, parainfluenza virus 4, human rhinovirus/enterovirus, respiratory syncytial virus, Bordetella pertussis, Chlamydophila pneumonia, Mycoplasma pneumoniae)"
+          },
+          {
+            "code": "0100U",
+            "display": "Detection of respiratory infectious agent by multiplex reverse transcription and multiplex amplified probe technique for adenovirus, coronavirus 229E, coronavirus HKU1, coronavirus NL63, coronavirus OC43, human metapneumovirus, human rhinovirus/enterovirus, influenza A, including subtypes H1, H1-2009, and H3, influenza B, parainfluenza virus 1, parainfluenza virus 2, parainfluenza virus 3, parainfluenza virus 4, respiratory syncytial virus, Bordetella parapertussis [IS1001], Bordetella pertussis [ptxP], Chlamydia pneumoniae, Mycoplasma pneumoniae"
+          },
+          {
+            "code": "0240U",
+            "display": "Detection of SARS-CoV-2, Influenza A and Influenza B"
+          },
+          {
+            "code": "86710",
+            "display": "Influenza A and B Antibodies, Quantitative"
+          },
+          {
+            "code": "87275",
+            "display": "Infectious agent antigen detection by immunofluorescence technique, Influenza B"
+          },
+          {
+            "code": "87276",
+            "display": "Infectious agent antigen detection by immunofluorescence technique, Influenza A"
+          },
+          {
+            "code": "87400",
+            "display": "Infectious agent antigen detection by enzyme immunoassay technique, qualitative or semiquantitative, multiple-step method; Influenza, A or B, each"
+          },
+          {
+            "code": "87501",
+            "display": "Determine the presence of influenza virus through nucleic acid detection including reverse transcription and amplified probe technique for each type or subtype"
+          },
+          {
+            "code": "87502",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, for multiple types or sub-types, includes multiplex reverse transcription, when performed, and multiplex amplified probe technique, first 2 types or sub-types"
+          },
+          {
+            "code": "87503",
+            "display": "Presence of influenza virus through nucleic acid detection including multiplex amplified probe technique and possibly multiplex reverse transcription for each additional influenza virus type or subtype after the detection of the first two types or subtypes"
+          },
+          {
+            "code": "87804",
+            "display": "Infectious agent antigen detection by immunoassay with direct optical observation; influenza"
+          },
+          {
+            "code": "87428",
+            "display": "Infectious agent antigen detection by immunoassay technique, (eg, enzyme immunoassay [EIA], enzyme-linked immunosorbent assay [ELISA], fluorescence immunoassay [FIA], immunochemiluminometric assay [IMCA]) qualitative or semiquantitative; severe acute resp"
+          },
+          {
+            "code": "87254",
+            "display": "Shell vial; Virus Isolation"
+          },
+          {
+            "code": "87299",
+            "display": "Infectious agent antigen detection by immunofluorescent technique; not otherwise specified, each organism"
+          },
+          {
+            "code": "87300",
+            "display": "Infectious agent antigen detection by immunofluorescent technique, polyvalent for multiple organisms, each polyvalent antiserum"
+          },
+          {
+            "code": "0115U",
+            "display": "ePlex® Respiratory Pathogen (RP) Panel (ePlex RP® panel) from GenMark Diagnostics, Inc., which is an automated molecular multiplexed nucleic acid diagnostic test on a nasopharyngeal specimen collected obtained from patients suspected of respiratory tract infections for a total of 20 (2 bacterial and 18 viral) common viral and bacterial respiratory pathogens."
+          },
+          {
+            "code": "87253",
+            "display": "Virus isolation; tissue culture, additional studies or definitive identification (eg, hemabsorption, neutralization, immunofluorescence stain), each isolate"
+          },
+          {
+            "code": "87252",
+            "display": "Viral Culture, General; Virus isolation; tissue culture inoculation, observation, and presumptive identification by cytopathic effect"
+          }
+        ]
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>resp-net-labtest-flu-loinc</h2><tt>http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-valueset</tt></div>"
+  },
+  "name": "Resp_net_labtest_flu_loinc"
+}

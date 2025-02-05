@@ -1,0 +1,367 @@
+<!--<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" rel="stylesheet" href="resources/sheet.css">-->
+<style type="text/css">
+    .ritz .waffle a {
+        color: inherit;
+    }
+
+
+    .ritz .waffle .s0 {
+        border-bottom: 1px SOLID #000000;
+        border-right: 1px SOLID #000000;
+        background-color: #45818e;
+        text-align: center;
+        font-weight: bold;
+        color: #ffffff;
+        font-family: docs-Calibri, Arial;
+        font-size: 11pt;
+        vertical-align: top;
+        white-space: normal;
+        overflow: hidden;
+        word-wrap: break-word;
+        direction: ltr;
+        padding: 2px 3px 2px 3px;
+    }
+
+    .ritz .waffle .s2 {
+        border-bottom: 1px SOLID #000000;
+        border-right: 1px SOLID #000000;
+        background-color: #cccccc;
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        color: #000000;
+        font-family: docs-Calibri, Arial;
+        font-size: 11pt;
+        vertical-align: top;
+        white-space: normal;
+        overflow: hidden;
+        word-wrap: break-word;
+        direction: ltr;
+        padding: 2px 3px 2px 3px;
+    }
+
+    .ritz .waffle .s3 {
+        border-bottom: 1px SOLID #000000;
+        border-right: 1px SOLID #000000;
+        background-color: #ffffff;
+        text-align: left;
+        color: #000000;
+        font-family: docs-Calibri, Arial;
+        font-size: 11pt;
+        vertical-align: top;
+        white-space: normal;
+        overflow: hidden;
+        word-wrap: break-word;
+        direction: ltr;
+        padding: 2px 3px 2px 3px;
+    }
+	
+	.ritz .waffle .s4 {
+        border-bottom: 1px SOLID #000000;
+        border-right: 1px SOLID #000000;
+        background-color: #ffffff;
+        text-align: left;
+        font-style: italic;
+        color: #000000;
+        font-family: docs-Calibri, Arial;
+        font-size: 11pt;
+        vertical-align: top;
+        white-space: normal;
+        overflow: hidden;
+        word-wrap: break-word;
+        direction: ltr;
+        padding: 2px 3px 2px 3px;
+    }
+
+</style>
+<div class="ritz grid-container" dir="ltr">
+    <table class="waffle" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="row-header freezebar-vertical-handle"></th>
+                <th id="491610746C0" style="width:186px;" class="column-headers-background">A</th>
+                <th id="491610746C1" style="width:109px;" class="column-headers-background">B</th>
+                <th id="491610746C2" style="width:260px;" class="column-headers-background">C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="height: 20px">
+                <th id="491610746R0" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">1</div>
+                </th>
+                <td class="s0" dir="ltr">Use Case 1 CRF Data Element</td>
+                <td class="s0" dir="ltr">Mapping Fidelity</td>
+                <td class="s0" dir="ltr">RESP-NET on FHIR IG Profile Mapping</td>
+            </tr>
+            <tr>
+                <th style="height:3px;" class="freezebar-cell freezebar-horizontal-handle"></th>
+                <td class="freezebar-cell"></td>
+                <td class="freezebar-cell"></td>
+                <td class="freezebar-cell"></td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R1" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">2</div>
+                </th>
+                <td class="s3" dir="ltr">State</td>
+                <td class="s3" dir="ltr">Complete</td>
+                <td class="s3" dir="ltr">us-ph-patient.address.state</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R2" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">3</div>
+                </th>
+                <td class="s3" dir="ltr">County</td>
+                <td class="s3" dir="ltr">Complete</td>
+                <td class="s3" dir="ltr">us-ph-patient.address.district</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R3" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">4</div>
+                </th>
+                <td class="s3" dir="ltr">Patient age</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">calculated by subtracting us-ph-patient.birthdate from
+                    us-public-health-encounter.period.start</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R4" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">5</div>
+                </th>
+                <td class="s3" dir="ltr">Date of birth</td>
+                <td class="s3" dir="ltr">Complete</td>
+                <td class="s3" dir="ltr">us-ph-patient.birthdate</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R5" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">6</div>
+                </th>
+                <td class="s3" dir="ltr">Sex</td>
+                <td class="s3" dir="ltr">Complete</td>
+                <td class="s3" dir="ltr">us-ph-patient.birthsex</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R6" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">7</div>
+                </th>
+                <td class="s3" dir="ltr">Race</td>
+                <td class="s3" dir="ltr">Partial</td>
+                <td class="s3" dir="ltr">us-ph-patient.extension:race</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R7" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">8</div>
+                </th>
+                <td class="s4" dir="ltr">White</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:race(White)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R8" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">9</div>
+                </th>
+                <td class="s4" dir="ltr">Black or African American</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:race(Black or African American)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R9" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">10</div>
+                </th>
+                <td class="s4" dir="ltr">Asian</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:race(Asian)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R10" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">11</div>
+                </th>
+                <td class="s4" dir="ltr">Native Hawaiian or Other Pacific Islander</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:race(Native Hawaiian or Other Pacific Islander)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R11" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">12</div>
+                </th>
+                <td class="s4" dir="ltr">American Indian or Alaska Native</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:race(American Indian or Alaska Native)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R12" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">13</div>
+                </th>
+                <td class="s4" dir="ltr">Multiracial, not otherwise specified</td>
+                <td class="s4" dir="ltr">Gap</td>
+                <td class="s4" dir="ltr"></td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R13" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">14</div>
+                </th>
+                <td class="s4" dir="ltr">Not specified</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:race(Unknown)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R14" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">15</div>
+                </th>
+                <td class="s3" dir="ltr">Ethnicity</td>
+                <td class="s3" dir="ltr">Partial</td>
+                <td class="s3" dir="ltr">us-ph-patient.extension:ethnicity</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R15" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">16</div>
+                </th>
+                <td class="s4" dir="ltr">Hispanic or Latino</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:ethnicity(Hispanic or Latino)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R16" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">17</div>
+                </th>
+                <td class="s4" dir="ltr">Non-Hispanic/Latino</td>
+                <td class="s4" dir="ltr">Complete</td>
+                <td class="s4" dir="ltr">us-ph-patient.extension:ethnicity(Non Hispanic or Latino)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R17" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">18</div>
+                </th>
+                <td class="s4" dir="ltr">Not Specified</td>
+                <td class="s4" dir="ltr">Gap</td>
+                <td class="s4"></td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R18" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">19</div>
+                </th>
+                <td class="s3" dir="ltr">Hospital admission date</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-encounter.period.start AND us-ph-encounter.period.end</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R19" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">20</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing data, TstTyp1, TstTyp2, TstTyp3, TstTyp4
+                </td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.code</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R20" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">21</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing data, TstRes1, TstRes2, TstRes3, TstRes4
+                </td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.value</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R21" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">22</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing
+                    data TstResOth1, TstResOth2, TstResOth3, TstResOth4</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.value</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R22" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">23</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing
+                    data PosTstDt1, PosTstDt2, PosTstDt3, PosTstDt4</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.effectiveDateTime</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R23" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">24</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing data, HospLab1, HospLab2, HospLab3, HospLab4
+                </td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.performer.organization.identifier</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R24" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">25</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing
+                    data HospLab1Oth, HospLab2Oth, HospLab3Oth, HospLab4Oth</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.performer.organization.identifier</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R25" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">26</div>
+                </th>
+                <td class="s3" dir="ltr">Positive influenza testing data SpecID1, SpecID2, SpecID3, SpecID4
+                </td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-lab-result-observation.specimen.accessionIdentifier</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R26" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">27</div>
+                </th>
+                <td class="s3" dir="ltr">ICU admission</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-encounter.serviceType = intensive care medicine OR pediatric intensive
+                    care medicine</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R27" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">28</div>
+                </th>
+                <td class="s3" dir="ltr">Mechanical ventilation</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">eicr-procedure.code</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R28" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">29</div>
+                </th>
+                <td class="s3" dir="ltr">Outcome: Alive</td>
+                <td class="s3" dir="ltr">Gap</td>
+                <td class="s3" dir="ltr"></td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R29" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">30</div>
+                </th>
+                <td class="s3" dir="ltr">Outcome: Died during hospitalization</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">
+                    us-ph-patient.deceasedDateTime OR us-ph-encounter.dischargeDisposition(Expired)</td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R30" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">31</div>
+                </th>
+                <td class="s3" dir="ltr">Outcome: Unknown</td>
+                <td class="s3" dir="ltr">Gap</td>
+                <td class="s3" dir="ltr"></td>
+            </tr>
+            <tr style="height: 20px">
+                <th id="491610746R31" style="height: 20px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 20px">32</div>
+                </th>
+                <td class="s3" dir="ltr">Length of Stay/Discharge Date</td>
+                <td class="s3" dir="ltr">Indirect</td>
+                <td class="s3" dir="ltr">us-ph-encounter.period.end</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!--</link>
+</meta>
+</div>-->

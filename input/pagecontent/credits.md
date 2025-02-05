@@ -29,7 +29,7 @@
 
 * Mike Flanigan (Carradora Health Inc)
 
-##### Technical Expert Panel Members (Represented Organizations):
+##### Technical Expert Panel Members (Represented OrganizUpdate JIRA Specations):
 
 * Colorado Department of Public Health and Environment
 * Georgia Department of Health

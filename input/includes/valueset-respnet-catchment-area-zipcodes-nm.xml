@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+	xmlns="http://hl7.org/fhir">
+	<id value="respnet-catchment-area-zipcodes-nm"/>
+	<url value="http://hl7.org/fhir/us/resp-net/ValueSet/respnet-catchment-area-zipcodes-nm"/>
+	<version value="1.0.1"/>
+	<name value="RESPNETCatchmentAreaZipCodesNM"/>
+	<title value="RESPNET Catchment Area Zip Codes NM"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2024-08-14"/>
+	<publisher value="HL7 International / Public Health"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.hl7.org/Special/committees/pher"/>
+		</telecom>
+	</contact>
+	<description value="The valueset contains US Zip Codes for catchment areas for RESP-NET Reportability determination. These are just sample set of codes for the state of New Mexico."/>
+	<copyright value="This value set includes content from the United States Postal Service. See http://terminology.hl7.org/CodeSystem/USZIPCODES."/>
+	<compose>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/USZIPCODES"/>
+			<concept>
+				<code value="81137"/>
+			</concept>
+			<concept>
+				<code value="87008"/>
+			</concept>
+			<concept>
+				<code value="87010"/>
+			</concept>
+			<concept>
+				<code value="87013"/>
+			</concept>
+			<concept>
+				<code value="87015"/>
+			</concept>
+			<concept>
+				<code value="87022"/>
+			</concept>
+			<concept>
+				<code value="87026"/>
+			</concept>
+			<concept>
+				<code value="87035"/>
+			</concept>
+			<concept>
+				<code value="87037"/>
+			</concept>
+			<concept>
+				<code value="87047"/>
+			</concept>
+			<concept>
+				<code value="87048"/>
+			</concept>
+			<concept>
+				<code value="87056"/>
+			</concept>
+			<concept>
+				<code value="87059"/>
+			</concept>
+			<concept>
+				<code value="87102"/>
+			</concept>
+			<concept>
+				<code value="87104"/>
+			</concept>
+			<concept>
+				<code value="87105"/>
+			</concept>
+			<concept>
+				<code value="87106"/>
+			</concept>
+			<concept>
+				<code value="87107"/>
+			</concept>
+			<concept>
+				<code value="87108"/>
+			</concept>
+			<concept>
+				<code value="87109"/>
+			</concept>
+			<concept>
+				<code value="87110"/>
+			</concept>
+			<concept>
+				<code value="87111"/>
+			</concept>
+			<concept>
+				<code value="87112"/>
+			</concept>
+			<concept>
+				<code value="87113"/>
+			</concept>
+			<concept>
+				<code value="87114"/>
+			</concept>
+			<concept>
+				<code value="87116"/>
+			</concept>
+			<concept>
+				<code value="87117"/>
+			</concept>
+			<concept>
+				<code value="87120"/>
+			</concept>
+			<concept>
+				<code value="87121"/>
+			</concept>
+			<concept>
+				<code value="87122"/>
+			</concept>
+			<concept>
+				<code value="87123"/>
+			</concept>
+			<concept>
+				<code value="87313"/>
+			</concept>
+			<concept>
+				<code value="87325"/>
+			</concept>
+			<concept>
+				<code value="87328"/>
+			</concept>
+			<concept>
+				<code value="87364"/>
+			</concept>
+			<concept>
+				<code value="87401"/>
+			</concept>
+			<concept>
+				<code value="87402"/>
+			</concept>
+			<concept>
+				<code value="87410"/>
+			</concept>
+			<concept>
+				<code value="87412"/>
+			</concept>
+			<concept>
+				<code value="87413"/>
+			</concept>
+			<concept>
+				<code value="87415"/>
+			</concept>
+			<concept>
+				<code value="87416"/>
+			</concept>
+			<concept>
+				<code value="87417"/>
+			</concept>
+			<concept>
+				<code value="87418"/>
+			</concept>
+			<concept>
+				<code value="87419"/>
+			</concept>
+			<concept>
+				<code value="87420"/>
+			</concept>
+			<concept>
+				<code value="87421"/>
+			</concept>
+			<concept>
+				<code value="87455"/>
+			</concept>
+			<concept>
+				<code value="87461"/>
+			</concept>
+			<concept>
+				<code value="87499"/>
+			</concept>
+			<concept>
+				<code value="87501"/>
+			</concept>
+			<concept>
+				<code value="87505"/>
+			</concept>
+			<concept>
+				<code value="87506"/>
+			</concept>
+			<concept>
+				<code value="87507"/>
+			</concept>
+			<concept>
+				<code value="87508"/>
+			</concept>
+			<concept>
+				<code value="87522"/>
+			</concept>
+			<concept>
+				<code value="87532"/>
+			</concept>
+			<concept>
+				<code value="87535"/>
+			</concept>
+			<concept>
+				<code value="87540"/>
+			</concept>
+			<concept>
+				<code value="87567"/>
+			</concept>
+			<concept>
+				<code value="87573"/>
+			</concept>
+			<concept>
+				<code value="87574"/>
+			</concept>
+			<concept>
+				<code value="87936"/>
+			</concept>
+			<concept>
+				<code value="87937"/>
+			</concept>
+			<concept>
+				<code value="87940"/>
+			</concept>
+			<concept>
+				<code value="87941"/>
+			</concept>
+			<concept>
+				<code value="88001"/>
+			</concept>
+			<concept>
+				<code value="88003"/>
+			</concept>
+			<concept>
+				<code value="88004"/>
+			</concept>
+			<concept>
+				<code value="88005"/>
+			</concept>
+			<concept>
+				<code value="88006"/>
+			</concept>
+			<concept>
+				<code value="88007"/>
+			</concept>
+			<concept>
+				<code value="88008"/>
+			</concept>
+			<concept>
+				<code value="88011"/>
+			</concept>
+			<concept>
+				<code value="88012"/>
+			</concept>
+			<concept>
+				<code value="88021"/>
+			</concept>
+			<concept>
+				<code value="88022"/>
+			</concept>
+			<concept>
+				<code value="88023"/>
+			</concept>
+			<concept>
+				<code value="88024"/>
+			</concept>
+			<concept>
+				<code value="88025"/>
+			</concept>
+			<concept>
+				<code value="88026"/>
+			</concept>
+			<concept>
+				<code value="88027"/>
+			</concept>
+			<concept>
+				<code value="88028"/>
+			</concept>
+			<concept>
+				<code value="88029"/>
+			</concept>
+			<concept>
+				<code value="88030"/>
+			</concept>
+			<concept>
+				<code value="88032"/>
+			</concept>
+			<concept>
+				<code value="88033"/>
+			</concept>
+			<concept>
+				<code value="88034"/>
+			</concept>
+			<concept>
+				<code value="88038"/>
+			</concept>
+			<concept>
+				<code value="88040"/>
+			</concept>
+			<concept>
+				<code value="88041"/>
+			</concept>
+			<concept>
+				<code value="88043"/>
+			</concept>
+			<concept>
+				<code value="88044"/>
+			</concept>
+			<concept>
+				<code value="88045"/>
+			</concept>
+			<concept>
+				<code value="88046"/>
+			</concept>
+			<concept>
+				<code value="88047"/>
+			</concept>
+			<concept>
+				<code value="88048"/>
+			</concept>
+			<concept>
+				<code value="88049"/>
+			</concept>
+			<concept>
+				<code value="88051"/>
+			</concept>
+			<concept>
+				<code value="88052"/>
+			</concept>
+			<concept>
+				<code value="88053"/>
+			</concept>
+			<concept>
+				<code value="88054"/>
+			</concept>
+			<concept>
+				<code value="88055"/>
+			</concept>
+			<concept>
+				<code value="88058"/>
+			</concept>
+			<concept>
+				<code value="88061"/>
+			</concept>
+			<concept>
+				<code value="88063"/>
+			</concept>
+			<concept>
+				<code value="88065"/>
+			</concept>
+			<concept>
+				<code value="88072"/>
+			</concept>
+			<concept>
+				<code value="88081"/>
+			</concept>
+			<concept>
+				<code value="88116"/>
+			</concept>
+			<concept>
+				<code value="88201"/>
+			</concept>
+			<concept>
+				<code value="88203"/>
+			</concept>
+			<concept>
+				<code value="88230"/>
+			</concept>
+			<concept>
+				<code value="88232"/>
+			</concept>
+			<concept>
+				<code value="88250"/>
+			</concept>
+			<concept>
+				<code value="88253"/>
+			</concept>
+			<concept>
+				<code value="88339"/>
+			</concept>
+			<concept>
+				<code value="88344"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

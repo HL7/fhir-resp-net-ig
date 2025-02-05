@@ -60,7 +60,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org" />
-          <code value="75619-7" />
+          <code value="55751-2" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -117,7 +117,7 @@
 	<element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
-      </extension>
+      </extension> 
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -367,7 +367,7 @@
       <short value="Lab Result Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab" />
+        <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-lab-result-observation" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -383,6 +383,7 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
+    
 	<element id="Composition.section:sliceNotesSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -451,6 +452,9 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
+    
+        
+    
     <element id="Composition.section:slicePlanOfTreatmentSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -497,10 +501,21 @@
       </slicing>
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:slicePlanOfTreatmentSection.serviceRequestEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceServiceRequests"/>
+      <short value="ServiceRequest Entries"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-servicerequest" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
     <element id="Composition.section:slicePlanOfTreatmentSection.medicationRequestEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceMedicationRequest"/>
-      <short value="Medication Request Entries"/>
+      <short value="MedicationRequest Entries"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest" />
@@ -519,17 +534,6 @@
       <mustSupport value="true" />
       <isModifier value="false" />
    </element>
-    <element id="Composition.section:slicePlanOfTreatmentSection.procedureOrderEntry">
-      <path value="Composition.section.entry" />
-      <sliceName value="sliceProcedureOrders"/>
-      <short value="Procedure Order Entries"/>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-servicerequest" />
-      </type>
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element>
     <element id="Composition.section:sliceImmunizationsSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -567,6 +571,18 @@
     </element>
     <element id="Composition.section:sliceImmunizationsSection.entry">
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sliceImmunizationsSection.immunizationEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceImmunizations"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization" />
@@ -611,6 +627,18 @@
     </element>
     <element id="Composition.section:sliceProceduresSection.entry">
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sliceProceduresSection.entry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceProcedures"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-procedure" />
@@ -655,6 +683,18 @@
     </element>
     <element id="Composition.section:sliceVitalSignsSection.entry">
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sliceVitalSignsSection.entry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceVitalSigns"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs" />
@@ -796,6 +836,28 @@
       </type>
       <mustSupport value="true" />
     </element> 
+    <element id="Composition.section:slicePregnancySection.entry:slicePregnancyStatusObservation">
+     <path value="Composition.section.entry" />
+      <sliceName value="slicePregnancyStatusObservation" />
+      <short value="Pregnancy Status Observation" />
+      <definition value="Pregnancy Status Observation entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-pregnancy-status-observation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:slicePregnancySection.entry:slicePostpartumStatus">
+     <path value="Composition.section.entry" />
+      <sliceName value="slicePostpartumStatus" />
+      <short value="Postpartum Status" />
+      <definition value="Postpartum Status entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-postpartum-status" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     
   </differential>
 </StructureDefinition>

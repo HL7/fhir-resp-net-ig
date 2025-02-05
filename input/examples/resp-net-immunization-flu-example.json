@@ -21,7 +21,7 @@
     ]
   },
   "patient": {
-    "reference": "Patient/patient-ecr-eve-everywoman"
+    "reference": "Patient/patient-respnet-eve-everywoman"
   },
   "occurrenceDateTime": "2023-09-01",
   "primarySource": true

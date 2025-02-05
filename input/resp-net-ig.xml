@@ -7,7 +7,7 @@
   </extension>
   <url value="http://hl7.org/fhir/us/resp-net/ImplementationGuide/resp-net"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden  -->
-  <version value="1.0.0-ballot"/>
+  <version value="1.0.0"/>
   <name value="RESPNET"/>
   <title value="Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide"/>
   <status value="draft"/>
@@ -38,6 +38,7 @@
     <packageId value="hl7.fhir.us.core"/>
     <version value="3.1.1"/>
   </dependsOn>
+    
   <dependsOn id="medmorphIg">
     <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph"/>
     <packageId value="hl7.fhir.us.medmorph"/>
@@ -53,11 +54,11 @@
     <packageId value="hl7.fhir.uv.subscriptions-backport.r4"/>
     <version value="1.1.0"/>
   </dependsOn>
-<!-- <dependsOn id="uspublichealthprofileslibraryIg">
+  <dependsOn id="uspublichealthprofileslibraryIg">
     <uri value="http://hl7.org/fhir/us/ph-library/ImplementationGuide/hl7.fhir.us.ph-library"/>
     <packageId value="hl7.fhir.us.ph-library"/>
     <version value="1.0.0"/>
-  </dependsOn> -->
+  </dependsOn>
   <dependsOn id="ecrIg">
     <uri value="http://hl7.org/fhir/us/ecr/ImplementationGuide/hl7.fhir.us.ecr"/>
     <packageId value="hl7.fhir.us.ecr"/>
@@ -154,7 +155,7 @@
    </resource>
    <resource>
       <reference>
-        <reference value="Patient/patient-ecr-eve-everywoman"/>
+        <reference value="Patient/patient-respnet-eve-everywoman"/>
       </reference>
       <name value="US Public Health Patient Example"/>
       <description value="An example showing a Patient for RESP-NET"/>
@@ -196,7 +197,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Organization/organization-ecr-salem-medical-center"/>
+        <reference value="Organization/organization-salem-medical-center"/>
       </reference>
       <name value="Organization Example"/>
       <description value="An example showing an Organization"/>
@@ -204,7 +205,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Location/location-ecr-salem-medical-center"/>
+        <reference value="Location/location-salem-medical-center"/>
       </reference>
       <name value="Location Example"/>
       <description value="An example showing a Location."/>
@@ -298,6 +299,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="dataelements.html"/>
+        <title value="Use Case Data Element Mappings"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
         <generation value="markdown"/>
@@ -326,7 +332,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU1 Ballot"/>
+      <value value="STU1 Release 1"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>

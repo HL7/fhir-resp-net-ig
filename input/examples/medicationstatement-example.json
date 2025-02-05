@@ -19,13 +19,13 @@
       }]
   },
   "subject" : {
-    "reference" : "Patient/patient-ecr-eve-everywoman",
+    "reference" : "Patient/patient-respnet-eve-everywoman",
     "display" : "Eve Everywoman"
   },
   "effectiveDateTime" : "2015-11-01",
   "dateAsserted" : "2015-11-01",
   "informationSource" : {
-    "reference" : "Patient/patient-ecr-eve-everywoman"
+    "reference" : "Patient/patient-respnet-eve-everywoman"
   },
   "note" : [{
     "text" : "Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin"

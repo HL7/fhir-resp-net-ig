@@ -1,0 +1,806 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv",
+  "title": "resp-net-labtest-rsv",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "concept": [
+          {
+            "code": "87280",
+            "display": "Infectious agent antigen detection by immunofluorescent technique; respiratory syncytial virus"
+          },
+          {
+            "code": "87634",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory syncytial virus, amplified probe technique"
+          },
+          {
+            "code": "87807",
+            "display": "Infectious agent antigen detection by immunoassay with direct optical (ie, visual) observation; respiratory syncytial virus"
+          },
+          {
+            "code": "87420",
+            "display": "Infectious agent antigen detection by immunoassay technique, (eg, enzyme immunoassay [EIA], enzyme-linked immunosorbent assay [ELISA], fluorescence immunoassay [FIA], immunochemiluminometric assay [IMCA]) qualitative or semiquantitative; respiratory syncy"
+          },
+          {
+            "code": "87637",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), influenza virus types A and B, and respiratory syncytial virus, multiplex amplified probe technique"
+          },
+          {
+            "code": "87631",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87632",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87633",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "0241U",
+            "display": "Infectious disease (viral respiratory tract infection), pathogen-specific RNA, 4 targets (severe acute respiratory syndrome coronavirus 2 [SARS-CoV-2], influenza A, influenza B, respiratory syncytial virus [RSV]), upper respiratory specimen, each pathogen"
+          },
+          {
+            "code": "87637",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), influenza virus types A and B, and respiratory syncytial virus, multiplex amplified probe technique"
+          },
+          {
+            "code": "86328",
+            "display": "Immunoassay for infectious agent antibody(ies), qualitative or semiquantitative, single step method (eg, reagent strip); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19])"
+          },
+          {
+            "code": "0098U",
+            "display": "Detection of respiratory infectious agent by multiplex reverse transcription and multiplex amplified probe technique for adenovirus, coronavirus, human metapneumovirus, influenza A, influenza A subtype H1, influenza A subtype H3, influenza A subtype H1-2009, influenza B, parainfluenza virus, human rhinovirus/enterovirus, respiratory syncytial virus, Bordetella pertussis, Chlamydophila pneumoniae, Mycoplasma pneumoniae"
+          },
+          {
+            "code": "0099U",
+            "display": "Test for detection of respiratory disease-causing organism using amplified probe, 20 target organisms (adenovirus, coronavirus 229E, coronavirus HKU1, coronavirus, coronavirus OC43, human metapneumovirus, influenza A, influenza A subtype, influenza A subtype H3, influenza A subtype H1-2009, influenza, parainfluenza virus, parainfluenza virus 2, parainfluenza virus 3, parainfluenza virus 4, human rhinovirus/enterovirus, respiratory syncytial virus, Bordetella pertussis, Chlamydophila pneumonia, Mycoplasma pneumoniae)"
+          },
+          {
+            "code": "0100U",
+            "display": "Detection of respiratory infectious agent by multiplex reverse transcription and multiplex amplified probe technique for adenovirus, coronavirus 229E, coronavirus HKU1, coronavirus NL63, coronavirus OC43, human metapneumovirus, human rhinovirus/enterovirus, influenza A, including subtypes H1, H1-2009, and H3, influenza B, parainfluenza virus 1, parainfluenza virus 2, parainfluenza virus 3, parainfluenza virus 4, respiratory syncytial virus, Bordetella parapertussis [IS1001], Bordetella pertussis [ptxP], Chlamydia pneumoniae, Mycoplasma pneumoniae"
+          },
+          {
+            "code": "87254",
+            "display": "Shell vial; Virus Isolation"
+          },
+          {
+            "code": "87299",
+            "display": "Infectious agent antigen detection by immunofluorescent technique; not otherwise specified, each organism"
+          },
+          {
+            "code": "87300",
+            "display": "Infectious agent antigen detection by immunofluorescent technique, polyvalent for multiple organisms, each polyvalent antiserum"
+          },
+          {
+            "code": "0115U",
+            "display": "ePlex� Respiratory Pathogen (RP) Panel (ePlex RP� panel) from GenMark Diagnostics, Inc., which is an automated molecular multiplexed nucleic acid diagnostic test on a nasopharyngeal specimen collected obtained from patients suspected of respiratory tract infections for a total of 20 (2 bacterial and 18 viral) common viral and bacterial respiratory pathogens."
+          },
+          {
+            "code": "87253",
+            "display": "Virus isolation; tissue culture, additional studies or definitive identification (eg, hemabsorption, neutralization, immunofluorescence stain), each isolate"
+          },
+          {
+            "code": "87252",
+            "display": "Viral Culture, General; Virus isolation; tissue culture inoculation, observation, and presumptive identification by cytopathic effect"
+          }
+        ]
+      },
+	        {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "Code",
+            "display": "Name/Description/Component"
+          },
+          {
+            "code": "49037-5",
+            "display": "Respiratory syncytial virus Ab.IgG & IgM panel"
+          },
+          {
+            "code": "80598-6",
+            "display": "Respiratory syncytial virus B F gene"
+          },
+          {
+            "code": "7990-5",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "33390-6",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "33045-6",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "31949-1",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "80597-8",
+            "display": "Respiratory syncytial virus A 5' UTR RNA"
+          },
+          {
+            "code": "91782-3",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "91785-6",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "22466-7",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "7991-3",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "41012-6",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "7992-1",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "88527-7",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "14129-1",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "17518-2",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "22467-5",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "31950-9",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "55100-2",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "52975-0",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "30147-3",
+            "display": "Respiratory syncytial virus Ab^1st specimen"
+          },
+          {
+            "code": "24298-2",
+            "display": "Respiratory syncytial virus Ab^1st specimen"
+          },
+          {
+            "code": "30148-1",
+            "display": "Respiratory syncytial virus Ab^2nd specimen"
+          },
+          {
+            "code": "24299-0",
+            "display": "Respiratory syncytial virus Ab^2nd specimen"
+          },
+          {
+            "code": "68966-1",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "72885-7",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5874-3",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "50329-2",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "17520-8",
+            "display": "Respiratory syncytial virus identified"
+          },
+          {
+            "code": "91795-5",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "91794-8",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "33382-3",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "5294-4",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "5295-1",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "69929-8",
+            "display": "Respiratory syncytial virus Ab.IgA"
+          },
+          {
+            "code": "31583-8",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "40989-6",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "17517-4",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "69962-9",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "17519-0",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "77389-5",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "32040-8",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "77390-3",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5875-0",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5876-8",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "101982-7",
+            "display": "Respiratory syncytial virus A B"
+          },
+          {
+            "code": "88204-3",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "77022-2",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "101425-7",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "88595-4",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "30075-6",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "88202-7",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "77023-0",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "101426-5",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "88597-0",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "30076-4",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "9573-7",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "9574-5",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "24224-8",
+            "display": "Respiratory syncytial virus Ab^1st specimen"
+          },
+          {
+            "code": "24225-5",
+            "display": "Respiratory syncytial virus Ab^2nd specimen"
+          },
+          {
+            "code": "88909-7",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5877-6",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "92880-4",
+            "display": "Human metapneumovirus & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "92881-2",
+            "display": "Human metapneumovirus & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "40987-0",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "60271-4",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "41456-5",
+            "display": "Respiratory syncytial virus genotype"
+          },
+          {
+            "code": "76088-4",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "88528-5",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "82176-9",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "76089-2",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "92131-2",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "92957-0",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "101298-8",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "91133-9",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "85479-4",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "40988-8",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "85476-0",
+            "display": "Influenza virus A & B & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "102048-6",
+            "display": "SARS coronavirus 2 & Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "87964-3",
+            "display": "Respiratory pathogens panel - Bronchoalveolar lavage by Immunofluorescence"
+          },
+          {
+            "code": "88137-5",
+            "display": "Respiratory pathogens panel - Nasopharynx by Immunofluorescence"
+          },
+          {
+            "code": "55101-0",
+            "display": "Respiratory pathogens panel - Specimen by Organism specific culture"
+          },
+          {
+            "code": "50219-5",
+            "display": "Respiratory pathogens DNA and RNA 12a panel - Specimen by NAA with probe detection"
+          },
+          {
+            "code": "60566-7",
+            "display": "Respiratory pathogens DNA and RNA 12b panel - Specimen by NAA with probe detection"
+          },
+          {
+            "code": "49037-5",
+            "display": "Respiratory syncytial virus Ab.IgG & IgM panel"
+          },
+          {
+            "code": "80598-6",
+            "display": "Respiratory syncytial virus B F gene"
+          },
+          {
+            "code": "7990-5",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "33390-6",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "33045-6",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "31949-1",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "80597-8",
+            "display": "Respiratory syncytial virus A 5' UTR RNA"
+          },
+          {
+            "code": "91782-3",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "91785-6",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "22466-7",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "7991-3",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "41012-6",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "7992-1",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "88527-7",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "14129-1",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "17518-2",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "22467-5",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "31950-9",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "55100-2",
+            "display": "Respiratory syncytial virus"
+          },
+          {
+            "code": "52975-0",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "30147-3",
+            "display": "Respiratory syncytial virus Ab^1st specimen"
+          },
+          {
+            "code": "24298-2",
+            "display": "Respiratory syncytial virus Ab^1st specimen"
+          },
+          {
+            "code": "30148-1",
+            "display": "Respiratory syncytial virus Ab^2nd specimen"
+          },
+          {
+            "code": "24299-0",
+            "display": "Respiratory syncytial virus Ab^2nd specimen"
+          },
+          {
+            "code": "68966-1",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "72885-7",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5874-3",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "50329-2",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "17520-8",
+            "display": "Respiratory syncytial virus identified"
+          },
+          {
+            "code": "91795-5",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "91794-8",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "33382-3",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "5294-4",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "5295-1",
+            "display": "Respiratory syncytial virus Ab"
+          },
+          {
+            "code": "69929-8",
+            "display": "Respiratory syncytial virus Ab.IgA"
+          },
+          {
+            "code": "31583-8",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "40989-6",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "17517-4",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "69962-9",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "17519-0",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "77389-5",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "32040-8",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "77390-3",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5875-0",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5876-8",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "101982-7",
+            "display": "Respiratory syncytial virus A B"
+          },
+          {
+            "code": "88204-3",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "77022-2",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "101425-7",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "88595-4",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "30075-6",
+            "display": "Respiratory syncytial virus A RNA"
+          },
+          {
+            "code": "88202-7",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "77023-0",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "101426-5",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "88597-0",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "30076-4",
+            "display": "Respiratory syncytial virus B RNA"
+          },
+          {
+            "code": "9573-7",
+            "display": "Respiratory syncytial virus Ab.IgG"
+          },
+          {
+            "code": "9574-5",
+            "display": "Respiratory syncytial virus Ab.IgM"
+          },
+          {
+            "code": "24224-8",
+            "display": "Respiratory syncytial virus Ab^1st specimen"
+          },
+          {
+            "code": "24225-5",
+            "display": "Respiratory syncytial virus Ab^2nd specimen"
+          },
+          {
+            "code": "88909-7",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "5877-6",
+            "display": "Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "92880-4",
+            "display": "Human metapneumovirus & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "92881-2",
+            "display": "Human metapneumovirus & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "40987-0",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "60271-4",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "41456-5",
+            "display": "Respiratory syncytial virus genotype"
+          },
+          {
+            "code": "76088-4",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "88528-5",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "82176-9",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "76089-2",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "92131-2",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "92957-0",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "101298-8",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "91133-9",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "85479-4",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "40988-8",
+            "display": "Respiratory syncytial virus RNA"
+          },
+          {
+            "code": "85476-0",
+            "display": "Influenza virus A & B & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "102048-6",
+            "display": "SARS coronavirus 2 & Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "87964-3",
+            "display": "Respiratory pathogens panel - Bronchoalveolar lavage by Immunofluorescence"
+          },
+          {
+            "code": "88137-5",
+            "display": "Respiratory pathogens panel - Nasopharynx by Immunofluorescence"
+          },
+          {
+            "code": "55101-0",
+            "display": "Respiratory pathogens panel - Specimen by Organism specific culture"
+          },
+          {
+            "code": "50219-5",
+            "display": "Respiratory pathogens DNA and RNA 12a panel - Specimen by NAA with probe detection"
+          },
+          {
+            "code": "60566-7",
+            "display": "Respiratory pathogens DNA and RNA 12b panel - Specimen by NAA with probe detection"
+          }
+        ]
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>resp-net-labtest-rsv</h2><tt>http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv</tt></div>"
+  },
+  "name": "Resp_net_labtest_rsv"
+}

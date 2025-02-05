@@ -32,7 +32,7 @@
     }
   ],
   "subject": {
-    "reference": "Patient/patient-ecr-eve-everywoman",
+    "reference": "Patient/patient-respnet-eve-everywoman",
     "display": "Eve Everywoman"
   },
   "participant": [
@@ -91,13 +91,13 @@
   "location": [
     {
       "location": {
-        "reference": "Location/location-ecr-salem-medical-center",
+        "reference": "Location/location-salem-medical-center",
         "display": "Clinic Bldg A, Salem Medical Center, 4646 Brown Rd, Salem, MA 02368"
       }
     }
   ],
   "serviceProvider": {
-    "reference": "Organization/organization-ecr-salem-medical-center",
+    "reference": "Organization/organization-salem-medical-center",
     "display": "Salem Medical Center, 22222 Health Authority Drive, Ann Arbor MI, 99999"
   }
 }

@@ -21,12 +21,12 @@
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "75619-7"
+        "code": "55751-2"
       }
     ]
   },
   "subject": {
-    "reference": "Patient/patient-ecr-eve-everywoman",
+    "reference": "Patient/patient-respnet-eve-everywoman",
     "display": "Eve Everywoman"
   },
   "encounter": {
