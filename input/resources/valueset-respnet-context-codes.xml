@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="respnet-report-context-codes"/> 
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2022-08-04T15:52:33.158+00:00"/>
+    <source value="#3Te0anOrvocKgcow"/>
+    <profile
+             value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <url value="http://hl7.org/fhir/us/resp-net/ValueSet/respnet-report-context-codes"/>
+  <version value="1.0.0"/>
+  <name value="RESPNetReportContextCodes"/>
+  <title value="RESPNet Report Context Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-09-06"/>
+  <publisher value="HL7 PHWG"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+  <description value="The RESPNet report context codes is a &#39;starter set&#39; of codes for identifying the programs and the use cases that will use the reported data."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context"/>
+    </include>
+  </compose>
+</ValueSet>
+

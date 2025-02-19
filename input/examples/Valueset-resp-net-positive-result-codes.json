@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "resp-net-positive-result-codes",
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Positive Lab Test Results</h2></div>"
+  },
+  "name": "RESPNetPositiveResultCodes",
+  "title": "resp-net-positive-result-codes",
+  "description": "List of codes for RESPNet positive test results",
+  "status": "draft",
+  "experimental": true,
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "10828004",
+            "display": "Positive (qualifier value)"
+          },
+          {
+            "code": "260373001",
+            "display": "Detected (qualifier value)"
+          },
+          {
+            "code": "42425007",
+            "display": "Equivocal (qualifier value)"
+          },
+          {
+            "code": "11214006",
+            "display": "Reactive (qualifier value)"
+          },
+          {
+            "code": "59156000",
+            "display": "Confirmed by (contextual qualifier) (qualifier value)"
+          },
+          {
+            "code": "840533007",
+            "display": "SARS-CoV-2"
+          },
+          {
+            "code": "407480007",
+            "display": "Influenza B virus (organism)"
+          },
+          {
+            "code": "407479009",
+            "display": "Influenza A virus (organism)"
+          },
+          {
+            "code": "6415009",
+            "display": "Human respiratory syncytial virus (organism)"
+          }
+        ]
+      }
+    ]
+  }
+}

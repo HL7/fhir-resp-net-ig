@@ -1,15 +1,17 @@
 {
   "resourceType": "ValueSet",
-  "id": "resp-net-labtest-rsv",
-  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv",
+  "id": "resp-net-labtest-rsv-codes",
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes",
   "version": "1",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet RSV Test Codes </h2><tt>http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-valueset</tt></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet RSV Test Codes </h2></div>"
   },
   "name": "RESPNetRsvCodes",
-  "title": "resp-net-labtest-rsv",
+  "title": "resp-net-labtest-rsv-codes",
+  "description": "List of RSV test codes",
   "status": "draft",
+  "experimental": true,
   "contact": [
     {
       "telecom": [
@@ -69,18 +71,6 @@
             "display": "Immunoassay for infectious agent antibody(ies), qualitative or semiquantitative, single step method (eg, reagent strip); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19])"
           },
           {
-            "code": "0098U",
-            "display": "Detection of respiratory infectious agent by multiplex reverse transcription and multiplex amplified probe technique for adenovirus, coronavirus, human metapneumovirus, influenza A, influenza A subtype H1, influenza A subtype H3, influenza A subtype H1-2009, influenza B, parainfluenza virus, human rhinovirus/enterovirus, respiratory syncytial virus, Bordetella pertussis, Chlamydophila pneumoniae, Mycoplasma pneumoniae"
-          },
-          {
-            "code": "0099U",
-            "display": "Test for detection of respiratory disease-causing organism using amplified probe, 20 target organisms (adenovirus, coronavirus 229E, coronavirus HKU1, coronavirus, coronavirus OC43, human metapneumovirus, influenza A, influenza A subtype, influenza A subtype H3, influenza A subtype H1-2009, influenza, parainfluenza virus, parainfluenza virus 2, parainfluenza virus 3, parainfluenza virus 4, human rhinovirus/enterovirus, respiratory syncytial virus, Bordetella pertussis, Chlamydophila pneumonia, Mycoplasma pneumoniae)"
-          },
-          {
-            "code": "0100U",
-            "display": "Detection of respiratory infectious agent by multiplex reverse transcription and multiplex amplified probe technique for adenovirus, coronavirus 229E, coronavirus HKU1, coronavirus NL63, coronavirus OC43, human metapneumovirus, human rhinovirus/enterovirus, influenza A, including subtypes H1, H1-2009, and H3, influenza B, parainfluenza virus 1, parainfluenza virus 2, parainfluenza virus 3, parainfluenza virus 4, respiratory syncytial virus, Bordetella parapertussis [IS1001], Bordetella pertussis [ptxP], Chlamydia pneumoniae, Mycoplasma pneumoniae"
-          },
-          {
             "code": "87254",
             "display": "Shell vial; Virus Isolation"
           },
@@ -109,10 +99,6 @@
 	        {
         "system": "http://loinc.org",
         "concept": [
-          {
-            "code": "Code",
-            "display": "Name/Description/Component"
-          },
           {
             "code": "49037-5",
             "display": "Respiratory syncytial virus Ab.IgG & IgM panel"

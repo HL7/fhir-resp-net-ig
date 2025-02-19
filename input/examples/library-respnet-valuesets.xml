@@ -1,0 +1,85 @@
+<Library xmlns="http://hl7.org/fhir">
+  <id value="respnet-valuesets"/>
+  <text>
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>RESPNet value sets example</p>  
+    </div> 
+  </text>
+  <url
+       value="http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.114222.4.11.11114"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="RESPNetValueSetLibraryExample"/>
+  <title value="RESPNet ValueSet Library Example"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="asset-collection"/>
+    </coding>
+  </type>
+  <date value="2023-08-17T13:22:13+00:00"/>
+  <publisher value="HL7 Public Health Working Group"/>
+  <contact>
+    <name value="HL7 Public Health Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="pher@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="RESPNet Value sets library"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Used to check reportability for RESPNet reports"/>
+  <effectivePeriod>
+    <start value="2020-11-01"/>
+  </effectivePeriod>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <resource
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes"/>
+  </relatedArtifact>
+</Library>

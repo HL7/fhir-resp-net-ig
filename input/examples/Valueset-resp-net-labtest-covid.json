@@ -1,0 +1,786 @@
+{
+  "resourceType": "ValueSet",
+  "id": "resp-net-labtest-covid-codes",
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes",
+  "version": "1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Covid Test Codes </h2></div>"
+  },
+  "name": "RESPNetCovidCodes",
+  "title": "resp-net-labtest-covid-codes",
+  "description": "List of Covid test codes",
+  "status": "draft",
+  "experimental": true,
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "102048-6",
+            "display": "SARS coronavirus 2 & Respiratory syncytial virus Ag"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "100861-4",
+            "display": "Cells.CD4+CD154+/Cells.CD4^after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+          },
+          {
+            "code": "100858-0",
+            "display": "Cells.CD4+CD154+/Cells.CD4^after stimulation with SARS-CoV-2 Spike peptide"
+          },
+          {
+            "code": "100862-2",
+            "display": "Cells.CD4.Interferon gamma-expressing/Cells.CD4^after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+          },
+          {
+            "code": "100859-8",
+            "display": "Cells.CD4.Interferon gamma-expressing/Cells.CD4^after stimulation with SARS-CoV-2 Spike peptide"
+          },
+          {
+            "code": "100863-0",
+            "display": "Cells.CD4.Tumor necrosis factor alfa-expressing/Cells.CD4^after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+          },
+          {
+            "code": "100860-6",
+            "display": "Cells.CD4.Tumor necrosis factor alfa-expressing/Cells.CD4^after stimulation with SARS-CoV-2 Spike peptide"
+          },
+          {
+            "code": "95942-9",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus+SARS coronavirus 2 Ag panel"
+          },
+          {
+            "code": "97099-6",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 Ag panel"
+          },
+          {
+            "code": "95941-1",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & Respiratory syncytial virus RNA panel"
+          },
+          {
+            "code": "95380-2",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 & SARS-related coronavirus RNA panel"
+          },
+          {
+            "code": "95423-0",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 identified"
+          },
+          {
+            "code": "95422-2",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "100345-8",
+            "display": "Influenza virus A & Influenza virus B & SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "98733-9",
+            "display": "Percent neutralization by SARS coronavirus 2 spike protein RBD Ab.neut"
+          },
+          {
+            "code": "99771-8",
+            "display": "SARS coronavirus 2 spike & nucleocapsid protein stimulated gamma interferon panel"
+          },
+          {
+            "code": "98846-9",
+            "display": "SARS coronavirus 2 stimulated gamma interferon release by Helper (CD4+) T-cells^^corrected for background"
+          },
+          {
+            "code": "98847-7",
+            "display": "SARS coronavirus 2 stimulated gamma interferon release by lymphocytes^^corrected for background"
+          },
+          {
+            "code": "99774-2",
+            "display": "SARS coronavirus 2 stimulated gamma interferon release by T-cells.Nucleocapsid Ag spot count^^corrected for background"
+          },
+          {
+            "code": "99773-4",
+            "display": "SARS coronavirus 2 stimulated gamma interferon release by T-cells.Spike Ag spot count^^corrected for background"
+          },
+          {
+            "code": "95209-3",
+            "display": "SARS coronavirus+SARS coronavirus 2 Ag"
+          },
+          {
+            "code": "94763-0",
+            "display": "SARS coronavirus 2"
+          },
+          {
+            "code": "94661-6",
+            "display": "SARS coronavirus 2 Ab"
+          },
+          {
+            "code": "95825-6",
+            "display": "SARS coronavirus 2 Ab"
+          },
+          {
+            "code": "98069-8",
+            "display": "SARS coronavirus 2 Ab"
+          },
+          {
+            "code": "94762-2",
+            "display": "SARS coronavirus 2 Ab"
+          },
+          {
+            "code": "95542-7",
+            "display": "SARS coronavirus 2 Ab"
+          },
+          {
+            "code": "94769-7",
+            "display": "SARS coronavirus 2 Ab"
+          },
+          {
+            "code": "96118-5",
+            "display": "SARS coronavirus 2 Ab panel"
+          },
+          {
+            "code": "94504-8",
+            "display": "SARS coronavirus 2 Ab panel"
+          },
+          {
+            "code": "94503-0",
+            "display": "SARS coronavirus 2 Ab panel"
+          },
+          {
+            "code": "94558-4",
+            "display": "SARS coronavirus 2 Ag"
+          },
+          {
+            "code": "96119-3",
+            "display": "SARS coronavirus 2 Ag"
+          },
+          {
+            "code": "97097-0",
+            "display": "SARS coronavirus 2 Ag"
+          },
+          {
+            "code": "96094-8",
+            "display": "SARS coronavirus 2 & SARS-related coronavirus RNA panel"
+          },
+          {
+            "code": "98080-5",
+            "display": "SARS coronavirus 2 & SARS-related coronavirus RNA panel"
+          },
+          {
+            "code": "96896-6",
+            "display": "SARS coronavirus 2 clade"
+          },
+          {
+            "code": "96764-6",
+            "display": "SARS coronavirus 2 E gene"
+          },
+          {
+            "code": "96763-8",
+            "display": "SARS coronavirus 2 E gene"
+          },
+          {
+            "code": "94562-6",
+            "display": "SARS coronavirus 2 Ab.IgA"
+          },
+          {
+            "code": "94768-9",
+            "display": "SARS coronavirus 2 Ab.IgA"
+          },
+          {
+            "code": "95427-1",
+            "display": "SARS coronavirus 2 Ab.IgA"
+          },
+          {
+            "code": "94720-0",
+            "display": "SARS coronavirus 2 Ab.IgA"
+          },
+          {
+            "code": "95125-1",
+            "display": "SARS coronavirus 2 Ab.IgA+IgM"
+          },
+          {
+            "code": "96742-2",
+            "display": "SARS coronavirus 2 Ab.IgG"
+          },
+          {
+            "code": "94761-4",
+            "display": "SARS coronavirus 2 Ab.IgG"
+          },
+          {
+            "code": "94563-4",
+            "display": "SARS coronavirus 2 Ab.IgG"
+          },
+          {
+            "code": "94507-1",
+            "display": "SARS coronavirus 2 Ab.IgG"
+          },
+          {
+            "code": "95429-7",
+            "display": "SARS coronavirus 2 Ab.IgG"
+          },
+          {
+            "code": "94505-5",
+            "display": "SARS coronavirus 2 Ab.IgG"
+          },
+          {
+            "code": "94547-7",
+            "display": "SARS coronavirus 2 Ab.IgG+IgM"
+          },
+          {
+            "code": "95416-4",
+            "display": "SARS coronavirus 2 Ab.IgM"
+          },
+          {
+            "code": "94564-2",
+            "display": "SARS coronavirus 2 Ab.IgM"
+          },
+          {
+            "code": "94508-9",
+            "display": "SARS coronavirus 2 Ab.IgM"
+          },
+          {
+            "code": "95428-9",
+            "display": "SARS coronavirus 2 Ab.IgM"
+          },
+          {
+            "code": "94506-3",
+            "display": "SARS coronavirus 2 Ab.IgM"
+          },
+          {
+            "code": "96895-8",
+            "display": "SARS coronavirus 2 lineage"
+          },
+          {
+            "code": "100157-7",
+            "display": "SARS coronavirus 2 lineage"
+          },
+          {
+            "code": "96957-6",
+            "display": "SARS coronavirus 2 M gene"
+          },
+          {
+            "code": "103557-5",
+            "display": "SARS coronavirus 2 Mpro gene mutation detected"
+          },
+          {
+            "code": "95521-1",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "96898-2",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94510-5",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94311-8",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94312-6",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "95522-9",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94760-6",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "96986-5",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "95409-9",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94533-7",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94756-4",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94757-2",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "95425-5",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "96448-6",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "96958-4",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94766-3",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94316-7",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94307-6",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "94308-4",
+            "display": "SARS coronavirus 2 N gene"
+          },
+          {
+            "code": "99596-9",
+            "display": "SARS coronavirus 2 nucleocapsid protein Ab.IgG"
+          },
+          {
+            "code": "95411-5",
+            "display": "SARS coronavirus 2 Ab.neut"
+          },
+          {
+            "code": "95410-7",
+            "display": "SARS coronavirus 2 Ab.neut"
+          },
+          {
+            "code": "97098-8",
+            "display": "SARS coronavirus 2 Nsp2 gene"
+          },
+          {
+            "code": "98132-4",
+            "display": "SARS coronavirus 2 ORF1a region"
+          },
+          {
+            "code": "98494-8",
+            "display": "SARS coronavirus 2 ORF1a region"
+          },
+          {
+            "code": "96899-0",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "94644-2",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "94511-3",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "94559-2",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "95824-9",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "94639-2",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "97104-4",
+            "display": "SARS coronavirus 2 ORF1ab region"
+          },
+          {
+            "code": "98131-6",
+            "display": "SARS coronavirus 2 ORF1b region"
+          },
+          {
+            "code": "98493-0",
+            "display": "SARS coronavirus 2 ORF1b region"
+          },
+          {
+            "code": "94646-7",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "94645-9",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "96120-1",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "94534-5",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "96091-4",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "94314-2",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "96123-5",
+            "display": "SARS coronavirus 2 RdRp gene"
+          },
+          {
+            "code": "99314-7",
+            "display": "SARS coronavirus 2 RdRp gene mutation detected"
+          },
+          {
+            "code": "94745-7",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94746-5",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94819-0",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94565-9",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94759-8",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "95406-5",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "96797-6",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "95608-6",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94500-6",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "95424-8",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94845-5",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94822-4",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94660-8",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "94309-2",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "96829-7",
+            "display": "SARS coronavirus 2 RNA"
+          },
+          {
+            "code": "96897-4",
+            "display": "SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "94531-1",
+            "display": "SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "95826-4",
+            "display": "SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "94306-8",
+            "display": "SARS coronavirus 2 RNA panel"
+          },
+          {
+            "code": "96900-6",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "94642-6",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "94643-4",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "94640-0",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "95609-4",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "96765-3",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "94767-1",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "94641-8",
+            "display": "SARS coronavirus 2 S gene"
+          },
+          {
+            "code": "96752-1",
+            "display": "SARS coronavirus 2 S gene mutation"
+          },
+          {
+            "code": "96751-3",
+            "display": "SARS coronavirus 2 S gene mutation detected"
+          },
+          {
+            "code": "99597-7",
+            "display": "SARS coronavirus 2 spike protein Ab.IgG"
+          },
+          {
+            "code": "96603-6",
+            "display": "SARS coronavirus 2 spike protein RBD Ab.neut"
+          },
+          {
+            "code": "98732-1",
+            "display": "SARS coronavirus 2 spike protein RBD Ab.neut"
+          },
+          {
+            "code": "98734-7",
+            "display": "SARS coronavirus 2 spike protein RBD Ab.neut"
+          },
+          {
+            "code": "96894-1",
+            "display": "SARS coronavirus 2 sequencing & identification panel"
+          },
+          {
+            "code": "95970-0",
+            "display": "SARS coronavirus 2 specific TCRB gene rearrangements"
+          },
+          {
+            "code": "100156-9",
+            "display": "SARS coronavirus 2 variant"
+          },
+          {
+            "code": "96741-4",
+            "display": "SARS coronavirus 2 variant"
+          },
+          {
+            "code": "96755-4",
+            "display": "SARS coronavirus 2 variant interpretation"
+          },
+          {
+            "code": "94764-8",
+            "display": "SARS coronavirus 2 whole genome"
+          },
+          {
+            "code": "99772-6",
+            "display": "SARS coronavirus 2 stimulated gamma interferon"
+          },
+          {
+            "code": "95971-8",
+            "display": "SARS coronavirus 2 stimulated gamma interferon"
+          },
+          {
+            "code": "95974-2",
+            "display": "SARS coronavirus 2 stimulated gamma interferon panel"
+          },
+          {
+            "code": "95972-6",
+            "display": "SARS coronavirus 2 stimulated gamma interferon release by T-cells^^corrected for background"
+          },
+          {
+            "code": "95973-4",
+            "display": "SARS coronavirus 2 stimulated gamma interferon release by T-cells"
+          },
+          {
+            "code": "94509-7",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "96121-9",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "94758-0",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "95823-1",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "94765-5",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "94315-9",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "96122-7",
+            "display": "SARS-related coronavirus E gene"
+          },
+          {
+            "code": "94313-4",
+            "display": "SARS-related coronavirus N gene"
+          },
+          {
+            "code": "94310-0",
+            "display": "SARS-related coronavirus N gene"
+          },
+          {
+            "code": "94502-2",
+            "display": "SARS-related coronavirus RNA"
+          },
+          {
+            "code": "94647-5",
+            "display": "SARS-related coronavirus RNA"
+          },
+          {
+            "code": "94532-9",
+            "display": "SARS-related coronavirus+MERS coronavirus RNA"
+          },
+          {
+            "code": "100342-5",
+            "display": "Volatile Organic Compounds associated with SARS-CoV-2 infection"
+          },
+          {
+            "code": "100972-9",
+            "display": "Influenza virus A and Influenza virus B and SARS coronavirus 2 RNA panel - Nose by NAA with non-probe detection"
+          }
+        ]
+      },
+	  {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "concept": [
+          {
+            "code": "87637",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), influenza virus types A and B, and respiratory syncytial virus, multiplex amplified probe technique"
+          },
+          {
+            "code": "87631",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87632",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87633",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); respiratory virus (eg, adenovirus, influenza virus, coronavirus, metapneumovirus, parainfluenza virus, respiratory syncytial virus, rhinovirus), includes multiplex reverse transcription, when perfor"
+          },
+          {
+            "code": "87635",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), amplified probe technique"
+          },
+          {
+            "code": "87636",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]) and influenza virus types A and B, multiplex amplified probe technique"
+          },
+          {
+            "code": "0241U",
+            "display": "Infectious disease (viral respiratory tract infection), pathogen-specific RNA, 4 targets (severe acute respiratory syndrome coronavirus 2 [SARS-CoV-2], influenza A, influenza B, respiratory syncytial virus [RSV]), upper respiratory specimen, each pathogen"
+          },
+          {
+            "code": "87635",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), amplified probe technique"
+          },
+          {
+            "code": "87636",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]) and influenza virus types A and B, multiplex amplified probe technique"
+          },
+          {
+            "code": "87637",
+            "display": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), influenza virus types A and B, and respiratory syncytial virus, multiplex amplified probe technique"
+          },
+          {
+            "code": "86328",
+            "display": "Immunoassay for infectious agent antibody(ies), qualitative or semiquantitative, single step method (eg, reagent strip); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19])"
+          },
+          {
+            "code": "86408",
+            "display": "Neutralizing antibody, severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]); screen"
+          },
+          {
+            "code": "86409",
+            "display": "Neutralizing antibody, severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]); titer"
+          },
+          {
+            "code": "86413",
+            "display": "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]) antibody, quantitative"
+          },
+          {
+            "code": "87811",
+            "display": "Infectious agent antigen detection by immunoassay with direct optical (ie, visual) observation; severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19])"
+          },
+          {
+            "code": "0224U",
+            "display": "Antibody, severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), includes titer(s), when performed"
+          },
+          {
+            "code": "0226U",
+            "display": "Surrogate viral neutralization test (sVNT), severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), ELISA, plasma, serum"
+          },
+          {
+            "code": "0202U",
+            "display": "Infectious disease (bacterial or viral respiratory tract infection), pathogen-specific nucleic acid (DNA or RNA), 22 targets including severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), qualitative RT-PCR, nasopharyngeal swab, each pathogen rep"
+          },
+          {
+            "code": "0223U",
+            "display": "Infectious disease (bacterial or viral respiratory tract infection), pathogen-specific nucleic acid (DNA or RNA), 22 targets including severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), qualitative RT-PCR, nasopharyngeal swab, each pathogen rep"
+          },
+          {
+            "code": "0225U",
+            "display": "Infectious disease (bacterial or viral respiratory tract infection) pathogen-specific DNA and RNA, 21 targets, including severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), amplified probe technique, including multiplex reverse transcription for"
+          },
+          {
+            "code": "87913",
+            "display": "Infectious agent genotype analysis by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), mutation identification in targeted region(s)"
+          },
+          {
+            "code": "0240U",
+            "display": "Detection of SARS-CoV-2, Influenza A and Influenza B"
+          },
+          {
+            "code": "87426",
+            "display": "Infectious agent antigen detection by immunoassay technique, (eg, enzyme immunoassay [EIA], enzyme-linked immunosorbent assay [ELISA], fluorescence immunoassay [FIA], immunochemiluminometric assay [IMCA]) qualitative or semiquantitative; severe acute resp"
+          },
+          {
+            "code": "87428",
+            "display": "Infectious agent antigen detection by immunoassay technique, (eg, enzyme immunoassay [EIA], enzyme-linked immunosorbent assay [ELISA], fluorescence immunoassay [FIA], immunochemiluminometric assay [IMCA]) qualitative or semiquantitative; severe acute resp"
+          },
+          {
+            "code": "86318",
+            "display": "Immunoassay for infectious agent antibody(ies) and to be a parent to 86328"
+          },
+          {
+            "code": "87252",
+            "display": "Viral Culture, General; Virus isolation; tissue culture inoculation, observation, and presumptive identification by cytopathic effect"
+          }
+        ]
+      }
+    ]
+  }
+}

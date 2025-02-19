@@ -13,6 +13,26 @@
     "status": "extensions",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Eve Everywoman data for RESP-NET</b></p></div>"
   },
+  "extension": [
+  {
+  	  "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-report-context-extension",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context",
+            "code": "respnet-case-report",
+            "display": "General RESPNet case report"
+          },
+          {
+            "system": "http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context",
+            "code": "respnet-influenza-case-detected",
+            "display": "RESPNet report for a Hospital-based influenza case"
+          }
+        ],
+        "text": "RESPNet case report"
+      }
+  }
+  ],
   "identifier": {
     "value": "c03eab8c-11e8-4d0c-ad2a-b385395e27db"
   },

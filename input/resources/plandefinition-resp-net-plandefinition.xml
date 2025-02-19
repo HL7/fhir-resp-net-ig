@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
-    <id value="resp-net-plandefinition"/>
+    <id value="respnet-plandefinition"/>
     <meta>
         <versionId value="35"/>
         <lastUpdated value="2021-11-17T04:21:04.742+00:00"/>
@@ -10,7 +10,7 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
 		<valueCode value="pher"/>
 	</extension>
-    <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition"/>
+    <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition"/>
     <version value="1.0.0"/>
     <name value="RESPNETPlanDefinition"/>
     <title value="RESP-NET PlanDefinition"/>
@@ -32,7 +32,7 @@
         <uri value="http://hl7.org/fhir/workflow"/>
         <name value="Workflow Pattern"/>
     </mapping>
-    <mapping>
+    <!-- <mapping>
         <identity value="w5"/>
         <uri value="http://hl7.org/fhir/fivews"/>
         <name value="FiveWs Pattern Mapping"/>
@@ -46,7 +46,7 @@
         <identity value="rim"/>
         <uri value="http://hl7.org/v3"/>
         <name value="RIM Mapping"/>
-    </mapping>
+    </mapping> -->
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="PlanDefinition"/>
@@ -69,7 +69,7 @@
                 <ordered value="true"/>
                 <rules value="open"/>
             </slicing>
-            <min value="6"/>
+            <min value="5"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action.code">
@@ -106,7 +106,7 @@
             <short value="Starts the workflow"/>
             <definition value="Description of the start workflow action."/>
             <min value="1"/>
-            <fixedString value="This action represents the start of the reporting workflow in response to the encounter-end event"/>
+            <fixedString value="This action represents the start of the reporting workflow in response to a named event"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:startWorkflow.textEquivalent">
@@ -114,7 +114,7 @@
             <short value="Text equivalent of the start workflow action."/>
             <definition value="Text equivalent of the start workflow action."/>
             <min value="1"/>
-            <fixedString value="Start the reporting workflow in response to an encounter-end event"/>
+            <fixedString value="Start the reporting workflow in response to a named event"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:startWorkflow.code">
@@ -133,12 +133,30 @@
         </element>
         <element id="PlanDefinition.action:startWorkflow.trigger">
             <path value="PlanDefinition.action.trigger"/>
-            <short value="When the &quot;start&quot; action should be triggered."/>
-            <definition value="When the &quot;start&quot; action should be triggered."/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="name"/>
+                </discriminator>
+                <description value="Triggers can be slided by the named events"/>
+                <rules value="open"/>
+            </slicing>
+            <short value="Trigger Events defined by implementations"/>
+            <definition value="Use named event names to slice the triggers"/>
+            <alias value="triggers"/>
+            <min value="2"/>
+            <max value="*"/>
+        </element>
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterClose">
+            <path value="PlanDefinition.action.trigger"/>
+            <sliceName value="encounterClose"/>
+            <short value="Encounter Close Trigger"/>
+            <definition value="Defines the &quot;encounter-close&quot; trigger"/>
             <min value="1"/>
+            <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="PlanDefinition.action:startWorkflow.trigger.extension">
+         <element id="PlanDefinition.action:startWorkflow.trigger:encounterClose.extension">
             <path value="PlanDefinition.action.trigger.extension"/>
             <slicing>
                 <discriminator>
@@ -148,11 +166,6 @@
                 <description value="Extensions are always sliced by (at least) url"/>
                 <rules value="open"/>
             </slicing>
-            <short value="Additional content defined by implementations"/>
-            <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-            <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-            <alias value="extensions"/>
-            <alias value="user content"/>
             <min value="0"/>
             <max value="*"/>
             <base>
@@ -165,12 +178,8 @@
             </type>
             <isModifier value="false"/>
             <isSummary value="false"/>
-            <mapping>
-                <identity value="rim"/>
-                <map value="n/a"/>
-            </mapping>
         </element>
-        <element id="PlanDefinition.action:startWorkflow.trigger.extension:namedEventType">
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterClose.extension:namedEventType">
             <path value="PlanDefinition.action.trigger.extension"/>
             <sliceName value="namedEventType"/>
             <short value="Indicates the types of named events to subscribe to from the EHR."/>
@@ -190,14 +199,90 @@
             <isModifier value="false"/>
             <isSummary value="false"/>
         </element>
-        <element id="PlanDefinition.action:startWorkflow.trigger.type">
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterClose.type">
             <path value="PlanDefinition.action.trigger.type"/>
             <fixedCode value="named-event"/>
         </element>
-        <element id="PlanDefinition.action:startWorkflow.trigger.name">
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterClose.name">
             <path value="PlanDefinition.action.trigger.name"/>
             <definition value="The name of the event, encounter-close in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable `%encounter`"/>
             <fixedString value="encounter-close"/>
+        </element>
+        
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterStart">
+            <path value="PlanDefinition.action.trigger"/>
+            <sliceName value="encounterStart"/>
+            <short value="Encounter Start Trigger"/>
+            <definition value="Defines the &quot;encounter-start&quot; trigger"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+         <element id="PlanDefinition.action:startWorkflow.trigger:encounterStart.extension">
+            <path value="PlanDefinition.action.trigger.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <description value="Extensions are always sliced by (at least) url"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="Element.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+            </type>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+        </element>
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterStart.extension:namedEventType">
+            <path value="PlanDefinition.action.trigger.extension"/>
+            <sliceName value="namedEventType"/>
+            <short value="Indicates the types of named events to subscribe to from the EHR."/>
+            <definition value="Indicates the types of named events to subscribe to from the EHR."/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="Element.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension"/>
+            </type>
+            <mustSupport value="true"/>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+        </element>
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterStart.type">
+            <path value="PlanDefinition.action.trigger.type"/>
+            <fixedCode value="named-event"/>
+        </element>
+        <element id="PlanDefinition.action:startWorkflow.trigger:encounterStart.name">
+            <path value="PlanDefinition.action.trigger.name"/>
+            <definition value="The name of the event, encounter-start in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable `%encounter`"/>
+            <fixedString value="encounter-start"/>
+        </element>
+        <element id="PlanDefinition.action:startWorkflow.input">
+          <path value="PlanDefinition.action.input" />
+          <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+          <min value="1" />
+          <max value="*" />
+          <mustSupport value="true" />
+        </element>
+        <element id="PlanDefinition.action:startWorkflow.input.id">
+          <path value="PlanDefinition.action.input.id" />
+          <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]" />
+          <min value="1" />
+          <max value="1" />
+          <mustSupport value="true" />
         </element>
         <element id="PlanDefinition.action:startWorkflow.relatedAction">
             <path value="PlanDefinition.action.relatedAction"/>
@@ -221,170 +306,41 @@
                 <code value="Duration"/>
             </type>
             <example>
-                <label value="Wait 72 hour before next action."/>
+                <label value="Wait 1 hour before next action."/>
                 <valueDuration>
-                    <value value="72"/>
+                    <value value="1"/>
                     <unit value="h"/>
                 </valueDuration>
             </example>
         </element>
 
-	<!--  Added workflow for Lab Result -->
-	<element id="PlanDefinition.action:positiveLabResultWorkflow">
-            <path value="PlanDefinition.action"/>
-            <sliceName value="positiveLabResultWorkflow"/>
-            <short value="Start Workflow Action due to a positive lab result"/>
-            <definition value="Defines the &quot;startr&quot; action"/>
-            <min value="1"/>
-            <max value="1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.id">
-            <path value="PlanDefinition.action.id"/>
-            <min value="1"/>
-            <fixedString value="start-workflow-for-positive-lab-result"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.description">
-            <path value="PlanDefinition.action.description"/>
-            <short value="Starts the workflow due to a positive lab result"/>
-            <definition value="Description of the start workflow action."/>
-            <min value="1"/>
-            <fixedString value="This action represents the start of the reporting workflow in response to the labresult-change (e.g new lab result or modified existing lab result) event"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.textEquivalent">
-            <path value="PlanDefinition.action.textEquivalent"/>
-            <short value="Text equivalent of the start workflow action for positive lab result."/>
-            <definition value="Text equivalent of the start workflow action."/>
-            <min value="1"/>
-            <fixedString value="Start the reporting workflow in response to an labresult-change event"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.code">
-            <path value="PlanDefinition.action.code"/>
-            <short value="Code for the &quot;start&quot; action."/>
-            <definition value="The US-PH-PlanDefinition-Action code for the &quot;start&quot; action."/>
-            <min value="1"/>
-            <max value="1"/>
-            <patternCodeableConcept>
-                <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
-                    <code value="initiate-reporting-workflow"/>
-                </coding>
-            </patternCodeableConcept>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger">
-            <path value="PlanDefinition.action.trigger"/>
-            <short value="When the &quot;start&quot; action should be triggered."/>
-            <definition value="When the &quot;start&quot; action should be triggered."/>
-            <min value="1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.extension">
-            <path value="PlanDefinition.action.trigger.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <description value="Extensions are always sliced by (at least) url"/>
-                <rules value="open"/>
-            </slicing>
-            <short value="Additional content defined by implementations"/>
-            <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-            <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-            <alias value="extensions"/>
-            <alias value="user content"/>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
-                <path value="Element.extension"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <type>
-                <code value="Extension"/>
-            </type>
-            <isModifier value="false"/>
-            <isSummary value="false"/>
-            <mapping>
-                <identity value="rim"/>
-                <map value="n/a"/>
-            </mapping>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.extension:namedEventType">
-            <path value="PlanDefinition.action.trigger.extension"/>
-            <sliceName value="namedEventType"/>
-            <short value="Indicates the types of named events to subscribe to from the EHR."/>
-            <definition value="Indicates the types of named events to subscribe to from the EHR."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="Element.extension"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension"/>
-            </type>
-            <mustSupport value="true"/>
-            <isModifier value="false"/>
-            <isSummary value="false"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.type">
-            <path value="PlanDefinition.action.trigger.type"/>
-            <fixedCode value="named-event"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.trigger.name">
-            <path value="PlanDefinition.action.trigger.name"/>
-            <definition value="The name of the event, labresult-change in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable $labresult"/>
-            <fixedString value="labresult-change"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.relatedAction">
-            <path value="PlanDefinition.action.relatedAction"/>
-            <min value="1"/>
-            <max value="1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.relatedAction.actionId">
-            <path value="PlanDefinition.action.relatedAction.actionId"/>
-            <fixedId value="check-reportability"/>
-        </element>
-        <element id="PlanDefinition.action:positiveLabResultWorkflow.relatedAction.relationship">
-            <path value="PlanDefinition.action.relatedAction.relationship"/>
-            <fixedCode value="before-start"/>
-        </element>
-
-    <element id="PlanDefinition.action:executeReportingWorkflow">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow">
       <path value="PlanDefinition.action" />
-      <sliceName value="executeReportingWorkflow" />
-      <short value="Execute Reporting Workflow" />
-      <definition value="Defines the &quot;Execute Reporting Workflow&quot; action" />
+      <sliceName value="checkReportabilityWorkflow" />
+      <short value="Check Reportability Workflow" />
+      <definition value="Defines the &quot;Check Reportability Workflow&quot; action" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.id">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.id">
       <path value="PlanDefinition.action.id" />
       <min value="1" />
       <fixedString value="check-reportability" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.description">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.description">
       <path value="PlanDefinition.action.description" />
-      <short value="Check for reportability conditions" />
-      <definition value="Check for Reportable Conditions." />
+      <short value="Check for reportability conditions and labresults" />
+      <definition value="Check for Reportable Conditions and labresults" />
       <min value="1" />
-      <fixedString value="This action represents the start of the check for reportable conditions in response to the encounter-end event. This is an example of executing a reporting workflow with other actions." />
+      <fixedString value="This action represents the start of the check for reportable conditions and labresults in response to the named event." />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.code">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.code">
       <path value="PlanDefinition.action.code" />
-      <short value="Code for the &quot;execute-reporting-workflow&quot; action." />
-      <definition value="The US-PH-PlanDefinition-Action code for the &quot;execute-reporting-workflow&quot; action." />
+      <short value="Code for the &quot;check-reportability&quot; action." />
+      <definition value="The US-PH-PlanDefinition-Action code for the &quot;check reportability&quot; action." />
       <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
@@ -395,7 +351,7 @@
       </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action">
       <path value="PlanDefinition.action.action" />
       <slicing>
         <discriminator>
@@ -404,11 +360,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="2" />
+      <min value="7" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase">
       <path value="PlanDefinition.action.action" />
-      <sliceName value="isInpatientEncounterReportable" />
+      <sliceName value="isHospitalBasedInfluenzaCase" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -416,13 +372,13 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.id">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.id">
       <path value="PlanDefinition.action.action.id" />
       <min value="1" />
-      <fixedString value="is-inpatient-encounter-reportable" />
+      <fixedString value="is-hospital-based-influenza-case" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.code">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.code">
       <path value="PlanDefinition.action.action.code" />
       <min value="1"/>
       <max value="1"/>
@@ -433,45 +389,469 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.condition">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.condition">
       <path value="PlanDefinition.action.action.condition" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.condition.kind">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.condition.kind">
       <path value="PlanDefinition.action.action.condition.kind" />
       <fixedCode value="applicability" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.condition.expression">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.condition.expression">
       <path value="PlanDefinition.action.action.condition.expression" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.condition.expression.language">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.condition.expression.language">
       <path value="PlanDefinition.action.action.condition.expression.language" />
       <fixedCode value="text/fhirpath" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.input">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.input">
       <path value="PlanDefinition.action.action.input" />
       <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.input.id">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.input.id">
       <path value="PlanDefinition.action.action.input.id" />
       <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.relatedAction">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.relatedAction">
       <path value="PlanDefinition.action.action.relatedAction" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.relatedAction.actionId">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.relatedAction.actionId">
       <path value="PlanDefinition.action.action.relatedAction.actionId" />
       <fixedId value="create-resp-net-report" />
     </element>
-    <element id="PlanDefinition.action:executeReportingWorkflow.action:isInpatientEncounterReportable.relatedAction.relationship">
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalBasedInfluenzaCase.relatedAction.relationship">
       <path value="PlanDefinition.action.action.relatedAction.relationship" />
       <fixedCode value="before-start" />
     </element>
+    
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase">
+      <path value="PlanDefinition.action.action" />
+      <sliceName value="isClinicalInfluenzaSurveillanceCase" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.id">
+      <path value="PlanDefinition.action.action.id" />
+      <min value="1" />
+      <fixedString value="is-clinical-surveillance-influena-case" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.code">
+      <path value="PlanDefinition.action.action.code" />
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions" />
+          <code value="evaluate-condition" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.condition">
+      <path value="PlanDefinition.action.action.condition" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.condition.kind">
+      <path value="PlanDefinition.action.action.condition.kind" />
+      <fixedCode value="applicability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.condition.expression">
+      <path value="PlanDefinition.action.action.condition.expression" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.condition.expression.language">
+      <path value="PlanDefinition.action.action.condition.expression.language" />
+      <fixedCode value="text/fhirpath" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.input">
+      <path value="PlanDefinition.action.action.input" />
+      <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.input.id">
+      <path value="PlanDefinition.action.action.input.id" />
+      <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.relatedAction">
+      <path value="PlanDefinition.action.action.relatedAction" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.relatedAction.actionId">
+      <path value="PlanDefinition.action.action.relatedAction.actionId" />
+      <fixedId value="create-resp-net-report" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isClinicalInfluenzaSurveillanceCase.relatedAction.relationship">
+      <path value="PlanDefinition.action.action.relatedAction.relationship" />
+      <fixedCode value="before-start" />
+    </element>
+    
+	<element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase">
+      <path value="PlanDefinition.action.action" />
+      <sliceName value="isHospitalDiseaseBurdenCase" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.id">
+      <path value="PlanDefinition.action.action.id" />
+      <min value="1" />
+      <fixedString value="is-hospital-disease-burden-case" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.code">
+      <path value="PlanDefinition.action.action.code" />
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions" />
+          <code value="evaluate-condition" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.condition">
+      <path value="PlanDefinition.action.action.condition" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.condition.kind">
+      <path value="PlanDefinition.action.action.condition.kind" />
+      <fixedCode value="applicability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.condition.expression">
+      <path value="PlanDefinition.action.action.condition.expression" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.condition.expression.language">
+      <path value="PlanDefinition.action.action.condition.expression.language" />
+      <fixedCode value="text/fhirpath" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.input">
+      <path value="PlanDefinition.action.action.input" />
+      <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.input.id">
+      <path value="PlanDefinition.action.action.input.id" />
+      <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.relatedAction">
+      <path value="PlanDefinition.action.action.relatedAction" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.relatedAction.actionId">
+      <path value="PlanDefinition.action.action.relatedAction.actionId" />
+      <fixedId value="create-resp-net-report" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isHospitalDiseaseBurdenCase.relatedAction.relationship">
+      <path value="PlanDefinition.action.action.relatedAction.relationship" />
+      <fixedCode value="before-start" />
+    </element>
+
+	<element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase">
+      <path value="PlanDefinition.action.action" />
+      <sliceName value="isCovid19SurveillanceCase" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.id">
+      <path value="PlanDefinition.action.action.id" />
+      <min value="1" />
+      <fixedString value="is-covid19-surveillance-case" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.code">
+      <path value="PlanDefinition.action.action.code" />
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions" />
+          <code value="evaluate-condition" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.condition">
+      <path value="PlanDefinition.action.action.condition" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.condition.kind">
+      <path value="PlanDefinition.action.action.condition.kind" />
+      <fixedCode value="applicability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.condition.expression">
+      <path value="PlanDefinition.action.action.condition.expression" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.condition.expression.language">
+      <path value="PlanDefinition.action.action.condition.expression.language" />
+      <fixedCode value="text/fhirpath" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.input">
+      <path value="PlanDefinition.action.action.input" />
+      <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.input.id">
+      <path value="PlanDefinition.action.action.input.id" />
+      <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.relatedAction">
+      <path value="PlanDefinition.action.action.relatedAction" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.relatedAction.actionId">
+      <path value="PlanDefinition.action.action.relatedAction.actionId" />
+      <fixedId value="create-resp-net-report" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isCovid19SurveillanceCase.relatedAction.relationship">
+      <path value="PlanDefinition.action.action.relatedAction.relationship" />
+      <fixedCode value="before-start" />
+    </element>
+
+	<element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase">
+      <path value="PlanDefinition.action.action" />
+      <sliceName value="isRsvSurveillanceCase" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.id">
+      <path value="PlanDefinition.action.action.id" />
+      <min value="1" />
+      <fixedString value="is-rsv-surveillance-case" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.code">
+      <path value="PlanDefinition.action.action.code" />
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions" />
+          <code value="evaluate-condition" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.condition">
+      <path value="PlanDefinition.action.action.condition" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.condition.kind">
+      <path value="PlanDefinition.action.action.condition.kind" />
+      <fixedCode value="applicability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.condition.expression">
+      <path value="PlanDefinition.action.action.condition.expression" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.condition.expression.language">
+      <path value="PlanDefinition.action.action.condition.expression.language" />
+      <fixedCode value="text/fhirpath" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.input">
+      <path value="PlanDefinition.action.action.input" />
+      <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.input.id">
+      <path value="PlanDefinition.action.action.input.id" />
+      <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.relatedAction">
+      <path value="PlanDefinition.action.action.relatedAction" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.relatedAction.actionId">
+      <path value="PlanDefinition.action.action.relatedAction.actionId" />
+      <fixedId value="create-resp-net-report" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isRsvSurveillanceCase.relatedAction.relationship">
+      <path value="PlanDefinition.action.action.relatedAction.relationship" />
+      <fixedCode value="before-start" />
+    </element>
+
+	<element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase">
+      <path value="PlanDefinition.action.action" />
+      <sliceName value="isInfluenzaEffectivenessEvaluationCase" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.id">
+      <path value="PlanDefinition.action.action.id" />
+      <min value="1" />
+      <fixedString value="is-influenza-effectiveness-evaluation-case" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.code">
+      <path value="PlanDefinition.action.action.code" />
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions" />
+          <code value="evaluate-condition" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.condition">
+      <path value="PlanDefinition.action.action.condition" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.condition.kind">
+      <path value="PlanDefinition.action.action.condition.kind" />
+      <fixedCode value="applicability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.condition.expression">
+      <path value="PlanDefinition.action.action.condition.expression" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.condition.expression.language">
+      <path value="PlanDefinition.action.action.condition.expression.language" />
+      <fixedCode value="text/fhirpath" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.input">
+      <path value="PlanDefinition.action.action.input" />
+      <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.input.id">
+      <path value="PlanDefinition.action.action.input.id" />
+      <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.relatedAction">
+      <path value="PlanDefinition.action.action.relatedAction" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.relatedAction.actionId">
+      <path value="PlanDefinition.action.action.relatedAction.actionId" />
+      <fixedId value="create-resp-net-report" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:isInfluenzaEffectivenessEvaluationCase.relatedAction.relationship">
+      <path value="PlanDefinition.action.action.relatedAction.relationship" />
+      <fixedCode value="before-start" />
+    </element>
+
+	<element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability">
+      <path value="PlanDefinition.action.action" />
+      <sliceName value="continueToCheckReportability" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.id">
+      <path value="PlanDefinition.action.action.id" />
+      <min value="1" />
+      <fixedString value="continue-to-check-reportability" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.code">
+      <path value="PlanDefinition.action.action.code" />
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions" />
+          <code value="evaluate-condition" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.condition">
+      <path value="PlanDefinition.action.action.condition" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.condition.kind">
+      <path value="PlanDefinition.action.action.condition.kind" />
+      <fixedCode value="applicability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.condition.expression">
+      <path value="PlanDefinition.action.action.condition.expression" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.condition.expression.language">
+      <path value="PlanDefinition.action.action.condition.expression.language" />
+      <fixedCode value="text/fhirpath" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.input">
+      <path value="PlanDefinition.action.action.input" />
+      <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.input.id">
+      <path value="PlanDefinition.action.action.input.id" />
+      <definition value="The id of the input requirement, allowing the data to be referenced via a context variable named `%[id]`" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.relatedAction">
+      <path value="PlanDefinition.action.action.relatedAction" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.relatedAction.actionId">
+      <path value="PlanDefinition.action.action.relatedAction.actionId" />
+      <fixedId value="check-reportability" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.relatedAction.relationship">
+      <path value="PlanDefinition.action.action.relatedAction.relationship" />
+      <fixedCode value="before-start" />
+    </element>
+    <element id="PlanDefinition.action:checkReportabilityWorkflow.action:continueToCheckReportability.relatedAction.offsetDuration">
+            <path value="PlanDefinition.action.action.relatedAction.offsetDuration"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Duration"/>
+            </type>
+            <example>
+                <label value="Wait 1 hour before next action."/>
+                <valueDuration>
+                    <value value="1"/>
+                    <unit value="h"/>
+                </valueDuration>
+            </example>
+        </element>
 
         
         <element id="PlanDefinition.action:createReport">
@@ -599,7 +979,7 @@
 
         <element id="PlanDefinition.action:submitReport">
             <path value="PlanDefinition.action"/>
-            <sliceName value="submitRespNetReport"/>
+            <sliceName value="submitReport"/>
             <short value="Route and send RESP-NET Report"/>
             <definition value="Defines the routing and sending of the RESP-NET Report"/>
             <min value="1"/>

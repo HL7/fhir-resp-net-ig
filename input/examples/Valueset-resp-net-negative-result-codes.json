@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "resp-net-negative-result-codes",
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Negtive Lab Test Results</h2></div>"
+  },
+  "name": "RESPNetNegativeResultCodes",
+  "title": "resp-net-negative-result-codes",
+  "description": "List of codes for negative test results for RESPNet",
+  "status": "draft",
+  "experimental": true,
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "260385009",
+            "display": "Negative (qualifier value)"
+          },
+          {
+            "code": "260415000",
+            "display": "Not Detected (qualifier value)"
+          },
+          {
+            "code": "131194007",
+            "display": "Non-Reactive (qualifier value)"
+          },
+          {
+            "code": "76104008",
+            "display": "Not Confirmed by (contextual qualifier) (qualifier value)"
+          },
+          {
+            "code": "1240591000000102",
+            "display": "Severe acute respiratory syndrome coronavirus 2 not detected (finding)"
+          },
+          {
+            "code": "711334003",
+            "display": "Influenza A virus H1N1 subtype not detected (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

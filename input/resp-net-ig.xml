@@ -67,6 +67,70 @@
   <definition>
   <resource>
       <reference>
+        <reference value="Library/respnet-valuesets"/>
+      </reference>
+      <name value="RESP-NET list of value sets"/>
+      <description value="An example for a library containing all RESPNet value sets"/>
+      <exampleBoolean value="true"/>
+   </resource>
+  <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-labtest-covid-codes"/>
+      </reference>
+      <name value="RESP-NET Covid test codes"/>
+      <description value="An example for Covid test codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-labtest-flu-codes"/>
+      </reference>
+      <name value="RESP-NET Flu test codes"/>
+      <description value="An example for Flu test codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-labtest-flu-rsv-covid-codes"/>
+      </reference>
+      <name value="RESP-NET Flu, Rsv and Covid test codes"/>
+      <description value="An example for Flu, Rsv and Covid test codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-labtest-rsv-codes"/>
+      </reference>
+      <name value="RESP-NET Rsv test codes"/>
+      <description value="An example for Rsv test codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-ari-test-codes"/>
+      </reference>
+      <name value="RESP-NET ARI codes"/>
+      <description value="An example for ARI codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-negative-result-codes"/>
+      </reference>
+      <name value="RESP-NET Negative test result codes"/>
+      <description value="An example for Negative test result codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="ValueSet/resp-net-positive-result-codes"/>
+      </reference>
+      <name value="RESP-NET Positive test result codes"/>
+      <description value="An example for Positive test result codes for RESP-NET"/>
+      <exampleBoolean value="true"/>
+   </resource>
+  <resource>
+      <reference>
         <reference value="Bundle/resp-net-reporting-bundle-example"/>
       </reference>
       <name value="RESP-NET Reporting Bundle Example"/>
@@ -357,6 +421,10 @@
     <parameter>
       <code value="shownav"/>
       <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="auto-oid-root"/>
+      <value value="2.16.840.1.113883.4.642.40.52"/>
     </parameter>
   </definition>
 </ImplementationGuide>

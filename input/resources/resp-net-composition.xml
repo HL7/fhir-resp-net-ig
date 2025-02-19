@@ -40,6 +40,17 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
+    <element id="Composition.extension:respnet-report-context">
+            <path value="Composition.extension"/>
+            <sliceName value="respnet-report-context"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-report-context-extension"/>
+            </type>
+            <mustSupport value="true"/>
+    </element>
     <element id="Composition.identifier">
             <path value="Composition.identifier"/>
             <short value="RESP-NET Composition identifier"/>

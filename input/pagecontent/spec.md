@@ -84,7 +84,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * The Data Receiver **SHALL** create a Knowledge Artifact following the constraints identified by the [MedMorph Provisioning requirements]({{site.data.fhir.ver.medmorphIg}}/provisioning.html#creating-knowledge-artifacts).
 
-* The Data Receiver **SHALL** create the Knowledge Artifact following the constraints identified in the [RESP-NET-PlanDefinition](StructureDefinition-resp-net-plandefinition.html).
+* The Data Receiver **SHALL** create the Knowledge Artifact following the constraints identified in the [RESP-NET-PlanDefinition](StructureDefinition-respnet-plandefinition.html).
 
 * The Data Receiver **SHALL** implement the Knowledge Artifact Repository requirements as outlined in the [MedMorph RA Knowledge Artifact Repository Requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-knowledge-artifact-repository.html).
 

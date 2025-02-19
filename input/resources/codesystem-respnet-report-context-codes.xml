@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="respnet-report-context"/>
+  <url value="http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context"/>
+  <version value="1.0.0"/>
+  <name value="RespNetReportContextCodes"/>
+  <title value="RESPNet Report Context Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-09-06"/>
+  <description value="The RESPNet Report Context codesystem contains a &#39;starter set&#39; of codes supported for identifying specific respnet programs that can use the reported data."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/us/resp-net/ValueSet/respnet-report-context-codes"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="respnet-case-report"/>
+    <display value="General RESPNet case report"/>
+    <definition value="Report that indicates this is a RESPNet case report"/>
+    <concept>
+	    <code value="respnet-influenza-case-detected"/>
+	    <display value="RESPNet report for a Hospital-based influenza case"/>
+	    <definition value="RESPNet report is generated based on a positive flu test result and the corresponding encounter is still in-progress (encounter.status = in-progress)"/>
+    </concept>
+    <concept>
+	    <code value="respnet-clinical-influenza-surveillance-case"/>
+	    <display value="RESPNet report for Hospital-based clinical influenza surveillance"/>
+	    <definition value="RESPNet report is generated based on a positive flu test result  and the corresponding encounter is closed (encounter.status=discharged|completed)"/>
+    </concept>
+    <concept>
+	    <code value="respnet-disease-burden-case"/>
+	    <display value="RESPNet report for Hospital-based disease burden case"/>
+	    <definition value="RESPNet report is generated based on an Acute Respiratory Illness diagnosis and the administration of a test for one of Flu or Covid or RSV and the corresponding encounter is closed (encounter.status=discharged|completed)"/>
+    </concept>
+    <concept>
+	    <code value="respnet-covid-19-surveillance"/>
+	    <display value="RESPNet report for covid-19 surveillance"/>
+	    <definition value="RESPNet report is generated based on a positive covid-19 test result  and the corresponding encounter is closed (encounter.status=discharged|completed)"/>
+    </concept>
+    <concept>
+	    <code value="respnet-rsv-surveillance"/>
+	    <display value="RESPNet report for rsv surveillance"/>
+	    <definition value="RESPNet report is generated based on a positive rsv test result  and the corresponding encounter is closed (encounter.status=discharged|completed)"/>
+    </concept>
+    <concept>
+	    <code value="respnet-influenza-vaccine-effectiveness-evaluation"/>
+	    <display value="RESPNet report for influenza effectiveness evaluation"/>
+	    <definition value="RESPNet report is generated based on a negative flu test result  and the corresponding encounter is closed (encounter.status=discharged|completed)"/>
+    </concept>
+  </concept>
+ </CodeSystem>
