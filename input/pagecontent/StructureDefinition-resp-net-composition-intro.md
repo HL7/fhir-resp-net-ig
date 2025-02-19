@@ -20,5 +20,11 @@ The following sections and population criteria should be used to create the comp
 * Social History section: Smoking status, disability status, and characteristics of home environment with status = final, amended
 * Pregnancy section: Pregnancy status, pregnancy outcome, postpartum status for the patient during the encounter
 
-The above data has to be populated by the implementers of either the DataSource actors or the MedMorph HDEA (backend services app).
+The above data has to be populated by the implementers of either the DataSource actors or the HDEA (backend services app).
+
+### Populating the RESPNet Use Case
+
+The [RESPNet Report Context extension](StructureDefinition-respnet-report-context-extension.html) is used to convey the how a RESPNet report receiver can use the data for different programs and use cases associated with the RESPNet activities.
+
+The extension **SHALL** always have two codings from the [RESPNet Context value set](ValueSet-respnet-report-context-codes.html), one containing the Level 1 code of "respnet-case-report" and the second one will be one of the Level 2 codes.
  

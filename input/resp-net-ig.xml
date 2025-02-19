@@ -5,12 +5,18 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
 	<valueCode value="pher"/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+	<valueCode value="trial-use"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+	<valueInteger value="2"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/resp-net/ImplementationGuide/resp-net"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden  -->
   <version value="1.0.0"/>
   <name value="RESPNET"/>
   <title value="Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International / Public Health"/>
   <contact>
@@ -391,7 +397,7 @@
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2021+"/>
+      <value value="2023+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>

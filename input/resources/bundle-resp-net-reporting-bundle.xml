@@ -14,7 +14,7 @@
     <version value="1.0.0"/>
     <name value="RespNetReportingBundle"/>
     <title value="RESP-NET Reporting Bundle"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
     <publisher value="HL7 International / Public Health"/>
