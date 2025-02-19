@@ -1,12 +1,61 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
+# Slicing Related Information, the extensions are required.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # This has to be fixed prior to publishing and is documented in the following [Bundle Zulip Thread](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Bundle.20creation.20issue.20with.20references.20to.20other.20resources)
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
 
-# This has to be fixed prior to publishing and is documented in the following [Extension Propagation Zulip Thread](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/WG.20definition.20extension.20from.20ig.2Exml.20being.20propagated)
+# Messages due to dependencies on other specifications 
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
 
+# Terminology Validation Related Items
+The value set include has too many codes to validate (1,804), so each individual code has not been checked
+This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Positive (qualifier value), Detected (qualifier value), Equivocal (qualifier value), Reactive (qualifier value), Confirmed by (contextual qualifier) (qualifier value)] and examples for no FSN: [SARS-CoV-2])
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# The following is a known issue with the Terminology
+# Old Terminology Related Items
+The code 'J04.10' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J04.10' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J04.11' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J04.11' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J04.3' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J04.3' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J04.30' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J04.30' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J04.31' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J04.31' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J05.10' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J05.10' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J05.11' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J05.11' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J09.X' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J09.X' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J09.X1' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J09.X1' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J09.X2' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J09.X2' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J09.X3' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J09.X3' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J09.X9' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J09.X9' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.00' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.00' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.01' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.01' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.08' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.08' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.2' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.2' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.81' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.81' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.82' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.82' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.83' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.83' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J10.89' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J10.89' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.00' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.00' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.08' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.08' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.2' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.2' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.81' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.81' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.82' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.82' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.83' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.83' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J11.89' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J11.89' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J12.81' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J12.81' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J12.82' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J12.82' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J12.89' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J12.89' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J15.20' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J15.20' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J15.211' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J15.211' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J15.212' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J15.212' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J15.29' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J15.29' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J96.00' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J96.00' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J96.01' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J96.01' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'J96.02' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'J96.02' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'A37.01' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'A37.01' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'A37.11' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'A37.11' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'A37.81' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'A37.81' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'A37.91' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'A37.91' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')
+The code 'B97.21' is not valid in the system http://hl7.org/fhir/sid/icd-10 (Unknown code 'B97.21' in the CodeSystem 'http://hl7.org/fhir/sid/icd-10' version '2019-covid-expanded')

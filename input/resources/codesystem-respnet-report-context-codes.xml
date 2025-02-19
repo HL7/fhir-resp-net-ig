@@ -18,6 +18,7 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <valueSet value="http://hl7.org/fhir/us/resp-net/ValueSet/respnet-report-context-codes"/>
+  <hierarchyMeaning value="grouped-by"/>
   <content value="complete"/>
   <count value="7"/>
   <concept>

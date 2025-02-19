@@ -12,10 +12,10 @@
   "timestamp": "2020-11-20T11:15:33-10:00",
   "entry": [
     {
-      "fullUrl": "http://hl7.org/fhir/us/resp-net/PlanDefinition/plandefinition-resp-net-example",
+      "fullUrl": "http://hl7.org/fhir/us/resp-net/PlanDefinition/resp-net-plandefinition",
       "resource": {
         "resourceType": "PlanDefinition",
-        "id": "plandefinition-resp-net-example",
+        "id": "resp-net-plandefinition",
         "meta": {
           "versionId": "1",
           "lastUpdated": "2020-11-29T02:03:28.045+00:00",
@@ -25,12 +25,38 @@
         },
         "text": {
           "status": "extensions",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>Receiver Endpoint Address</b>: <a>Generated Summary: id: example-nchs-endpoint; status: active; <span title=\"{http://terminology.hl7.org/CodeSystem/endpoint-connection-type hl7-fhir-rest}\">HL7 FHIR</span>; name: PHAReceiver; endpointmanager@example.pha.org; period: 2020-11-20 --&gt; (ongoing); <span title=\"Codes: {http://hl7.org/fhir/resource-types Bundle}\">Bundle</span>; payloadMimeType: application/fhir+xml, payloadMimeType: application/fhir+json; address: http://example.pha.org/fhir</a></p><p><b>Author </b></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative: RESP-NET PlanDefinition Example</b></p></div>"
         },
-        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/plandefinition-resp-net-example",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/variable",
+            "valueExpression": {
+              "name": "normalReportingDuration",
+              "language": "text/fhirpath",
+              "expression": "1500"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/variable",
+            "valueExpression": {
+              "name": "encounterStartDate",
+              "language": "text/fhirpath",
+              "expression": "{{context.encounterStartDate}}"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/variable",
+            "valueExpression": {
+              "name": "encounterEndDate",
+              "language": "text/fhirpath",
+              "expression": "{{context.encounterEndDate}}"
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-plandefinition",
         "version": "1.0",
-        "name": "PlanDefinitionRespNetExample",
-        "title": "PlanDefinition RESP-NET Example",
+        "name": "RESPNetPlanDefinition",
+        "title": "RESPNet PlanDefinition",
         "type": {
           "coding": [
             {
@@ -41,25 +67,25 @@
           ]
         },
         "status": "active",
-        "experimental": true,
+        "experimental": false,
         "date": "2023-06-01T12:32:29.858-05:00",
         "publisher": "HL7 Public Health Work Group",
-        "description": "This is the RESP-NET Reporting Knowledge Artifact",
+        "description": "This is the RESP-NET Knowledge Artifact",
         "effectivePeriod": {
-          "start": "2021-11-01"
+          "start": "2024-11-01"
         },
         "relatedArtifact": [
           {
             "type": "depends-on",
-            "label": "Health Care Survey Registered Participants",
-            "resource": "http://nchs/fhir/r4/Group/healthcare-survey-participants"
+            "label": "RESPNet Valueset Library",
+            "resource": "http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets"
           }
         ],
         "action": [
           {
             "id": "start-workflow",
-            "description": "This action represents the start of the reporting workflow in response to the encounter-end event",
-            "textEquivalent": "Start the reporting workflow in response to an encounter-end event",
+            "description": "This action represents the start of the reporting workflow in response to a named event",
+            "textEquivalent": "Start the reporting workflow in response to a named event",
             "code": [
               {
                 "coding": [
@@ -72,7 +98,7 @@
             ],
             "trigger": [
               {
-                "id": "encounter-end",
+                "id": "encounter-close",
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension",
@@ -89,6 +115,47 @@
                 ],
                 "type": "named-event",
                 "name": "encounter-close"
+              },
+              {
+                "id": "encounter-start",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-triggerdefinition-namedevents",
+                          "code": "encounter-start",
+                          "display": "Indicates the start of an encounter"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "type": "named-event",
+                "name": "encounter-start"
+              }
+            ],
+            "input": [
+              {
+                "id": "patient",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "valueString": "Patient/{{context.patientId}}"
+                  }
+                ],
+                "type": "Patient"
+              },
+              {
+                "id": "encounter",
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
+                    "valueString": "Encounter/{{context.encounterId}}"
+                  }
+                ],
+                "type": "Encounter"
               }
             ],
             "relatedAction": [
@@ -96,7 +163,7 @@
                 "actionId": "check-reportability",
                 "relationship": "before-start",
                 "offsetDuration": {
-                  "value": 72,
+                  "value": 1,
                   "system": "http://unitsofmeasure.org",
                   "code": "h"
                 }
@@ -104,56 +171,9 @@
             ]
           },
           {
-      "id": "start-workflow-for-positive-lab-result",
-      "description": "This action represents the start of the reporting workflow in response to the labresult-change (e.g new lab result or modified existing lab result) event",
-      "textEquivalent": "Start the reporting workflow in response to an labresult-change event",
-      "code": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
-              "code": "initiate-reporting-workflow"
-            }
-          ]
-        }
-      ],
-      "trigger": [
-        {
-          "id": "labresult-change",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-triggerdefinition-namedevents",
-                    "code": "labresult-change",
-                    "display": "Indicates a change in the patient's labresults"
-                  }
-                ]
-              }
-            }
-          ],
-          "type": "named-event",
-          "name": "labresult-change"
-        }
-      ],
-      "relatedAction": [
-        {
-          "actionId": "check-reportability",
-          "relationship": "before-start",
-          "offsetDuration": {
-            "value": 72,
-            "system": "http://unitsofmeasure.org",
-            "code": "h"
-          }
-        }
-      ]
-    },
-          {
             "id": "check-reportability",
-            "description": "This action represents the start of the check for reportable conditions in response to the encounter-end event. This is an example of executing a reporting workflow with other actions.",
-            "textEquivalent": "Check Reportability",
+            "description": "This action represents the start of the check for reportable conditions and labresults in response to the named event.",
+            "textEquivalent": "Check Reportability workflow",
             "code": [
               {
                 "coding": [
@@ -166,6 +186,9 @@
             ],
             "action": [
               {
+                "id": "is-hospital-based-influenza-case",
+                "description": "Check for reportability of a hospital based influenza case",
+                "textEquivalent": "Check for hospital based influenza case",
                 "code": [
                   {
                     "coding": [
@@ -179,34 +202,194 @@
                 "condition": [
                   {
                     "expression": {
-                      "expression": "%closedEncounter.participant.individual.identifier.where(system = 'http://hl7.org/fhir/sid/us-npi).value.subsetOf(participantGroup.member.entity.identifier.where(system = 'http://hl7.org/fhir/sid/us-npi).value)'",
+                      "expression": "%fluTestEncounter.where(status = 'in-progress' or status = 'arrived') and %encounterStartDate + 1 day * %normalReportingDuration >= now() and %positiveFluTestResults.exists()",
                       "language": "text/fhirpath"
                     },
                     "kind": "applicability"
                   }
                 ],
-                "description": "This action represents the check for reportability of ambulatory encounters based on survey participation.",
-                "id": "is-ambulatory-encounter-reportable",
                 "input": [
                   {
+                    "id": "positiveFluTestResults",
                     "extension": [
                       {
-                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
-                        "valueString": "Encounter/{{context.patientId}}"
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Observation?patient=Patient/{{context.patientId}}"
                       }
                     ],
-                    "id": "closedEncounter",
+                    "type": "Observation",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"
+                      },
+                      {
+                        "path": "value",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fluTestEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
+                    "type": "Encounter"
+                  }
+                ],
+                "relatedAction": [
+                  {
+                    "actionId": "create-resp-net-report",
+                    "relationship": "before-start"
+                  }
+                ]
+              },
+              {
+                "id": "is-clinical-surveillance-influena-case",
+                "description": "Check for reportability of a clincial surveillance influenza case",
+                "textEquivalent": "Check for clinical surveillance influenza case",
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "code": "evaluate-condition",
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
+                      }
+                    ]
+                  }
+                ],
+                "condition": [
+                  {
+                    "expression": {
+                      "expression": "%influenzaTestEncounter.where(status = 'finished') and %encounterStartDate + 1 day * %normalReportingDuration >= now() and %positiveInfluenzaTestResults.exists()",
+                      "language": "text/fhirpath"
+                    },
+                    "kind": "applicability"
+                  }
+                ],
+                "input": [
+                  {
+                    "id": "positiveInfluenzaTestResults",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Observation?patient=Patient/{{context.patientId}}"
+                      }
+                    ],
+                    "type": "Observation",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"
+                      },
+                      {
+                        "path": "value",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "influenzaTestEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
+                    "type": "Encounter"
+                  }
+                ],
+                "relatedAction": [
+                  {
+                    "actionId": "create-resp-net-report",
+                    "relationship": "before-start"
+                  }
+                ]
+              },
+              {
+                "id": "is-hospital-disease-burden-case",
+                "description": "Check for reportability of a hospital disease burden case",
+                "textEquivalent": "Check for hospital disease burden case",
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "code": "evaluate-condition",
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
+                      }
+                    ]
+                  }
+                ],
+                "condition": [
+                  {
+                    "expression": {
+                      "expression": "%diseaseEncounter.where(status = 'finished') and %encounterStartDate + 1 day * %normalReportingDuration >= now() and %ariConditions.exists() and (%labTests.exists() or %diagnosticReports.exists())",
+                      "language": "text/fhirpath"
+                    },
+                    "kind": "applicability"
+                  }
+                ],
+                "input": [
+                  {
+                    "id": "labTests",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Observation?patient=Patient/{{context.patientId}}"
+                      }
+                    ],
+                    "type": "Observation",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "diagnosticReports",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "DiagnosticReport?patient=Patient/{{context.patientId}}"
+                      }
+                    ],
+                    "type": "DiagnosticReport",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "diseaseEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
                     "type": "Encounter"
                   },
                   {
+                    "id": "ariConditions",
                     "extension": [
                       {
-                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
-                        "valueString": "Group/{{context.nchsGroupId}}"
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Condition?patient=Patient/{{context.patientId}}"
                       }
                     ],
-                    "id": "participantGroup",
-                    "type": "Group"
+                    "type": "Condition",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes"
+                      }
+                    ]
                   }
                 ],
                 "relatedAction": [
@@ -214,10 +397,12 @@
                     "actionId": "create-resp-net-report",
                     "relationship": "before-start"
                   }
-                ],
-                "textEquivalent": "Check Participation of Provider to report on the encounter"
+                ]
               },
               {
+                "id": "is-covid19-surveillance-case",
+                "description": "Check for reportability of a covid-19 surveillance case",
+                "textEquivalent": "Check for covid-19 surveillance case",
                 "code": [
                   {
                     "coding": [
@@ -231,23 +416,41 @@
                 "condition": [
                   {
                     "expression": {
-                      "expression": "%closedEncounter.exists()",
+                      "expression": "%covidEncounter.where(status = 'finished') and %encounterStartDate + 1 day * %normalReportingDuration >= now() and %positiveCovidTestResults.exists()",
                       "language": "text/fhirpath"
                     },
                     "kind": "applicability"
                   }
                 ],
-                "description": "This action represents the check for reportability of inpatient encounters based on survey requirements.",
-                "id": "is-inpatient-encounter-reportable",
                 "input": [
                   {
+                    "id": "positiveCovidTestResults",
                     "extension": [
                       {
-                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
-                        "valueString": "Encounter/{{context.patientId}}"
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Observation?patient=Patient/{{context.patientId}}"
                       }
                     ],
-                    "id": "inpatientEncounter",
+                    "type": "Observation",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes"
+                      },
+                      {
+                        "path": "value",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "covidEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
                     "type": "Encounter"
                   }
                 ],
@@ -256,8 +459,178 @@
                     "actionId": "create-resp-net-report",
                     "relationship": "before-start"
                   }
+                ]
+              },
+              {
+                "id": "is-rsv-surveillance-case",
+                "description": "Check for reportability of a RSV surveillance case",
+                "textEquivalent": "Check for RSV surveillance case",
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "code": "evaluate-condition",
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
+                      }
+                    ]
+                  }
                 ],
-                "textEquivalent": "Check criteria to report on the encounter"
+                "condition": [
+                  {
+                    "expression": {
+                      "expression": "%rsvEncounter.where(status = 'finished') and %encounterStartDate + 1 day * %normalReportingDuration >= now() and %positiveRsvTestResults.exists()",
+                      "language": "text/fhirpath"
+                    },
+                    "kind": "applicability"
+                  }
+                ],
+                "input": [
+                  {
+                    "id": "positiveRsvTestResults",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Observation?patient=Patient/{{context.patientId}}"
+                      }
+                    ],
+                    "type": "Observation",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes"
+                      },
+                      {
+                        "path": "value",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "rsvEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
+                    "type": "Encounter"
+                  }
+                ],
+                "relatedAction": [
+                  {
+                    "actionId": "create-resp-net-report",
+                    "relationship": "before-start"
+                  }
+                ]
+              },
+              {
+                "id": "is-influenza-effectiveness-evaluation-case",
+                "description": "Check for reportability of a influenza vaccine effectiveness case",
+                "textEquivalent": "Check for influenza vaccine effectiveness case",
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "code": "evaluate-condition",
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
+                      }
+                    ]
+                  }
+                ],
+                "condition": [
+                  {
+                    "expression": {
+                      "expression": "%influenzaEffectivenessEncounter.where(status = 'finished') and %encounterStartDate + 1 day * %normalReportingDuration >= now() and %negativeFluTestResults.exists()",
+                      "language": "text/fhirpath"
+                    },
+                    "kind": "applicability"
+                  }
+                ],
+                "input": [
+                  {
+                    "id": "negativeFluTestResults",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "valueString": "Observation?patient=Patient/{{context.patientId}}"
+                      }
+                    ],
+                    "type": "Observation",
+                    "codeFilter": [
+                      {
+                        "path": "code",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"
+                      },
+                      {
+                        "path": "value",
+                        "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "influenzaEffectivenessEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
+                    "type": "Encounter"
+                  }
+                ],
+                "relatedAction": [
+                  {
+                    "actionId": "create-resp-net-report",
+                    "relationship": "before-start"
+                  }
+                ]
+              },
+              {
+                "id": "continue-to-check-reportability",
+                "description": "Continue to Check for reportability of RESPNet cases until 72 hours after encounter closure",
+                "textEquivalent": "Continue to Check for reportability of RESPNet cases until 72 hours after encounter closure",
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "code": "evaluate-condition",
+                        "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"
+                      }
+                    ]
+                  }
+                ],
+                "condition": [
+                  {
+                    "expression": {
+                      "expression": "%contextEncounter.where(status = 'finished') and %encounterEndDate + 72 hours >= now()",
+                      "language": "text/fhirpath"
+                    },
+                    "kind": "applicability"
+                  }
+                ],
+                "input": [
+                  {
+                    "id": "contextEncounter",
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-relateddata-extension",
+                        "valueString": "encounter"
+                      }
+                    ],
+                    "type": "Encounter"
+                  }
+                ],
+                "relatedAction": [
+                  {
+                    "actionId": "check-reportability",
+                    "relationship": "before-start",
+                    "offsetDuration": {
+                      "value": 24,
+                      "system": "http://unitsofmeasure.org",
+                      "code": "h"
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -283,7 +656,7 @@
                     "valueString": "Patient/{{context.patientId}}"
                   }
                 ],
-                "id": "patient",
+                "id": "contextPatient",
                 "type": "Patient"
               },
               {
@@ -343,7 +716,7 @@
                     "valueString": "Encounter/{{context.encounterId}}"
                   }
                 ],
-                "id": "encounter",
+                "id": "reportableEncounter",
                 "type": "Encounter"
               },
               {

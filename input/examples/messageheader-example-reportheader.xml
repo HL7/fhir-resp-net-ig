@@ -19,16 +19,6 @@
   <extension url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-message-processing-category-extension">
   	<valueCode value="consequence"/>
   </extension>
-  <extension
-             url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-report-initiation-type-extension">
-    <valueCodeableConcept>
-      <coding>
-        <system
-                value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-report-initiation-types"/>
-        <code value="alternately-initiated"/>
-      </coding>
-    </valueCodeableConcept>
-  </extension>
   <eventCoding> 
     <system value="http://snomed.info/sct"/> 
     <code value="77386006"/> 
