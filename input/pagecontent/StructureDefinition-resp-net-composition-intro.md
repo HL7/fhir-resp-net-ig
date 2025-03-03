@@ -24,7 +24,7 @@ The above data has to be populated by the implementers of either the DataSource 
 
 ### Populating the RESP-NET Use Case
 
-The [RESP-NET Report Context extension](StructureDefinition-respnet-report-context-extension.html) is used to convey the how a RESP-NET report receiver can use the data for different programs and use cases associated with the RESP-NET activities.
+The [RESP-NET Report Context extension](StructureDefinition-respnet-report-context-extension.html) is used to convey how a RESP-NET report receiver can use the data for different programs and use cases associated with the RESP-NET activities.
 
-The extension **SHALL** always have two codings from the [RESP-NET Context value set](ValueSet-respnet-report-context-codes.html), one containing the Level 1 code of "respnet-case-report" and the second one will be one of the Level 2 codes.
+The extension **SHALL** always have two codings from the [RESP-NET Context value set](ValueSet-respnet-report-context-codes.html), one containing the Level 1 code of "respnet-case-report" and the second one will be one of the Level 2 use case specific codes.
  
