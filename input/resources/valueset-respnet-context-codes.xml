@@ -11,7 +11,7 @@
   <url value="http://hl7.org/fhir/us/resp-net/ValueSet/respnet-report-context-codes"/>
   <version value="1.0.0"/>
   <name value="RESPNetReportContextCodes"/>
-  <title value="RESPNet Report Context Codes"/>
+  <title value="RESP-NET Report Context Codes"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2020-09-06"/>
@@ -22,7 +22,7 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-  <description value="The RESPNet report context codes is a &#39;starter set&#39; of codes for identifying the programs and the use cases that will use the reported data."/>
+  <description value="The RESP-NET report context codes is a &#39;starter set&#39; of codes for identifying the programs and the use cases that will use the reported data."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
