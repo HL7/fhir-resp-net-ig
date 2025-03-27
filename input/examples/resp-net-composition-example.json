@@ -21,12 +21,12 @@
           {
             "system": "http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context",
             "code": "respnet-case-report",
-            "display": "General RESPNet case report"
+            "display": "General RESP-NET case report"
           },
           {
             "system": "http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context",
             "code": "respnet-influenza-case-detected",
-            "display": "RESPNet report for a Hospital-based influenza case"
+            "display": "RESP-NET report for a Hospital-based influenza case"
           }
         ],
         "text": "RESPNet case report"
