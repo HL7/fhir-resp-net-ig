@@ -5,7 +5,6 @@
     <meta>
         <versionId value="8"/>
         <lastUpdated value="2021-08-17T07:59:00.824+00:00"/>
-        <source value="#bBlVx7OsNPsZVCbu"/>
         <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-pregnancy-status-observation"/>
     </meta>
     <extension url="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-date-recorded-extension">

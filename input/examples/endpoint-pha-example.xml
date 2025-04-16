@@ -13,7 +13,7 @@
     </div> 
   </text> 
   <identifier> 
-    <system value="http://example.pha.org/enpoint-identifier"/> 
+    <system value="http://example.org/enpoint-identifier"/> 
     <value value="pha-endpoint-id"/> 
   </identifier> 
   <status value="active"/> 
@@ -42,5 +42,5 @@
   <payloadMimeType value="application/fhir+xml"/>
   <payloadMimeType value="application/fhir+json"/>
 
-  <address value="http://example.pha.org/fhir"/> 
+  <address value="http://example.org/fhir/pha"/> 
 </Endpoint>

@@ -1,11 +1,12 @@
 {
   "package-id" : "hl7.fhir.us.resp-net",
   "version" : "1.0.0",
-  "path" : "http://hl7.org/fhir/us/resp-net/STU1.0.0",
+  "path" : "http://hl7.org/fhir/us/resp-net/STU1",
   "mode" : "milestone",
   "milestone" : "true",
   "status" : "trial-use",
+  "Release-Label" : "STU 1",
   "sequence" : "STU1",
-  "desc" : "This is the STU1 Release 1 of the RESP-NET FHIR IG.",
+  "desc" : "This is the STU 1 of the RESP-NET FHIR IG.",
   "changes" : "changes.html"
 }

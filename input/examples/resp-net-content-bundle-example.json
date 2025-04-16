@@ -19,7 +19,6 @@
   "meta": {
     "versionId": "23",
     "lastUpdated": "2021-08-19T22:06:32.441+00:00",
-    "source": "#6i8cijintDjJ8In2",
     "profile": [
       "http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-composition"
     ]

@@ -5,7 +5,6 @@
     <meta>
         <versionId value="2"/>
         <lastUpdated value="2022-07-12T02:03:21.911+00:00"/>
-        <source value="#IqyJCmUTqk2pvKFb"/>
     </meta>
     <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-report-context-extension"/>
     <version value="0.1.0"/>

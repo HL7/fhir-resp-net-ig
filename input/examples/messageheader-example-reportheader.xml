@@ -25,7 +25,7 @@
   </eventCoding> 
   <destination> 
     <name value="PHA endpoint"/> 
-    <endpoint value="http://example.pha.org/fhir"/> 
+    <endpoint value="http://example.org/fhir/pha"/> 
   </destination> 
   <sender> 
     <reference value="Organization/example-healthcare-org"/> 
@@ -38,7 +38,7 @@
       <system value="phone"/> 
       <value value="+1 (917) 123 4567"/> 
     </contact> 
-    <endpoint value="http://example.healthcare.org/fhir"/> 
+    <endpoint value="http://example.org/fhir/healthcare"/> 
   </source> 
   <reason> 
     <coding> 

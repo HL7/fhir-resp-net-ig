@@ -12,7 +12,7 @@
   },
   "identifier" : [
     {
-      "system" : "http://lab.smarthealthit.org",
+      "system" : "http://example.org",
       "value" : "061ef612-344f-4e7b-81a8-1059ae7bbe11"
     }
   ],

@@ -5,7 +5,6 @@
     <meta>
         <versionId value="6"/>
         <lastUpdated value="2021-08-17T07:59:00.858+00:00"/>
-        <source value="#BCXyWPUZO0vC56VR"/>
         <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-pregnancy-outcome-observation"/>
     </meta>
     <status value="final"/>

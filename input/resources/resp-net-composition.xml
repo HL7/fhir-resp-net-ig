@@ -4,7 +4,6 @@
   <meta>
     <versionId value="77" />
     <lastUpdated value="2021-08-21T02:37:44.721+00:00" />
-    <source value="#W9i7pBeg7jai2jZL" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
 	<valueCode value="pher"/>
@@ -708,7 +707,7 @@
       <sliceName value="sliceVitalSigns"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs|4.0.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
