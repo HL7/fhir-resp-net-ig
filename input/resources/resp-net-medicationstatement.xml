@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="resp-net-medicationstatement" />
+  <meta>
+    <versionId value="77" />
+    <lastUpdated value="2022-08-21T02:37:44.721+00:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+	<valueCode value="pher"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/resp-net/StructureDefinition/resp-net-medicationstatement" />
+  <version value="1.0.0" />
+  <name value="RESPNETMedicationStatement" />
+  <title value="RESP-NET Medication Statement" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="HL7 International / Public Health" />
+  <description value="This MedicationStatement profile is used as part of the RESP-NET report content." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+    <text value="United States of America" />
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement">
+      <path value="MedicationStatement" />
+      <short value="Resp-net MedicationStatement Profile" />
+      <definition
+        value="The RESP-NET MedicationStatement profile establishes the core elements, extensions, vocabularies and value sets to be used as part of RESP-NET report. " />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.status">
+            <path value="MedicationStatement.status"/>
+            <mustSupport value="true"/>
+     </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <short value="Patient who is the subject of the MedicationStatement." />
+      <definition value="This Patient profile represents the subject of the MedicationStatement." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-patient" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationStatement.context">
+      <path value="MedicationStatement.context" />
+      <short value="Encounter related to the public health event" />
+      <definition value="This Encounter profile represents the encounter related to the RESP-NET report." />
+      <min value="0" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-encounter" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.effective[x]">
+            <path value="MedicationStatement.effective[x]"/>
+            <min value="1" />
+            <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dateAsserted">
+            <path value="MedicationStatement.dateAsserted"/>
+            <min value="0"/>
+            <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.dosage">
+            <path value="MedicationStatement.dosage"/>
+            <min value="0"/>
+            <mustSupport value="true"/>
+    </element>
+    
+  </differential>
+</StructureDefinition>

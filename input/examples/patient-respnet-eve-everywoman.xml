@@ -4,7 +4,7 @@
   <meta>
     <versionId value="10" />
     <lastUpdated value="2021-08-17T08:00:32.356+00:00" />
-    <profile value="http://hl7.org/fhir/us/resp-net/StructureDefinition/us-ph-patient" />
+    <profile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-patient" />
   </meta>
   <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
     <extension url="ombCategory">
