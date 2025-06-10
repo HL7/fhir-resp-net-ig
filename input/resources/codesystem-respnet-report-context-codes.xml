@@ -3,8 +3,8 @@
   <id value="respnet-report-context"/>
   <url value="http://hl7.org/fhir/us/resp-net/CodeSystem/respnet-report-context"/>
   <version value="1.0.0"/>
-  <name value="RespNetReportContextCodes"/>
-  <title value="RESP-NET Report Context Codes"/>
+  <name value="RespNetReportContextCodeSystem"/>
+  <title value="RESP-NET Report Context Code System"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2024-09-06"/>
