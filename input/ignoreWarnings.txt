@@ -2,7 +2,7 @@
 
 # Warnings due to old specifications, however these are based on existing US ONC Cures Act requirements and USCDIv1
 The ImplementationGuide uses package hl7.fhir.uv.smart-app-launch#2.0.0 released on 2021-11-26, but the most recent appropriate version is 2.2.0. This reference is getting old and the more recent version should be considered
-The ImplementationGuide uses package hl7.fhir.us.core#3.1.1 released on 2020-08-28, but the most recent appropriate version is 7.0.0. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#3.1.1 released on 2020-08-28, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
 
 # Slicing Related Information, the extensions specified are required, hence the warnings can be ignored
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
