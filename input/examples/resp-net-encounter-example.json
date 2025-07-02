@@ -60,29 +60,6 @@
   },
   "diagnosis": [
     {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-trigger-code-flag-extension",
-          "extension": [
-            {
-              "url": "triggerCodeValueSet",
-              "valueOid": "urn:oid:2.16.840.1.114222.4.11.7508"
-            },
-            {
-              "url": "triggerCodeValueSetVersion",
-              "valueString": "12/12/2018"
-            },
-            {
-              "url": "triggerCode",
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "6142004",
-                "display": "Influenza (disorder)"
-              }
-            }
-          ]
-        }
-      ],
       "condition": {
         "reference": "Condition/influenza-example"
       }

@@ -1,8 +1,8 @@
 == Suppressed Messages ==
 
 # Warnings due to old specifications, however these are based on existing US ONC Cures Act requirements and USCDIv1
-The ImplementationGuide uses package hl7.fhir.us.core#3.1.1 released on 2020-08-28, but the most recent appropriate version is 7.0.0. This reference is getting old and the more recent version should be considered
 The ImplementationGuide uses package hl7.fhir.uv.smart-app-launch#2.0.0 released on 2021-11-26, but the most recent appropriate version is 2.2.0. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#3.1.1 released on 2020-08-28, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
 
 # Slicing Related Information, the extensions specified are required, hence the warnings can be ignored
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -14,15 +14,14 @@ Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].
 # Messages due to dependencies on other specifications 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0, 3.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActCode' to 'http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0'
-Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt' does not resolve
 The extension http://hl7.org/fhir/StructureDefinition/valueset-steward|5.2.0 is deprecated with the note Use ValueSet.publisher instead
 The extension http://hl7.org/fhir/StructureDefinition/valueset-author|5.2.0 is deprecated with the note Replaced by the extension [[[http://hl7.org/fhir/StructureDefinition/artifact-author]]] prior to R5, and the element [[[ValueSet.author]]] in R5
 
 # Terminology Validation Related Items
 The value set include has too many codes to validate (1,804), so each individual code has not been checked
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Positive (qualifier value), Detected (qualifier value), Equivocal (qualifier value), Reactive (qualifier value), Confirmed by (contextual qualifier) (qualifier value)] and examples for no FSN: [SARS-CoV-2])
-URL value 'urn:oid:2.16.840.1.114222.4.11.7508' does not resolve
 The value set expansion is too large, and only a subset has been displayed
+A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'
 
 # THO has been notified, however this is an experimental codesystem for pilots and will be considered for moving to THO based on Pilot results in the future
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
