@@ -16,8 +16,7 @@
 	hospitalized with respiratory viruses to public health surveillance partners in RESP-NET.  The goal is 
 	to improve the availability of EHR data for public health surveillance of hospitalized persons with influenza and 
 	other respiratory viruses and reduce the burden of data collection on surveillance officers and healthcare facilities 
-	and complement ongoing CDC data modernization initiatives. It also refers to the <a href="{{site.data.fhir.ver.medmorphIg}}/index.html">MedMorph Reference Architecture (RA) IG</a>
-  for organizations who utilize the Health Data Exchange App (HDEA) in their implementations.
+	and complement ongoing CDC data modernization initiatives.
 	</p>
 	
 	<a name="technical"> </a>

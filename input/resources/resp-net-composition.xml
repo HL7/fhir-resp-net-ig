@@ -111,9 +111,9 @@
             <max value="*"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|3.1.1"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|3.1.1"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|3.1.1"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|6.1.0"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device|4.0.1"/>
             </type>
             <mustSupport value="true"/>
@@ -242,7 +242,7 @@
       <short value="Medication Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -320,7 +320,7 @@
       <short value="Medication Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -388,7 +388,7 @@
       <short value="Diagnostic Result Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -446,7 +446,7 @@
       <short value="Document Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -457,7 +457,7 @@
       <short value="Diagnostic Report Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -518,6 +518,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-servicerequest" />
+		<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -528,7 +529,7 @@
       <short value="MedicationRequest Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -539,7 +540,7 @@
       <short value="Medication Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -595,7 +596,7 @@
       <sliceName value="sliceImmunizations"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -764,7 +765,7 @@
       <definition value="Smoking Status entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|3.1.1" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0" />
       </type>
       <mustSupport value="true" />
     </element> 
@@ -776,6 +777,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-disability-status" />
+		<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0" />
       </type>
       <mustSupport value="true" />
     </element>     
@@ -853,7 +855,7 @@
       <definition value="Pregnancy Status Observation entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-pregnancy-status-observation" />
+        <targetProfile value="hhttp://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0" />
       </type>
       <mustSupport value="true" />
     </element>

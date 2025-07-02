@@ -13,7 +13,7 @@
   </extension>
   <url value="http://hl7.org/fhir/us/resp-net/ImplementationGuide/resp-net"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden  -->
-  <version value="1.0.0"/>
+  <version value="2.0.0"/>
   <name value="RESPNET"/>
   <title value="Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide"/>
   <status value="active"/>
@@ -42,18 +42,18 @@
   <dependsOn id="uscoreR4">
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="3.1.1"/>
+    <version value="6.1.0"/>
   </dependsOn>
-    
+<!--    
   <dependsOn id="medmorphIg">
     <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph"/>
     <packageId value="hl7.fhir.us.medmorph"/>
     <version value="1.0.0"/>
-  </dependsOn>
+  </dependsOn>-->
   <dependsOn id="smartapplaunch">
     <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
     <packageId value="hl7.fhir.uv.smart-app-launch"/>
-    <version value="2.0.0"/>
+    <version value="2.2.0"/>
   </dependsOn>
   <dependsOn id="subscriptionsIg">
     <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>

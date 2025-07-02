@@ -20,7 +20,7 @@ The following sections and population criteria should be used to create the comp
 * Social History section: Smoking status, disability status, and characteristics of home environment with status = final, amended
 * Pregnancy section: Pregnancy status, pregnancy outcome, postpartum status for the patient during the encounter
 
-The above data has to be populated by the implementers of either the DataSource actors or the HDEA (backend services app).
+The above data has to be populated by the implementers of either the DataSource or the eCR Now app (or vendor developed solution).
 
 ### Populating the RESP-NET Use Case
 
