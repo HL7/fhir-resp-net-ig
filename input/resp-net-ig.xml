@@ -139,7 +139,7 @@
       <reference>
         <reference value="Bundle/resp-net-reporting-bundle-example"/>
       </reference>
-      <name value="RESP-NET Reporting Bundle Example"/>
+      <name value="Reporting Bundle Example"/>
       <description value="An example showing a Reporting Bundle for RESP-NET"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -147,7 +147,7 @@
       <reference>
         <reference value="PlanDefinition/plandefinition-example"/>
       </reference>
-      <name value="RESP-NET PlanDefinition Example"/>
+      <name value="PlanDefinition Example"/>
       <description value="An example showing a PlanDefinition for RESP-NET"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -163,7 +163,7 @@
       <reference>
         <reference value="ServiceRequest/example"/>
       </reference>
-      <name value="ServiceRequest Example"/>
+      <name value="Service Request Example"/>
       <description value="An example showing a ServiceRequest for RESP-NET."/>
       <exampleBoolean value="true"/>
    </resource>
@@ -171,7 +171,7 @@
       <reference>
         <reference value="MedicationStatement/example"/>
       </reference>
-      <name value="MedicationStatement Example"/>
+      <name value="Medication Statement Example"/>
       <description value="An example showing a MedicationStatement for RESP-NET."/>
       <exampleBoolean value="true"/>
    </resource>
@@ -179,15 +179,23 @@
       <reference>
         <reference value="Encounter/resp-net-encounter-example"/>
       </reference>
-      <name value="RESP-NET Encounter Example"/>
+      <name value="Encounter Example"/>
       <description value="An Encounter example for RESP-NET."/>
       <exampleBoolean value="true"/>
    </resource>
+   <!--<resource>
+      <reference>
+        <reference value="Encounter/condition-encounter-diagnosis-example1"/>
+      </reference>
+      <name value="Encounter Diagnosis Example"/>
+      <description value="An Encounter Diagnosis example for RESP-NET."/>
+      <exampleBoolean value="true"/>
+   </resource>-->
    <resource>
       <reference>
         <reference value="MedicationRequest/self-tylenol"/>
       </reference>
-      <name value="MedicationRequest Example"/>
+      <name value="Medication Request Example"/>
       <description value="An example showing a MedicationRequest for RESP-NET."/>
       <exampleBoolean value="true"/>
    </resource>
@@ -203,7 +211,7 @@
       <reference>
         <reference value="MedicationAdministration/medicationadministration-oseltamivir"/>
       </reference>
-      <name value="RESP-NET Medication Administration Example"/>
+      <name value="Medication Administration Example"/>
       <description value="An example showing a Medication Administration resource"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -211,7 +219,7 @@
       <reference>
         <reference value="Observation/influenza"/>
       </reference>
-      <name value="RESP-NET Observation Example"/>
+      <name value="Observation Example"/>
       <description value="An example showing an Observation for RESP-NET"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -219,7 +227,7 @@
       <reference>
         <reference value="Immunization/flu"/>
       </reference>
-      <name value="RESP-NET Immunization Example"/>
+      <name value="Immunization Example"/>
       <description value="An example showing an Immunization for RESP-NET"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -227,7 +235,7 @@
       <reference>
         <reference value="Patient/patient-respnet-eve-everywoman"/>
       </reference>
-      <name value="US Public Health Patient Example"/>
+      <name value="Patient Example"/>
       <description value="An example showing a Patient for RESP-NET"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -236,7 +244,7 @@
         <reference value="Practitioner/practitioner-us-core-henry-seven" />
         <display value="Practitioner Seven Henry" />
       </reference>
-      <name value="US Core Practitioner Example: Henry Seven" />
+      <name value="Practitioner Example" />
       <description value="US Core Practitioner (Henry Seven) Example" />
       <exampleBoolean value="true" />
    </resource>
@@ -245,7 +253,7 @@
         <reference value="PractitionerRole/practitionerrole-henry-seven" />
         <display value="Practitioner Role Henry Seven" />
       </reference>
-      <name value="US Core Practitioner Role Example: Henry Seven" />
+      <name value="Practitioner Role Example" />
       <description value="US Core Practitioner Role (Henry Seven) Example" />
       <exampleBoolean value="true" />
    </resource>
@@ -309,7 +317,7 @@
       <reference>
         <reference value="Bundle/resp-net-content-bundle-example"/>
       </reference>
-      <name value="Example of a Content Bundle containing Composition resource"/>
+      <name value="Content Bundle containing Composition resource example"/>
       <description value="Example of a Content Bundle containing Composition resource"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -317,7 +325,7 @@
       <reference>
         <reference value="Bundle/resp-net-specification-bundle-example"/>
       </reference>
-      <name value="Example of a Specification Bundle containing PlanDefinition"/>
+      <name value="Specification Bundle containing a Plan Definition example"/>
       <description value="Example of a Specification Bundle containing PlanDefinition"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -325,7 +333,7 @@
       <reference>
         <reference value="Observation/observation-characteristics-of-home-environment-eve-everywoman"/>
       </reference>
-      <name value="Example of Characteristic of Home Environment"/>
+      <name value="Characteristic of Home Environment example"/>
       <description value="Example of a Characteristic of Home Environment"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -333,7 +341,7 @@
       <reference>
         <reference value="Observation/observation-pregnancy-outcome-eve-everywoman"/>
       </reference>
-      <name value="Example of a Pregnancy Outcome"/>
+      <name value="Pregnancy Outcome example"/>
       <description value="Example of a Pregnancy Outcome"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -341,7 +349,7 @@
       <reference>
         <reference value="Observation/observation-pregnancy-status-eve-everywoman"/>
       </reference>
-      <name value="Example of a Pregnancy Status"/>
+      <name value="Pregnancy Status example"/>
       <description value="Example of Pregnancy Status"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -349,7 +357,7 @@
       <reference>
         <reference value="Observation/some-day-smoker"/>
       </reference>
-      <name value="Example of Smoking Status"/>
+      <name value="Smoking Status example"/>
       <description value="Example of Smoking Status"/>
       <exampleBoolean value="true"/>
     </resource>

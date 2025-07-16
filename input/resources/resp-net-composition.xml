@@ -138,6 +138,74 @@
       </slicing>
       <mustSupport value="true" />
     </element>
+	
+ 	<element id="Composition.section:sliceEncounterSection">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <sliceName value="sliceEncounterSection" />
+      <short value="Encounter Section" />
+      <definition value="This section lists and describes all the patient's encounter information related to the encounter." />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>	
+    <element id="Composition.section:sliceEncounterSection.code">
+      <path value="Composition.section.code" />
+      <short value="Encounter Section code" />
+      <definition value="Encounter Section code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="67781-5" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sliceEncounterSection.text">
+      <path value="Composition.section.text" />
+      <short value="Encounter Section narrative" />
+      <definition value="Encounter Section narrative" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>	
+	<element id="Composition.section:sliceEncounterSection.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sliceEncounterSection.sliceEncounterEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEncounter"/>
+      <short value="Encounter Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-encounter" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+   </element>
+   <element id="Composition.section:slicePEncounterSection.sliceEncounterDiagnosis">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEncounterDiagnosis"/>
+      <short value="Encounter Diagnosis Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+   </element>	
  	<element id="Composition.section:sliceProblemSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -146,7 +214,7 @@
       <sliceName value="sliceProblemSection" />
       <short value="Problem Section" />
       <definition value="This section lists and describes all the patient's current problems on the maintained problem list." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -172,14 +240,40 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceProblemSection.entry">
+	
+	<element id="Composition.section:sliceProblemSection.entry">
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sliceProblemSection.sliceConditionEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceCondition"/>
+      <short value="Condition Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-condition" />
       </type>
-    </element>  
+      <mustSupport value="true" />
+      <isModifier value="false" />
+   </element>
+   <element id="Composition.section:sliceProblemSection.sliceProblemHealthConcern">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceProblemHealthConcern"/>
+      <short value="Problem Health Concern Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+   </element> 
     <element id="Composition.section:sliceMedicationsAdministeredSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -239,7 +333,7 @@
    <element id="Composition.section:sliceMedicationsAdministeredSection.sliceMedicationReferences">
       <path value="Composition.section.entry" />
       <sliceName value="sliceMedicationReferences"/>
-      <short value="Medication Reference Entries"/>
+      <short value="Medication Reference Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
@@ -317,7 +411,7 @@
    <element id="Composition.section:sliceMedicationsSection.sliceMedicationReferences">
       <path value="Composition.section.entry" />
       <sliceName value="sliceMedicationReferences"/>
-      <short value="Medication Reference Entries"/>
+      <short value="Medication Reference Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
@@ -374,7 +468,7 @@
     <element id="Composition.section:sliceResultsSection.labResultEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceLabResultEntry"/>
-      <short value="Lab Result Entries"/>
+      <short value="Lab Result Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-lab-result-observation" />
@@ -385,7 +479,7 @@
     <element id="Composition.section:sliceResultsSection.diagnosticResultEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceDiagnosticResultEntry"/>
-      <short value="Diagnostic Result Entries"/>
+      <short value="Diagnostic Result Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|6.1.0" />
@@ -393,7 +487,28 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    
+    <element id="Composition.section:sliceResultsSection.clinicalResultEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceClinicalResultEntry"/>
+      <short value="Clincial Result Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>  
+    <element id="Composition.section:sliceResultsSection.simpleObservationEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceSimpleObservationEntry"/>
+      <short value="Simple Observation Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element> 
 	<element id="Composition.section:sliceNotesSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -443,7 +558,7 @@
     <element id="Composition.section:sliceNotesSection.documentReferenceEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceDocumentReferenceEntry"/>
-      <short value="Document Reference Entries"/>
+      <short value="Document Reference Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0" />
@@ -454,7 +569,7 @@
     <element id="Composition.section:sliceNotesSection.diagnosticReportEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceDiagnosticReportEntry"/>
-      <short value="Diagnostic Report Entries"/>
+      <short value="Diagnostic Report Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0" />
@@ -462,9 +577,6 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    
-        
-    
     <element id="Composition.section:slicePlanOfTreatmentSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -514,11 +626,11 @@
     <element id="Composition.section:slicePlanOfTreatmentSection.serviceRequestEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceServiceRequests"/>
-      <short value="ServiceRequest Entries"/>
+      <short value="Service Request Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-servicerequest" />
-		<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest" />
+		<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -526,7 +638,7 @@
     <element id="Composition.section:slicePlanOfTreatmentSection.medicationRequestEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceMedicationRequest"/>
-      <short value="MedicationRequest Entries"/>
+      <short value="Medication Request Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0" />
@@ -537,7 +649,7 @@
     <element id="Composition.section:slicePlanOfTreatmentSection.sliceMedicationReferences">
       <path value="Composition.section.entry" />
       <sliceName value="sliceMedicationReferences"/>
-      <short value="Medication Reference Entries"/>
+      <short value="Medication Reference Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
@@ -594,6 +706,7 @@
     <element id="Composition.section:sliceImmunizationsSection.immunizationEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceImmunizations"/>
+	  <short value="Immunizations Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|6.1.0" />
@@ -650,6 +763,7 @@
     <element id="Composition.section:sliceProceduresSection.entry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceProcedures"/>
+	  <short value="Procedures Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/eicr-procedure" />
@@ -706,6 +820,7 @@
     <element id="Composition.section:sliceVitalSignsSection.entry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceVitalSigns"/>
+	  <short value="Vital Signs Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs|4.0.0" />
@@ -852,10 +967,10 @@
      <path value="Composition.section.entry" />
       <sliceName value="slicePregnancyStatusObservation" />
       <short value="Pregnancy Status Observation" />
-      <definition value="Pregnancy Status Observation entry" />
+      <definition value="Pregnancy Status Observation Entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="hhttp://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -863,7 +978,7 @@
      <path value="Composition.section.entry" />
       <sliceName value="slicePostpartumStatus" />
       <short value="Postpartum Status" />
-      <definition value="Postpartum Status entry" />
+      <definition value="Postpartum Status Entry" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-postpartum-status" />
