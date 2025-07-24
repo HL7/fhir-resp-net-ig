@@ -1,6 +1,7 @@
 == Suppressed Messages ==
 
 # Warnings due to old specifications, however these are based on existing US ONC Cures Act requirements and USCDIv3
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
 
 # The resource exists in the folder, just not in the bundle and it is an information only message.
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
@@ -8,7 +9,7 @@ Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].
 # Slicing Messages, we have verified that this can be ignored and is not a problem.
 # These extensions have been validated explicitly and the message can be ignored.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 # The use context that has been added is needed for RESPNet and hence it is different.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-valueset|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 # This is a base profile which is already published and is identified as a false positive
@@ -25,6 +26,7 @@ The value set include has too many codes to validate (1,804), so each individual
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Positive (qualifier value), Detected (qualifier value), Equivocal (qualifier value), Reactive (qualifier value), Confirmed by (contextual qualifier) (qualifier value)] and examples for no FSN: [SARS-CoV-2])
 The value set expansion is too large, and only a subset has been displayed
 A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
 
 # THO has been notified, however this is an experimental codesystem for pilots and will be considered for moving to THO based on Pilot results in the future
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)

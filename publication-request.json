@@ -1,12 +1,11 @@
 {
   "package-id" : "hl7.fhir.us.resp-net",
-  "version" : "1.0.0",
-  "path" : "http://hl7.org/fhir/us/resp-net/STU1",
-  "mode" : "milestone",
-  "milestone" : "true",
+  "version" : "2.0.0-ballot",
+  "path" : "http://hl7.org/fhir/us/resp-net/STU2-ballot",
+  "mode" : "working",
   "status" : "trial-use",
-  "Release-Label" : "STU 1",
-  "sequence" : "STU1",
-  "desc" : "This is the STU 1 of the RESP-NET FHIR IG.",
+  "Release-Label" : "STU 2 - Ballot",
+  "sequence" : "STU2",
+  "desc" : "This is the STU 2 - Ballot version of the RESP-NET FHIR IG.",
   "changes" : "changes.html"
 }

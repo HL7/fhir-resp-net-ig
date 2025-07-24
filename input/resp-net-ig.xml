@@ -13,7 +13,7 @@
   </extension>
   <url value="http://hl7.org/fhir/us/resp-net/ImplementationGuide/resp-net"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden  -->
-  <version value="2.0.0"/>
+  <version value="2.0.0-ballot"/>
   <name value="RESPNET"/>
   <title value="Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide"/>
   <status value="active"/>
@@ -414,7 +414,7 @@
       <page>
         <nameUrl value="changes.html"/>
         <title value="IG Change History"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
@@ -425,7 +425,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1"/>
+      <value value="STU 2 - Ballot"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
