@@ -1,15 +1,18 @@
 == Suppressed Messages ==
 
-# Warnings due to old specifications, however these are based on existing US ONC Cures Act requirements and USCDIv1
-The ImplementationGuide uses package hl7.fhir.uv.smart-app-launch#2.0.0 released on 2021-11-26, but the most recent appropriate version is 2.2.0. This reference is getting old and the more recent version should be considered
-The ImplementationGuide uses package hl7.fhir.us.core#3.1.1 released on 2020-08-28, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
-
-# Slicing Related Information, the extensions specified are required, hence the warnings can be ignored
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+# Warnings due to old specifications, however these are based on existing US ONC Cures Act requirements and USCDIv3
 
 # The resource exists in the folder, just not in the bundle and it is an information only message.
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
+
+# Slicing Messages, we have verified that this can be ignored and is not a problem.
+# These extensions have been validated explicitly and the message can be ignored.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+# The use context that has been added is needed for RESPNet and hence it is different.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-valueset|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+# This is a base profile which is already published and is identified as a false positive
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-triggering-valueset|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # Messages due to dependencies on other specifications 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated

@@ -2,14 +2,12 @@
   "resourceType": "ValueSet",
   "id": "resp-net-ari-test-codes",
   "meta": {
-    "versionId": "1",
+    "versionId": "1.0.0",
     "lastUpdated": "2024-08-19T22:06:32.441+00:00",
     "profile": [
       "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-triggering-valueset"
     ]
   },
-  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes",
-  "version": "1",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet ARI ICD10 Test Codes</h2></div>"
@@ -28,16 +26,26 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes",
+  "version": "1.0.0",
   "name": "RESPNetARITestCodes",
   "title": "resp-net-ari-test-codes",
   "description": "A list of ARI test codes",
   "status": "draft",
   "experimental": true,
+  "date" : "2023-08-01",
+  "publisher" : "HL7 Public Health Working Group",
   "contact": [
     {
-      "telecom": [
+      "name" : "HL7 Public Health Working Group",
+      "telecom" : [
         {
-          "system": "email"
+          "system" : "url",
+          "value" : "http://www.hl7.org/Special/committees/pher"
+        },
+        {
+          "system" : "email",
+          "value" : "pher@lists.HL7.org"
         }
       ]
     }
@@ -74,6 +82,16 @@
           }
         ]
       }
+    }
+  ],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US"
+        }
+      ]
     }
   ],
   "copyright" : "This value set includes content from ICD-10, ICD-10 is copyrighted by the World Health Organization (WHO) which owns and publishes the classification. See https://www.who.int/classifications/icd/en. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes.",

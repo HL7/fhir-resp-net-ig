@@ -59,7 +59,7 @@
     {
       "type": "depends-on",
       "label": "RESPNet Valueset Library",
-      "resource": "http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets"
+      "resource": "http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets-example"
     }
   ],
   "action": [
@@ -191,11 +191,11 @@
             "type": "Observation",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes|2.0.0"
             },
             {
               "path": "value",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes|2.0.0"
             }]
           },
           {
@@ -246,11 +246,11 @@
             "type": "Observation",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes|2.0.0"
             },
             {
               "path": "value",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes|2.0.0"
             }]
           },
           {
@@ -301,7 +301,7 @@
             "type": "Observation",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes|2.0.0"
             }]
           },
           {
@@ -313,7 +313,7 @@
             "type": "DiagnosticReport",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes|2.0.0"
             }]
           },
           {
@@ -333,7 +333,7 @@
             "type": "Condition",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes|2.0.0"
             }]
           }
           ],
@@ -376,11 +376,11 @@
             "type": "Observation",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes|2.0.0"
             },
             {
               "path": "value",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes|2.0.0"
             }]
           },
           {
@@ -431,11 +431,11 @@
             "type": "Observation",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes|2.0.0"
             },
             {
               "path": "value",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes|2.0.0"
             }]
           },
           {
@@ -486,11 +486,11 @@
             "type": "Observation",
             "codeFilter": [ {
               "path": "code",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes|2.0.0"
             },
             {
               "path": "value",
-              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes"
+              "valueSet": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes|2.0.0"
             }]
           },
           {

@@ -76,6 +76,27 @@
   ],
   "title": "RESP-NET Report",
   "section": [
+  {
+      "title": "Encounter Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "67781-5",
+            "display": "Summarization of encounter note Narrative"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Flu Encounter</p></div>"
+      },
+      "entry": [
+        {
+          "reference": "Encounter/resp-net-encounter-example"
+        }	
+      ]
+    },
     {
       "title": "Problems Section",
       "code": {

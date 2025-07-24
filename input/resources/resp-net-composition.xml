@@ -465,13 +465,15 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceResultsSection.labResultEntry">
+    <element id="Composition.section:sliceResultsSection.observationEntries">
       <path value="Composition.section.entry" />
-      <sliceName value="sliceLabResultEntry"/>
-      <short value="Lab Result Entry"/>
+      <sliceName value="observationEntries"/>
+      <short value="Observation Entries"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-lab-result-observation" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -487,28 +489,6 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceResultsSection.clinicalResultEntry">
-      <path value="Composition.section.entry" />
-      <sliceName value="sliceClinicalResultEntry"/>
-      <short value="Clincial Result Entry"/>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0" />
-      </type>
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element>  
-    <element id="Composition.section:sliceResultsSection.simpleObservationEntry">
-      <path value="Composition.section.entry" />
-      <sliceName value="sliceSimpleObservationEntry"/>
-      <short value="Simple Observation Entry"/>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0" />
-      </type>
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element> 
 	<element id="Composition.section:sliceNotesSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -873,18 +853,22 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceSocialHistorySection.entry:sliceSmokingStatus">
+    <element id="Composition.section:sliceSocialHistorySection.entry:sliceSocialHistoryObservations">
      <path value="Composition.section.entry" />
-      <sliceName value="sliceSmokingStatus" />
-      <short value="Smoking Status" />
-      <definition value="Smoking Status entry" />
+      <sliceName value="sliceSocialHistoryObservations" />
+      <short value="Social History Observations" />
+      <definition value="Social History Observation entries" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-disability-status" />
+		<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0" />
+        <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-characteristics-of-home-environment" />
+     
       </type>
       <mustSupport value="true" />
     </element> 
-    <element id="Composition.section:sliceSocialHistorySection.entry:sliceDisabilityStatus">
+ <!--     <element id="Composition.section:sliceSocialHistorySection.entry:sliceDisabilityStatus">
      <path value="Composition.section.entry" />
       <sliceName value="sliceDisabilityStatus" />
       <short value="Disability Status" />
@@ -906,7 +890,7 @@
         <targetProfile value="http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-characteristics-of-home-environment" />
       </type>
       <mustSupport value="true" />
-    </element>
+    </element> -->
     <element id="Composition.section:slicePregnancySection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

@@ -50,36 +50,36 @@
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-rsv-codes|2.0.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-codes|2.0.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-covid-codes|2.0.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes|2.0.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-ari-test-codes|2.0.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes|2.0.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
     <resource
-              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes"/>
+              value="http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes|2.0.0"/>
   </relatedArtifact>
 </Library>
