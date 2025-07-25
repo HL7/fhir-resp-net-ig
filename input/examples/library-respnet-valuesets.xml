@@ -1,5 +1,5 @@
 <Library xmlns="http://hl7.org/fhir">
-  <id value="respnet-valuesets-example"/>
+  <id value="respnet-valuesets-example2"/>
   <text>
     <status value="generated"/> 
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -7,14 +7,14 @@
     </div> 
   </text>
   <url
-       value="http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets-example"/>
+       value="http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets-example2"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.114222.4.11.11114"/>
   </identifier>
   <version value="1.0.0"/>
-  <name value="RESPNetValueSetLibraryExample"/>
-  <title value="RESPNet ValueSet Library Example"/>
+  <name value="RESPNetValueSetLibraryExample2"/>
+  <title value="RESPNet ValueSet Library Example2"/>
   <status value="active"/>
   <experimental value="true"/>
   <type>

@@ -59,7 +59,7 @@
     {
       "type": "depends-on",
       "label": "RESPNet Valueset Library",
-      "resource": "http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets-example"
+      "resource": "http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets-example2"
     }
   ],
   "action": [

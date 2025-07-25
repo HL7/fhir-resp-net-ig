@@ -72,7 +72,7 @@
   <definition>
   <resource>
       <reference>
-        <reference value="Library/respnet-valuesets-example"/>
+        <reference value="Library/respnet-valuesets-example2"/>
       </reference>
       <name value="RESP-NET list of value sets"/>
       <description value="An example for a library containing all RESPNet value sets"/>
