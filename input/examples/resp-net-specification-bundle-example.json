@@ -12066,11 +12066,6 @@
             "resource": {
                 "resourceType": "Library",
                 "id": "respnet-valuesets-example1",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-triggering-valueset-library"
-                    ]
-                },
                 "text": {
                     "status": "generated",
                     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>RESPNet value sets</p>  \n    </div>"

@@ -1,9 +1,9 @@
 {
   "package-id" : "hl7.fhir.us.resp-net",
   "version" : "2.0.0-ballot",
-  "path" : "http://hl7.org/fhir/us/resp-net/STU2-ballot",
+  "path" : "http://hl7.org/fhir/us/resp-net/2025Sep",
   "mode" : "working",
-  "status" : "trial-use",
+  "status" : "ballot",
   "Release-Label" : "STU 2 - Ballot",
   "sequence" : "STU2",
   "desc" : "This is the STU 2 - Ballot version of the RESP-NET FHIR IG.",

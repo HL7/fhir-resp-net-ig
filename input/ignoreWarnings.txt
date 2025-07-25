@@ -7,9 +7,11 @@ The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
 
 # Slicing Messages, we have verified that this can be ignored and is not a problem.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-specification-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 # These extensions have been validated explicitly and the message can be ignored.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/resp-net/StructureDefinition/respnet-plandefinition|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-triggering-valueset-library|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 # The use context that has been added is needed for RESPNet and hence it is different.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-valueset|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 # This is a base profile which is already published and is identified as a false positive

@@ -86,7 +86,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ##### Subscription Requirements
 
-* The Data Source **SHALL** support the creation of Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html)
+* The Data Source **SHALL** support the creation of Subscriptions for the encounter-end Subscription Topic
 
 * The Data Source **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to notify the Data Submitter.
 
@@ -112,7 +112,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ##### Subscription Requirements
 
-* The Data Submitter **SHALL** create Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html).
+* The Data Submitter **SHALL** create Subscriptions for the encounter-end Subscription Topic.
 
 * The Data Submitter **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to receive notifications from the Data Source.
 
