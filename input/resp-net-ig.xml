@@ -69,6 +69,12 @@
     <version value="2.1.0"/>
   </dependsOn>
   
+  <dependsOn id="extenionsR520">
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  
   <definition>
   <resource>
       <reference>
