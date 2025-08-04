@@ -1,10 +1,10 @@
-This section defines the specific requirements for systems wishing to conform to actors specified in this Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide (IG). The specification highlights the requirements used to  report the data to RESP-NET sites.
+This section defines the specific requirements for systems wishing to conform to actors specified in this Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Implementation Guide (IG). The specification highlights the requirements used to  report the data to RESP-NET sites.
 
 ### Pre-reading
 Before reading this formal specification, implementers should first be familiar with the [Use Cases](usecases.html) page which provides the business context and general process flow.
 
 ### Conventions
-This IG uses specific terminology to flag statements that have relevance for the evaluation of conformance with the guide:
+This IG uses RFC-2119 terminology to flag statements that have relevance for the evaluation of conformance with the guide:
 
 * **SHALL** indicates requirements that must be met to be conformant with the specification.
 * **SHOULD** indicates behaviors that are strongly recommended (and which may result in interoperability issues or sub-optimal behavior if not adhered to), but which do not, for this version of the specification, affect the determination of specification conformance.
@@ -52,20 +52,20 @@ This IG leverages the [SMART App Launch IG]({{site.data.fhir.ver.smartapplaunch}
 
 #### SMART on FHIR Backend Services Requirements
 
-This section outlines how the SMART on FHIR Backend Services Authorization will be used by the RESP-NET Content IG.
+This section outlines how the SMART on FHIR Backend Services Authorization will be used by the RESP-NET  IG.
 
 * The system actors namely Data Source, Data Submitter, and the Data Receiver are required to use the SMART on FHIR Backend Services Authorization mechanisms as outlined below for the following interactions:
 
 
-    * Data Submitter accessing data from the Data Source
-    * Data Submitter posting data to the Data Receiver with FHIR capabilities
+    * When the Data Submitter is not packaged within the Data Source, the Data Submitter **SHALL** use the SMART on FHIR Backend Service Authorization to access data from the Data Source  
+    * Data Submitter posting data to the Data Receiver **SHALL** use the SMART on FHIR Backend Services Authorization to submit the data.
     
 
-* System actors acting as servers (e.g., Data Source and Data Receiver) **SHALL** advertise conformance to SMART on FHIR Backend Services by hosting Well-Known Uniform Resource Identifiers (URIs) as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
+* System actors acting as servers (i.e, Data Source and Data Receiver) **SHALL** advertise conformance to SMART on FHIR Backend Services by hosting Well-Known Uniform Resource Identifiers (URIs) as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
 
-* System actors acting as servers **SHALL** include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
+* System actors acting as servers (i.e, Data Source and Data Receiver) **SHALL** include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
 
-* When System actors act as clients (e.g., Data Submitter), they **SHALL** share their JSON Web Key Set (JWKS) with the server System actors (e.g., Data Source and Data Receiver) using Uniform Resource Locators (URLs) as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
+* When System actors act as clients (i.e, Data Submitter), they **SHALL** share their JSON Web Key Set (JWKS) with the server System actors (i.e, Data Source and Data Receiver) using Uniform Resource Locators (URLs) as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
 
 * System actors acting as clients **SHALL** obtain the access token as defined in the [SMART App Launch IG Backend Services]({{site.data.fhir.ver.smartapplaunch}}/backend-services.html) specification.
 
@@ -86,13 +86,19 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ##### Subscription Requirements
 
-* The Data Source **SHALL** support the creation of Subscriptions for the encounter-end Subscription Topic
+The requirements in this sub-section are only applicable if when the Data Submitter is not packaged as part of the Data Source.
+
+* The Data Source **SHALL** support the creation of Subscriptions for the following named events described at [US Public Health Profiles Library IG Trigger Events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/us-ph-valueset-triggerdefinition-namedevent.html
+	
+	* Start of an Encounter
+	* Close of an Encounter
+	
 
 * The Data Source **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to notify the Data Submitter.
 
 * The Data Source **SHALL** support Notification Bundles with [``full resource payload``]({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#full-resource) as outlined in the Backport Subscriptions IG. 
 
-* For the RESP-NET Content IG, the Data Source **SHALL** include the Encounter resource which was closed as part of the Notification Bundle.
+* For the RESP-NET IG, the Data Source **SHALL** include the Encounter resource which was started or closed as part of the Notification Bundle.
 
 * The Data Source **SHALL** support operations and APIs for Subscription, Notification Bundle, Subscription status resources as outlined in the [Data Source Capability Statement](CapabilityStatement-resp-net-data-source.html).
 
@@ -112,14 +118,16 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ##### Subscription Requirements
 
-* The Data Submitter **SHALL** create Subscriptions for the encounter-end Subscription Topic.
+The requirements in this sub-section are only applicable if the Data Submitter is not packaged, as part of the Data Source.
+
+* The Data Submitter **SHALL** be capable of creating Subscriptions for the [encounter-close and encounter-start trigger events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/us-ph-valueset-triggerdefinition-namedevent.html
 
 * The Data Submitter **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to receive notifications from the Data Source.
 
 
 ##### Subscription Notification API 
 
-* The Data Submitter **SHALL** support a POST API <BSA Base URL>/receive-notification with a payload of the Subscription Notification Bundle to receive the notifications from the Data Source. 
+* The Data Submitter **SHALL** support a POST API <Data Submitter Base URL>/receive-notification with a payload of the Subscription Notification Bundle to receive the notifications from the Data Source. 
 
 
 
@@ -133,24 +141,38 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ##### Report Generation Requirements 
 
+* The Data Submitter **SHALL** be capable of interpreting [RESP-Net PlanDefinition](StructureDefinition-respnet-plandefinition.html) to process the encounter-start and encounter-close trigger events and determine if a RESP-Net report needs to be generated and submitted.
+
+* The Data Submitter **SHALL** be capable of processing [RESP-Net Specification Bundle]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/StructureDefinition-us-ph-specification-bundle.html) to determine processing criteria for RESP-Net bundle creation.
+
 * The Data Submitter **SHALL** create a RESP-NET report following the constraints identified in [RESP-NET Content Bundle](StructureDefinition-resp-net-content-bundle.html).
 
 * The Data Submitter **SHALL** package the RESP-NET report following the constraints identified in [RESP-NET Reporting Bundle](StructureDefinition-resp-net-reporting-bundle.html).
 
-* The Data Submitter **SHALL** submit the message containing the RESP-NET report to the identified endpoint.
+* The Data Submitter **SHALL** submit the message containing the RESP-NET report to the identified endpoint using either FHIR Messaging (<Data Receiver Base URL>/$process-message) endpoint or POST a Bundle using the <Data Receiver Base URL>/Bundle endpoint. 
 
 ##### Use of Non-FHIR Based Approaches to Submit the RESP-NET Report
 
 * The Data Submitter **MAY** use other transport methods such as Direct Transport to submit the RESP-NET Report created when appropriate.
+
+NOTE: We are seeking feedback if this method should be retained or removed.
 
 #### RESP-NET Data Receiver Actor Requirements
 
 
 ##### Message Receiving and Processing Requirements
 
+* The Data Receiver **SHALL** support multiple methods to receive data from the Data Submitter as follows
+	
+	* POST a Bundle using the <Data Receiver Base URL>/Bundle endpoint
+	* POST a Bundle using the FHIR Messaging <Data Receiver base URL>/$process-message endpoint
+		 
+
 * The Data Receiver **SHALL** implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the Data Submitter using the POST operation.
 
-* Upon receipt of the message, the Data Receiver **SHALL** validate the message before accepting the message.
+* The Data Receiver **SHALL** implement the /Bundle endpoint to receive [RESP-NET Content Bundle](StructureDefinition-resp-net-content-bundle.html) from a Data Submitter.
+
+* Upon receipt of the message, the Data Receiver **SHALL** validate the data before accepting the data for downstream processing.
 
 * When there are validation failures, the Data Receiver **SHALL** return an Operation Outcome response with the details of the validations as part of the POST response.
 

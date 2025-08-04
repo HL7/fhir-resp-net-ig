@@ -27,7 +27,7 @@ The goals of the RESP-NET reporting use cases include:
 ### RESP-NET Actors
 The following actors are used by the RESP-NET use cases:
 * Data Source (e.g., Healthcare Facility with FHIR-enabled EHR, HIE with FHIR capability)
-* Data Submitter (e.g., a system responsible for exracting the data for the patients whose data needs to be submitted and for notifying the readiness of the data to the Data Receiver
+* Data Submitter (e.g., a system responsible for exracting the data from the Data Source, evaluate the data for submission and is responsible for submitting the data (report) to the Data Receiver
 * Data Receiver (e.g., RESP-NET Site)
 
 #### Interactions between RESP-NET Actors 
