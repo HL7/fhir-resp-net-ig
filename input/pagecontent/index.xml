@@ -14,8 +14,7 @@
   and <a href="{{site.data.fhir.ver.ecrIg}}/index.html">electronic Case Reporting (eCR) IG</a> along with other relevant existing health data and 
 	exchange standards to provide the profiles and necessary extensions required for patient-level data exchange on persons 
 	hospitalized with respiratory viruses to public health surveillance partners in RESP-NET.  The goal is 
-	to improve the availability of EHR data for public health surveillance of hospitalized persons with influenza and 
-	other respiratory viruses and reduce the burden of data collection on surveillance officers and healthcare facilities 
+	to improve the availability of EHR data for public health surveillance of hospitalized persons with influenza, COVID-19, or RSV and reduce the burden of data collection on surveillance officers and healthcare facilities 
 	and complement ongoing CDC data modernization initiatives.
 	</p>
 	

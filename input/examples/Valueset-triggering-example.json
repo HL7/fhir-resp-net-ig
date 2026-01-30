@@ -1,16 +1,16 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "respnet-triggering-chlamydia-example",
+  "id" : "respnet-triggering-flu-example",
   "meta" : {
     "versionId" : "5",
-    "lastUpdated" : "2023-07-12T10:21:28.370Z",
+    "lastUpdated" : "2026-01-27T10:21:28.370Z",
     "profile" : [
       "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-triggering-valueset"
     ]
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/14461-8/\">14461-8</a></td><td>Chlamydia trachomatis [Presence] in Blood by Organism specific culture</td></tr><tr><td><a href=\"https://loinc.org/14462-6/\">14462-6</a></td><td>Chlamydia trachomatis [Presence] in Cerebral spinal fluid by Organism specific culture</td></tr><tr><td><a href=\"https://loinc.org/14463-4/\">14463-4</a></td><td>Chlamydia trachomatis [Presence] in Cervix by Organism specific culture</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include this list of example codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/31859-2/\">31859-2</a></td><td>Influenza virus A Ag [Presence] in Specimen (General antigen test)</td></tr><tr><td><a href=\"https://loinc.org/80382-5/\">80382-5</a></td><td>Influenza virus A Ag [Presence] in Upper respiratory specimen by Rapid immunoassay</td></tr><tr><td><a href=\"https://loinc.org/34487-9/\">34487-9</a></td><td>Influenza virus A RNA [Presence] in Specimen by NAA with probe detection (PCR)</td></tr></table></li></ul></div>"
   },
   "extension" : [
     {
@@ -26,7 +26,7 @@
       }
     }
   ],
-  "url" : "http://hl7.org/fhir/us/resp-net/ValueSet/respnet-triggering-chlamydia-example",
+  "url" : "http://hl7.org/fhir/us/resp-net/ValueSet/respnet-triggering-flu-example",
   "identifier" : [
     {
       "system" : "urn:ietf:rfc:3986",
@@ -34,11 +34,11 @@
     }
   ],
   "version" : "1.0.0",
-  "name" : "USPublicHealthValueSetTriggeringChlamydiaExample",
-  "title" : "US Public Health VaueSet - Triggering Chlamydia Example",
+  "name" : "RespNetValueSetTriggeringFluExample",
+  "title" : "RESP-NET ValueSet - Triggering Flu Example",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2018-08-01",
+  "date" : "2026-01-27",
   "publisher" : "HL7 Public Health Working Group",
   "contact" : [
     {
@@ -55,7 +55,7 @@
       ]
     }
   ],
-  "description" : "This example set of values contains laboratory observations test names that represent that the patient may have the potentially reportable condition of Chlamydia regardless of the clinical presentation of the condition.",
+  "description" : "This example contains a set (not all-inclusive) of influenza laboratory test names that may trigger a report when the result is positive/detected.",
   "useContext" : [
     {
       "code" : {
@@ -83,8 +83,8 @@
         "coding" : [
           {
             "system" : "http://snomed.info/sct",
-            "code" : "240589008",
-            "display" : "Chlamydia trachomatis infection"
+            "code" : "407479009",
+            "display" : "Influenza A virus (organism)"
           }
         ]
       }
@@ -123,16 +123,16 @@
         "system" : "http://loinc.org",
         "concept" : [
           {
-            "code" : "14461-8",
-            "display" : "Chlamydia trachomatis [Presence] in Blood by Organism specific culture"
+            "code" : "31859-2",
+            "display" : "Influenza virus A Ag [Presence] in Specimen (General antigen test)"
           },
           {
-            "code" : "14462-6",
-            "display" : "Chlamydia trachomatis [Presence] in Cerebral spinal fluid by Organism specific culture"
+            "code" : "80382-5",
+            "display" : "Influenza virus A Ag [Presence] in Upper respiratory specimen by Rapid immunoassay"
           },
           {
-            "code" : "14463-4",
-            "display" : "Chlamydia trachomatis [Presence] in Cervix by Organism specific culture"
+            "code" : "34487-9",
+            "display" : "Influenza virus A RNA [Presence] in Specimen by NAA with probe detection (PCR)"
           }
         ]
       }

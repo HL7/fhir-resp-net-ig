@@ -16,7 +16,7 @@
       {
         "system": "http://hl7.org/fhir/sid/cvx",
         "code": "135",
-        "display": "Influenza, high dose seasonal"
+        "display": "Influenza, high dose seasonal, preservative-free"
       }
     ]
   },

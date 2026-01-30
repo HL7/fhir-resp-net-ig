@@ -8,7 +8,6 @@ The following sections and population criteria should be used to create the comp
 
 * Patient: The Patient who is the subject of the encounter
 * Encounter: The Encounter that was closed (updated documentation has to be added to the encounter before saying it is closed)
-* Encounter section: Encounter and encounter diagnosis for the patient.
 * Problems section: Underlying medical conditions and active health concerns and problems. All clinicalStatuses except InActive, verificationStatus = Confirmed
 * Medications Administered section: Medications administered during the encounter and status = active
 * Medications section: Current medications and pertinent medication history
@@ -21,7 +20,7 @@ The following sections and population criteria should be used to create the comp
 * Social History section: Smoking status, disability status, and characteristics of home environment with status = final, amended
 * Pregnancy section: Pregnancy status, pregnancy outcome, postpartum status for the patient during the encounter
 
-The above data has to be populated by the implementers of the DataSource or Data Submitter.
+The above data has to be populated by the implementers of the Data Source or Data Submitter.
 
 ### Populating the RESP-NET Use Case
 

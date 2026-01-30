@@ -1,12 +1,54 @@
-### Change History
-
 The following is a list of all the changes based on versions.
+
+### Changes made from STU 2 (Ballot) to STU 2:
+
+#### Addressed the following Jira Tickets:
+
+|JIRA #|Ticket Description|
+|---------|----------|
+|[FHIR-52800](https://jira.hl7.org/browse/FHIR-52800) | Please add project contributors and IG author information |
+|[FHIR-52472](https://jira.hl7.org/browse/FHIR-52472) | Typos in IG |
+|[FHIR-52364](https://jira.hl7.org/browse/FHIR-52364) | Alternative Mapping to Length of Stay Data Element in Use Case 1 |
+|[FHIR-52361](https://jira.hl7.org/browse/FHIR-52361) | Duplicate Date of Death Data Elements |
+|[FHIR-52360](https://jira.hl7.org/browse/FHIR-52360) | Missing example of flu subtyping result codes |
+|[FHIR-52248](https://jira.hl7.org/browse/FHIR-52248) | Descriptions of Scenarios 1, 2 and 3 |
+|[FHIR-52247](https://jira.hl7.org/browse/FHIR-52247) | other respiratory viruses |
+|[FHIR-52235](https://jira.hl7.org/browse/FHIR-52235) | Rename RESP-NET EHR Capability Statement |
+|[FHIR-52234](https://jira.hl7.org/browse/FHIR-52234) | Add a tab/page for Change Log |
+|[FHIR-52233](https://jira.hl7.org/browse/FHIR-52233) | Rename Knowledge Artifacts: Libraries section |
+|[FHIR-52232](https://jira.hl7.org/browse/FHIR-52232) | Fix broken links on Specification page |
+|[FHIR-52231](https://jira.hl7.org/browse/FHIR-52231) | Create Data Submitter Capability Statement |
+|[FHIR-52230](https://jira.hl7.org/browse/FHIR-52230) | Create Data Receiver Capability Statement |
+|[FHIR-51804](https://jira.hl7.org/browse/FHIR-51804) | Clarify encounter expectations |
+|[FHIR-51749](https://jira.hl7.org/browse/FHIR-51749) | N. ICD-10 CMS codes Discharged Diagnoses as header, but ICD-9 listed in table |
+|[FHIR-51748](https://jira.hl7.org/browse/FHIR-51748) | respiratory support (bipap, cpap, high flow nasal cannula) using lab result incorrectly |
+|[FHIR-51742](https://jira.hl7.org/browse/FHIR-51742) | US Public Health Triggering Valueset Library Example has no content |
+|[FHIR-51741](https://jira.hl7.org/browse/FHIR-51741) | Typo found Figure 2.1 label - "Worflow" should be "Workflow"? |
+|[FHIR-51469](https://jira.hl7.org/browse/FHIR-51469) | Update to align with USCDI V3/US Core 6.1 |
+
+
+#### Detailed Description of Changes:
+
+<table border="1">
+    <thead>
+       <tr style="background-color:#DCDCDC">
+            <th style="text-align: center; vertical-align: middle;">Artifact</th>
+            <th style="text-align: center; vertical-align: middle;">Change Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Plan Definition Example</td>
+            <td>Updated based on pilot testing results</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Changes made from STU 1 to STU 2 (Ballot)
 
 #### Addressed the following Jira Tickets:
 
-|JIRA Ticket|Ticket Description|
+|JIRA #|Ticket Description|
 |---------|----------|
 |[FHIR-51469](https://jira.hl7.org/browse/FHIR-51469) | Update to align with USCDI V3/US Core 6.1.0 |
 
@@ -43,7 +85,7 @@ The following is a list of all the changes based on versions.
 
 #### Addressed the following Jira Tickets:
 
-|JIRA Ticket|Ticket Description|
+|JIRA #|Ticket Description|
 |---------|----------|
 |[FHIR-45328](https://jira.hl7.org/browse/FHIR-45328) | Tag bundles to identify which use case is being reported |
 |[FHIR-45327](https://jira.hl7.org/browse/FHIR-45327) | Support Catchment Area |

@@ -52,7 +52,7 @@ This IG leverages the [SMART App Launch IG]({{site.data.fhir.ver.smartapplaunch}
 
 #### SMART on FHIR Backend Services Requirements
 
-This section outlines how the SMART on FHIR Backend Services Authorization will be used by the RESP-NET  IG.
+This section outlines how the SMART on FHIR Backend Services Authorization will be used by the RESP-NET IG.
 
 * The system actors namely Data Source, Data Submitter, and the Data Receiver are required to use the SMART on FHIR Backend Services Authorization mechanisms as outlined below for the following interactions:
 
@@ -88,7 +88,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 The requirements in this sub-section are only applicable if when the Data Submitter is not packaged as part of the Data Source.
 
-* The Data Source **SHALL** support the creation of Subscriptions for the following named events described at [US Public Health Profiles Library IG Trigger Events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/us-ph-valueset-triggerdefinition-namedevent.html
+* The Data Source **SHALL** support the creation of Subscriptions for the following named events described at [US Public Health Profiles Library IG Trigger Events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/StructureDefinition-us-ph-named-eventtype-extension.html)
 	
 	* Start of an Encounter
 	* Close of an Encounter
@@ -120,7 +120,7 @@ The requirements in this sub-section are only applicable if when the Data Submit
 
 The requirements in this sub-section are only applicable if the Data Submitter is not packaged, as part of the Data Source.
 
-* The Data Submitter **SHALL** be capable of creating Subscriptions for the [encounter-close and encounter-start trigger events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/us-ph-valueset-triggerdefinition-namedevent.html
+* The Data Submitter **SHALL** be capable of creating Subscriptions for the [encounter-close and encounter-start trigger events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/StructureDefinition-us-ph-named-eventtype-extension.html)
 
 * The Data Submitter **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to receive notifications from the Data Source.
 
@@ -141,9 +141,9 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 
 ##### Report Generation Requirements 
 
-* The Data Submitter **SHALL** be capable of interpreting [RESP-Net PlanDefinition](StructureDefinition-respnet-plandefinition.html) to process the encounter-start and encounter-close trigger events and determine if a RESP-Net report needs to be generated and submitted.
+* The Data Submitter **SHALL** be capable of interpreting [RESP-NET PlanDefinition](StructureDefinition-respnet-plandefinition.html) to process the encounter-start and encounter-close trigger events and determine if a RESP-NET report needs to be generated and submitted.
 
-* The Data Submitter **SHALL** be capable of processing [RESP-Net Specification Bundle]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/StructureDefinition-us-ph-specification-bundle.html) to determine processing criteria for RESP-Net bundle creation.
+* The Data Submitter **SHALL** be capable of processing [RESP-NET Specification Bundle]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/StructureDefinition-us-ph-specification-bundle.html) to determine processing criteria for RESP-NET bundle creation.
 
 * The Data Submitter **SHALL** create a RESP-NET report following the constraints identified in [RESP-NET Content Bundle](StructureDefinition-resp-net-content-bundle.html).
 
@@ -158,7 +158,6 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 NOTE: We are seeking feedback if this method should be retained or removed.
 
 #### RESP-NET Data Receiver Actor Requirements
-
 
 ##### Message Receiving and Processing Requirements
 
