@@ -138,8 +138,7 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-	
- 	<element id="Composition.section:sliceEncounterSection">
+ 	<!--<element id="Composition.section:sliceEncounterSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
@@ -205,7 +204,7 @@
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
-   </element>	
+   </element>	-->
  	<element id="Composition.section:sliceProblemSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

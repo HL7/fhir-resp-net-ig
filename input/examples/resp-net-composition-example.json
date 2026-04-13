@@ -60,30 +60,7 @@
     }
   ],
   "title": "RESP-NET Report",
-  "section": [
-    
-	{
-      "title": "Encounter Section",
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "67781-5",
-            "display": "Summarization of encounter note Narrative"
-          }
-        ]
-      },
-      "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Flu Encounter</p></div>"
-      },
-      "entry": [
-        {
-          "reference": "Encounter/resp-net-encounter-example"
-        }	
-      ]
-    },	
-	
+  "section": [    
 	{
       "title": "Problems Section",
       "code": {
@@ -133,7 +110,7 @@
           {
             "system": "http://loinc.org",
             "code": "30954-2",
-            "display": "Relevant diagnostic tests/laboratory data Narrative"
+            "display": "Relevant diagnostic tests/laboratory data note"
           }
         ]
       },
@@ -154,7 +131,7 @@
           {
             "system": "http://loinc.org",
             "code": "11369-6",
-            "display": "History of Immunization Narrative"
+            "display": "History of Immunization note"
           }
         ]
       },
@@ -175,7 +152,7 @@
           {
             "system": "http://loinc.org",
             "code": "29762-2",
-            "display": "Social history Narrative"
+            "display": "Social history note"
           }
         ]
       },

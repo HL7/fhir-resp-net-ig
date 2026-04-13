@@ -6,7 +6,7 @@ CDC seeks to expand the utilization of electronic health information in RESP-NET
 ### Goals of the Use Cases
 The goals of the RESP-NET reporting use cases include:
 * Expand the utilization of electronic health information in RESP-NET
-* Improve the availability of EHR data for public health surveillance of hospitalized persons with influenza and other respiratory viruses including SARS-CoV-2 and RSV
+* Improve the availability of EHR data for public health surveillance of hospitalized persons with influenza, SARS-CoV-2, and RSV
 * Improve data exchange between healthcare facilities, state/local public health partners, and CDC to maintain the quality of these important surveillance activities 
 * Improve the efficiency and timeliness with which these data are available and reported
 * Reduce burden of data collection on surveillance officers and healthcare facilities 
@@ -14,7 +14,7 @@ The goals of the RESP-NET reporting use cases include:
 
 ### Scope of the Use Cases
 #### In Scope
-* Patients hospitalized with laboratory-confirmed respiratory viruses among residents of the RESP-NET catchment area (defined by patient county of residence) for active population-based surveillance
+* Patients hospitalized with laboratory-confirmed respiratory viruses (based on a positive influenza/SAR-CoV-2/RSV test result within 14 days before or any time during their hospitalization) among residents of the RESP-NET catchment area (defined by patient county of residence) for active population-based surveillance
 * Identify the data elements to be retrieved from the data source to produce the report
 * Define under what circumstances a report must be created and transmitted to RESP-NET sites
 
@@ -25,51 +25,52 @@ The goals of the RESP-NET reporting use cases include:
 * Cases where the influenza, RSV, or SARSCoV-2 test result is not accessible in hospital system
 
 ### RESP-NET Actors
-The following actors are used by the RESP-NET use cases:
+The following actors are used in the RESP-NET use cases:
+* Provider (e.g., a licensed medical provider)
 * Data Source (e.g., Healthcare Facility with FHIR-enabled EHR, HIE with FHIR capability)
-* Data Submitter (e.g., a system responsible for exracting the data from the Data Source, evaluate the data for submission and is responsible for submitting the data (report) to the Data Receiver
+* Data Submitter (e.g., a system responsible for extracting the data from the Data Source, evaluating the data for submission, and submitting the data (report) to the Data Receiver)
 * Data Receiver (e.g., RESP-NET Site)
 
 #### Interactions between RESP-NET Actors 
 This section outlines the high-level interactions between the actors listed above. 
 
-{% include img.html img="resp-net-actors-and-systems-datasubinsource.png" caption="Figure 2.1 - RESP-NET Reporting Worflow with Data Submitted in Data Source Organization" %}
+{% include img.html img="resp-net-actors-and-systems-datasubinsource.png" caption="Figure 2.1 - RESP-NET Reporting Workflow with Data Submitted in Data Source Organization" %}
 
-The descriptions for each step in the above diagram where the Data Submitter is hosted within the Data Source Organization are as follow:
+The descriptions for each step in the above diagram where the Data Submitter is hosted within the Data Source Organization are as follows:
 
-* Step 1: The Data Submitter creates a subscription in the Data Source so that it can be notified when specific events occur in clinical workflows.In this model, Subscriptions should be implemented using FHIR Subscriptions.
-* Step 2: Providers as part of their clinical workflows update the data in the Data Source’s patient chart.
+* Step 1: The Data Submitter creates a subscription in the Data Source so that it can be notified when specific events occur in clinical workflows. In this model, subscriptions should be implemented using FHIR Subscriptions.
+* Step 2: A Provider, as part of their clinical workflow, updates the data in the Data Source’s patient chart.
 * Step 3: The Data Source notifies the Data Submitter based on subscriptions created in Step 1.
-* Step 4: The Data Submitter queries the Data Source for patient’s data. 
-	* Step 4a: Data Submitter receives the response from the Data Source with the patient’s data.
+* Step 4: The Data Submitter queries the Data Source for the patient’s data. 
+	* Step 4a: The Data Submitter receives the response from the Data Source with the patient’s data.
 * Step 5: The Data Submitter evaluates the received data to determine if a report needs to be submitted.
-* Step 6: In cases where the report needs to be submitted, The Data Submitter submits the created report to the Data Receiver.
+* Step 6: In cases where the report needs to be submitted, the Data Submitter submits the created report to the Data Receiver.
 
 
 
 {% include img.html img="resp-net-actors-and-systems-datasubinreceiver.png" caption="Figure 2.2 - RESP-NET Reporting Workflow with Data Submitter in Data Receiver Organization" %}
 
-Implementers may package the Data Submitter within the DataSource as illustrated in the diagram below.
+Implementers may package the Data Submitter within the Data Source as illustrated in the diagram below.
 
 The descriptions for each step in the above diagram are as follows:
 
-* Step 1: Providers as part of their clinical workflows update the data in the Data Source’s patient chart
-* Step 2: DataSubmitter which is part of the DataSource package evaluates the changes to determine if a report needs to be generated
-* Step 3: In case a report needs to be submitted, The Data Submitter submits the created report to the Data Receiver.
+* Step 1: A Provider, as part of their clinical workflow, updates the data in the Data Source’s patient chart.
+* Step 2: The Data Submitter, which is part of the Data Source, evaluates the changes to determine if a report needs to be generated.
+* Step 3: In cases where the report needs to be submitted, the Data Submitter submits the created report to the Data Receiver.
 
-The next section identifies the list of RESP-Net use cases and provides brief descriptions for the use cases 
+The next section identifies the list of RESP-NET use cases and provides brief descriptions for the use cases. 
 
 ### Use Case 1: Hospital-based influenza case detection and minimum data elements
-This use case will identify patients hospitalized with laboratory-confirmed influenza among residents of the RESP-NET catchment area (defined by patient state and county of residence (or other geographic regions)) for active population-based surveillance. The cases are reported along with minimum patient-level data and transmitted to the RESP-NET surveillance officers in the relevant state/local jurisdiction.
+This use case will identify patients hospitalized with laboratory-confirmed influenza (based on a positive influenza test result within 14 days before or any time during hospitalization) among residents of the RESP-NET catchment area (defined by patient state and county of residence (or other geographic regions)) for active population-based surveillance. Hospitalization is defined as admission to inpatient after any amount of time or having spent ≥24 hours in the Emergency Room/Department (ER/ED) and/or observation. The cases are reported along with minimum patient-level data and transmitted to the RESP-NET surveillance officers in the relevant state/local jurisdiction.
 
 Use Case 1 is reported when case identification is met. Minimum data elements to define the catchment area, patient age or date of birth, sex, race/ethnicity, hospital admission date, hospital facility name, positive influenza testing data (test type, test result, test date), and influenza type and subtype (if available). 
 
 <!--Use Case 2 focuses on the more detailed clinical surveillance data collected in RESP-NET by site surveillance officers. Patient-level data from EHRs about persons hospitalized with influenza include data on important outcomes and indicators of disease severity such as ICU admission, mechanical ventilation, in-hospital death, and length of hospital stay. Additional elements include health history (underlying conditions, tobacco, alcohol, substance use), clinical course, viral and bacterial codetections, findings from chest imaging, diagnoses, vaccination, and treatment. This use case will include person-level clinical data elements that are currently collected in RESP-NET on a standardized case report form for all identified cases. Not all of the current data elements may be reachable in a FHIR-based approach; proposed solutions should recognize that this may evolve over time and surveillance officers may still need to conduct medical chart review on data elements.-->
 
 #### User Stories for Use Case 1
-* Scenario 1: A patient is admitted to the hospital. An influenza test is ordered, and the test results are positive.
-* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive influenza test result, which was within 14 days before admission at the hospital.
-* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.
+* Scenario 1: A patient is either directly admitted to the hospital or admitted from the Emergency Department after being there >24 hours. An influenza test is ordered, and the test results are positive.
+* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a positive influenza test result within 14 days before admission at the hospital.
+<!--* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.-->
 
 #### Workflow for Use Case 1
 The positive influenza test prompts a notification to the Data Submitter. The Data Submitter queries for a limited set of PII, including the patient’s address. If the patient is not a resident of a catchment area, the Data Submitter stops all activity regarding this patient. If the patient is a resident of a catchment area, the Data Submitter requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are bundled and transmitted to the RESP-NET Site.
@@ -78,9 +79,9 @@ The positive influenza test prompts a notification to the Data Submitter. The Da
 Use Case 2 focuses on the more detailed clinical surveillance data collected in RESP-NET by site surveillance officers. Patient-level data from EHRs about persons hospitalized with influenza include data on important outcomes and indicators of disease severity such as ICU admission, mechanical ventilation, in-hospital death, and length of hospital stay. Additional elements include health history (underlying conditions, tobacco, alcohol, substance use), clinical course, viral and bacterial codetections, findings from chest imaging, diagnoses, vaccination, and treatment. This use case will include person-level clinical data elements that are currently collected in RESP-NET on a standardized case report form for all identified cases. Not all of the current data elements may be reachable in a FHIR-based approach; proposed solutions should recognize that this may evolve over time and surveillance officers may still need to conduct medical chart review on data elements.
 
 #### User Stories for Use Case 2
-* Scenario 1: A patient is admitted to the hospital. An influenza test is ordered, and the test results are positive.
-* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive influenza test result, which was within 14 days before admission at the hospital.
-* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.
+* Scenario 1: A patient is either directly admitted to the hospital or admitted from the Emergency Department after being there >24 hours. An influenza test is ordered, and the test results are positive.
+* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a positive influenza test result within 14 days before admission at the hospital.
+<!--* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.-->
 
 #### Workflow for Use Case 2
 The close of an encounter prompts a notification to the Data Submitter. The Data Submitter (after a 72-hour delay for lab results) queries for a limited set of data, including the patient’s address, in-patient status, and influenza lab result. If the patient is not a resident of a catchment area, the Data Submitter stops all activity regarding this patient. If the patient is a resident of a catchment area, was admitted to the hospital, and has a positive influenza lab result, the Data Submitter requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are bundled and transmitted to the RESP-NET Site.
@@ -90,7 +91,7 @@ Because testing for influenza and other respiratory viruses is done at the discr
 
 #### User Stories for Use Case 3
 * Scenario 1: A patient is admitted to the hospital and has a diagnosis consistent with an ARI (match into ARI value set). 
-* Scenario 2: A patient visits the ED, has a diagnosis consistent with an ARI (match into ARI value set). (May or may not be admitted to hospital.)
+* Scenario 2: A patient visits the Emergency Department for >24 hours and has a diagnosis consistent with an ARI (match into ARI value set). (May or may not be admitted to hospital.)
 
 #### Workflow for Use Case 3
 The close of an encounter prompts a notification to the Data Submitter. The Data Submitter (after a 72-hour delay for lab results) queries for a limited set of PII data, including the patient’s address, in-patient status, and ARI lab result. If the patient is not a resident of a catchment area, the Data Submitter stops all activity regarding this patient. If the patient is a resident of a catchment area, was admitted to the hospital, and has a positive ARI lab result, the Data Submitter requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are bundled and transmitted to the RESP-NET site.
@@ -99,9 +100,9 @@ The close of an encounter prompts a notification to the Data Submitter. The Data
 These use cases focus on collecting equivalent data to Use Case 2 but for patients who test positive for SARSCoV-2 (the virus that causes COVID-19) (Use Case 4) or Respiratory Syncytial Virus (RSV) (Use Case 5). Public health surveillance through COVID-NET and RSV-NET is conducted in many of the same sites as RESP-NET, collects many of the same data elements, with some additional data elements specific to these viral illnesses.
 
 #### User Stories for Use Cases 4 and 5
-* Scenario 1: A patient is admitted to the hospital. A SARSCoV-2 or RSV test is ordered, and the test results are positive.
-* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a previously recorded positive SARSCoV-2 or RSV test result, which was within 14 days before admission at the hospital.
-* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.
+* Scenario 1: A patient is either directly admitted to the hospital or admitted from the Emergency Department after being there >24 hours. A SARSCoV-2 or RSV test is ordered, and the test results are positive.
+* Scenario 2: A patient is admitted to the hospital. Included in the available patient data is a positive SARSCoV-2 or RSV test result within 14 days before admission at the hospital.
+<!--* Scenario 3: A patient arrives at the emergency room (ER). The patient is admitted to the hospital before or while awaiting test results. A positive test is recorded at any time during their hospitalization.-->
 
 #### Workflow for Use Cases 4 and 5
 The close of an encounter prompts a notification to the Data Submitter. The Data Submitter (after a 72-hour delay for lab results) queries for a limited set of data, including the patient’s address, in-patient status, and ARI lab result. If the patient is not a resident of a catchment area, the Data Submitter stops all activity regarding this patient. If the patient is a resident of a catchment area, was admitted to the hospital, and has a positive SARSCoV-2 or RSV lab result, the Data Submitter requests a set of FHIR resources representing patient-level encounter information from the Data Source. The obtained resources are bundled and transmitted to the RESP-NET site.

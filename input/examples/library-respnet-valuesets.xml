@@ -36,14 +36,14 @@
       <value value="pher@lists.HL7.org"/>
     </telecom>
   </contact>
-  <description value="RESPNet Value sets library"/>
+  <description value="RESP-NET Value sets library"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="US"/>
     </coding>
   </jurisdiction>
-  <purpose value="Used to check reportability for RESPNet reports"/>
+  <purpose value="Used to check reportability for RESP-NET reports"/>
   <effectivePeriod>
     <start value="2020-11-01"/>
   </effectivePeriod>

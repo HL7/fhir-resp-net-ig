@@ -26,26 +26,32 @@
                 "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-positive-result-codes",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Positive Lab Test Results</h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET Positive Lab Test Results</h2></div>"
                 },
                 "extension": [
                     {
+                        "url": "http://hl7.org/fhir/StructureDefinition/valueset-publisher",
+                        "valueContactDetail": {
+                            "name": "CDC RESP-NET Program"
+                        }
+                    },
+                    {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
                 "version": "1.0.0",
                 "name": "RESPNetPositiveResultCodes",
                 "title": "resp-net-positive-result-codes",
-                "description": "List of codes for RESPNet positive test results",
+                "description": "List of codes for RESP-NET positive test results",
                 "status": "draft",
                 "experimental": true,
                 "date": "2023-08-01",
@@ -156,26 +162,26 @@
                 "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-negative-result-codes",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Negtive Lab Test Results</h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET Negtive Lab Test Results</h2></div>"
                 },
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
                 "version": "1.0.0",
                 "name": "RESPNetNegativeResultCodes",
                 "title": "resp-net-negative-result-codes",
-                "description": "List of codes for negative test results for RESPNet",
+                "description": "List of codes for negative test results for RESP-NET",
                 "status": "draft",
                 "experimental": true,
                 "date": "2023-08-01",
@@ -274,26 +280,26 @@
                 "url": "http://hl7.org/fhir/us/resp-net/ValueSet/resp-net-labtest-flu-rsv-covid-codes",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Flu, RSV, Covid Test Codes </h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET Flu, RSV, Covid Test Codes </h2></div>"
                 },
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
                 "version": "1.0.0",
                 "name": "RESPNetFluRsvCovidCodes",
                 "title": "resp-net-labtest-flu-rsv-covid-codes",
-                "description": "List of Flu, Covid and Rsv test codes",
+                "description": "List of Flu, Covid and RSV test codes",
                 "status": "draft",
                 "experimental": true,
                 "date": "2023-08-01",
@@ -7762,19 +7768,19 @@
                 "version": "1.0.0",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet RSV Test Codes </h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET RSV Test Codes </h2></div>"
                 },
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
@@ -8617,19 +8623,19 @@
                 "version": "1.0.0",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Flu LOINC Test Codes</h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET Flu LOINC Test Codes</h2></div>"
                 },
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
@@ -10592,19 +10598,19 @@
                 "version": "1.0.0",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet Covid Test Codes </h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET Covid Test Codes </h2></div>"
                 },
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
@@ -11439,19 +11445,19 @@
                 "version": "1.0.0",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESPNet ARI ICD10 Test Codes</h2></div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>RESP-NET ARI ICD10 Test Codes</h2></div>"
                 },
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     },
                     {
                         "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
                         "valueContactDetail": {
-                            "name": "CDC RESPNet Program"
+                            "name": "CDC RESP-NET Program"
                         }
                     }
                 ],
@@ -12068,7 +12074,7 @@
                 "id": "respnet-valuesets-example1",
                 "text": {
                     "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>RESPNet value sets</p>  \n    </div>"
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>RESP-NET value sets</p>  \n    </div>"
                 },
                 "url": "http://hl7.org/fhir/us/resp-net/Library/respnet-valuesets-example1",
                 "identifier": [
@@ -12079,7 +12085,7 @@
                 ],
                 "version": "1.0.0",
                 "name": "RESPNetValueSetLibraryExample",
-                "title": "RESPNet ValueSet Library Example",
+                "title": "RESP-NET ValueSet Library Example",
                 "status": "active",
                 "experimental": true,
                 "type": {
@@ -12102,7 +12108,7 @@
                         ]
                     }
                 ],
-                "description": "RESPNet Value sets library",
+                "description": "RESP-NET Value sets library",
                 "jurisdiction": [
                     {
                         "coding": [
@@ -12113,7 +12119,7 @@
                         ]
                     }
                 ],
-                "purpose": "Used to check reportability for RESPNet reports",
+                "purpose": "Used to check reportability for RESP-NET reports",
                 "effectivePeriod": {
                     "start": "2020-11-01"
                 },
@@ -12725,8 +12731,8 @@
                             },
                             {
                                 "id": "continue-to-check-reportability",
-                                "description": "Continue to Check for reportability of RESPNet cases until 72 hours after encounter closure",
-                                "textEquivalent": "Continue to Check for reportability of RESPNet cases until 72 hours after encounter closure",
+                                "description": "Continue to Check for reportability of RESP-NET cases until 72 hours after encounter closure",
+                                "textEquivalent": "Continue to Check for reportability of RESP-NET cases until 72 hours after encounter closure",
                                 "code": [
                                     {
                                         "coding": [
